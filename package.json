@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Arman Zohrabyan <arman.zohrabyan.96@gmail.com> (https://github.com/Arman-Zohrabyan)",
   "scripts": {
+    "start": "webpack -w & nodemon server.js",
     "watch": "webpack -w",
     "nodemon": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,10 +26,12 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "iplocation": "^5.0.1",
     "isomorphic-fetch": "^2.2.1",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-router-dom": "^4.2.2",
+    "request-ip": "^2.1.1",
     "serialize-javascript": "^1.4.0"
   },
   "babel": {

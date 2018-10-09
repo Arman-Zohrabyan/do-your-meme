@@ -6,6 +6,8 @@ import { StaticRouter, matchPath } from "react-router-dom"
 import serialize from "serialize-javascript"
 import App from '../shared/App'
 import routes from '../shared/routes'
+import iplocation from 'iplocation'
+import requestIp from 'request-ip'
 
 const app = express()
 
@@ -13,6 +15,12 @@ app.use(cors())
 app.use(express.static("public"))
 
 app.get("*", (req, res, next) => {
+  const clientIp = requestIp.getClientIp(req)
+  console.log(clientIp);
+  iplocation('56.70.97.8', function (error, res) {
+    console.log(res);
+  });
+
   const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}
 
   const promise = activeRoute.fetchInitialData
