@@ -26,7 +26,7 @@ app.get('*', (req, res, next) => {
   promise.then((data) => {
     res.send(PageGenerator.getPage(
       {},
-      data,
+      {title: 'page1'},
       req.url
     ));
   }).catch(next);

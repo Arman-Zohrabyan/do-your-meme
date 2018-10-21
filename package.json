@@ -37,12 +37,12 @@
     "isomorphic-fetch": "^2.2.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "serialize-javascript": "^1.4.0"
   },
-
-
-
   "babel": {
     "presets": [
       "env",
@@ -54,10 +54,6 @@
       "babel-plugin-transform-object-rest-spread"
     ]
   },
-
-
-
-
   "eslintConfig": {
     "parser": "babel-eslint",
     "plugins": [
@@ -78,11 +74,32 @@
       "jasmine": true
     },
     "rules": {
-      "semi-spacing": [2, { "before": false, "after": true }],
-      "semi": [2, "always"],
-      "max-len": [2, 350, 2],
-      "indent": ["error", 2],
-      "no-param-reassign": [2, { "props": false }],
+      "semi-spacing": [
+        2,
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "semi": [
+        2,
+        "always"
+      ],
+      "max-len": [
+        2,
+        350,
+        2
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "no-param-reassign": [
+        2,
+        {
+          "props": false
+        }
+      ],
       "no-console": [
         "warn",
         {
@@ -102,7 +119,11 @@
           "functions": "never"
         }
       ],
-      "quotes": [1, "single", "avoid-escape"],
+      "quotes": [
+        1,
+        "single",
+        "avoid-escape"
+      ],
       "no-nested-ternary": 0,
       "no-tabs": 0,
       "no-uderscore-dangling": 0,
@@ -125,8 +146,8 @@
       "react/jsx-filename-extension": 0,
       "react/no-string-refs": 1,
       "react/no-array-index-key": 1,
-      "react/jsx-uses-vars": 1,
-      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 2,
+      "react/jsx-uses-react": 2,
       "jsx-a11y/label-has-for": 1,
       "jsx-a11y/click-events-have-key-events": 1,
       "jsx-a11y/anchor-is-valid": 0,
@@ -134,21 +155,33 @@
       "jsx-a11y/no-static-element-interactions": 1,
       "react/jsx-boolean-value": 2,
       "react/jsx-closing-bracket-location": 2,
-      "react/jsx-curly-spacing":  [2, "never"],
+      "react/jsx-curly-spacing": [
+        2,
+        "never"
+      ],
       "react/jsx-handler-names": 2,
-      "react/jsx-indent-props": [2, 4],
+      "react/jsx-indent-props": [
+        2,
+        4
+      ],
       "react/jsx-key": 2,
-      "react/jsx-max-props-per-line": [2, {"maximum": 3}],
-      "react/jsx-no-bind": [2, {
+      "react/jsx-max-props-per-line": [
+        2,
+        {
+          "maximum": 3
+        }
+      ],
+      "react/jsx-no-bind": [
+        2,
+        {
           "ignoreRefs": true,
           "allowBind": true,
           "allowArrowFunctions": true
-      }],
+        }
+      ],
       "react/jsx-no-duplicate-props": 2,
       "react/jsx-no-undef": 2,
       "react/jsx-pascal-case": 2,
-      "react/jsx-uses-react": 2,
-      "react/jsx-uses-vars": 2,
       "react/no-deprecated": 2,
       "react/no-did-mount-set-state": 0,
       "react/no-did-update-set-state": 0,
@@ -160,16 +193,19 @@
       "react/prop-types": 2,
       "react/react-in-jsx-scope": 2,
       "react/self-closing-comp": 2,
-      "react/sort-comp": [2, {
+      "react/sort-comp": [
+        2,
+        {
           "order": [
-              "lifecycle",
-              "/^handle.+$/",
-              "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
-              "everything-else",
-              "/^render.+$/",
-              "render"
+            "lifecycle",
+            "/^handle.+$/",
+            "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+            "everything-else",
+            "/^render.+$/",
+            "render"
           ]
-      }]
+        }
+      ]
     },
     "settings": {
       "react": {

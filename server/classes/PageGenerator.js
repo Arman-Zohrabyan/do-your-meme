@@ -1,9 +1,12 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter, matchPath } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import serialize from 'serialize-javascript';
+// import { Helmet } from 'react-helmet';
+
+import Store from '../../src/store/Store';
 import App from '../../src/components/App';
-import routes from '../../src/routes';
 
 
 class PageGenerator {
@@ -22,7 +25,7 @@ class PageGenerator {
       '<meta name="viewport" content="width=device-width, initial-scale=1"/>',
       '<meta charset="utf-8">',
       '<script src="/bundle.js" defer></script>',
-      `<script>window.__INITIAL_DATA__ = ${serialize(state)}</script>`,
+      `<script>window.__INITIAL_STATE__ = ${serialize(state)}</script>`,
       '</head>',
 
       '<body>',
@@ -35,36 +38,25 @@ class PageGenerator {
   /**
    * Returns page html.
    *
-   * @param  {Object}  reducers  App reducers.
    * @param  {Object}  state     Initial state.
    * @return {string}            Page html.
    */
-  static getPage(reducers = {}, state = {}, url = '/') {
+  static getPage(state = {}, head = {}, url = '/') {
+    const store = Store.init(state);
 
     const body = renderToString(
-      <StaticRouter location={url} context={{state}}>
-        <App />
-      </StaticRouter>
+      <Provider store={store}>
+        <StaticRouter location={url} context={{state}}>
+          <App />
+        </StaticRouter>
+      </Provider>
     );
 
-    // const store = initStore(reducers, state);
-
-    // const body = renderToString(
-    //     <LocalizeProvider store={store}>
-    //         <Provider store={store}>
-    //             <App/>
-    //         </Provider>
-    //     </LocalizeProvider>
-    // );
-
     // const helmet = Helmet.renderStatic();
-
     return this.page({
-      state,
-      head: {
-        title: '123',
-      },
-      body,
+      state: store.getState(),
+      head,
+      body
     });
   }
 
