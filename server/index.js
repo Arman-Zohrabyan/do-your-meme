@@ -4,7 +4,7 @@ import React from 'react';
 import serialize from 'serialize-javascript';
 import App from '../src/components/App';
 import customMiddlewares from './customMiddlewares';
-import PageGenerator from './PageGenerator';
+import PageGenerator from './classes/PageGenerator';
 
 const app = express();
 

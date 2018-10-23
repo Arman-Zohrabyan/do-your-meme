@@ -2,8 +2,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import serialize from 'serialize-javascript';
-import App from '../src/components/App';
-import routes from '../src/routes';
+import App from '../../src/components/App';
+import routes from '../../src/routes';
 
 
 class PageGenerator {
