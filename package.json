@@ -7,6 +7,8 @@
     "start": "webpack -w & nodemon server.js",
     "watch": "webpack -w",
     "nodemon": "nodemon server.js",
+    "eslint": "eslint ./src ./server ./browser --ext .jsx --ext .js",
+    "eslint:fix": "eslint --fix ./src ./server ./browser --ext .jsx --ext .js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,11 +17,16 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^5.7.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "nodemon": "^1.12.5",
     "webpack": "^3.10.0",
     "webpack-node-externals": "^1.6.0"
@@ -36,7 +43,6 @@
 
 
 
-
   "babel": {
     "presets": [
       "env",
@@ -47,5 +53,128 @@
       "babel-plugin-transform-class-properties",
       "babel-plugin-transform-object-rest-spread"
     ]
+  },
+
+
+
+
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "jsx-a11y"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true
+    },
+    "rules": {
+      "semi-spacing": [2, { "before": false, "after": true }],
+      "semi": [2, "always"],
+      "max-len": [2, 350, 2],
+      "indent": ["error", 2],
+      "no-param-reassign": [2, { "props": false }],
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ],
+      "quotes": [1, "single", "avoid-escape"],
+      "no-nested-ternary": 0,
+      "no-tabs": 0,
+      "no-uderscore-dangling": 0,
+      "new-cap": 0,
+      "no-underscore-dangle": 0,
+      "prefer-destructuring": 0,
+      "no-unused-vars": 1,
+      "no-else-return": 1,
+      "arrow-body-style": 1,
+      "global-require": 1,
+      "no-mixed-operators": 1,
+      "newline-per-chained-call": 1,
+      "space-infix-ops": 1,
+      "import/extensions": {
+        ".js": "never",
+        ".json": "always",
+        ".scss": "always"
+      },
+      "import/no-extraneous-dependencies": 0,
+      "react/jsx-filename-extension": 0,
+      "react/no-string-refs": 1,
+      "react/no-array-index-key": 1,
+      "react/jsx-uses-vars": 1,
+      "react/jsx-uses-react": 1,
+      "jsx-a11y/label-has-for": 1,
+      "jsx-a11y/click-events-have-key-events": 1,
+      "jsx-a11y/anchor-is-valid": 0,
+      "jsx-a11y/no-noninteractive-element-interactions": 0,
+      "jsx-a11y/no-static-element-interactions": 1,
+      "react/jsx-boolean-value": 2,
+      "react/jsx-closing-bracket-location": 2,
+      "react/jsx-curly-spacing":  [2, "never"],
+      "react/jsx-handler-names": 2,
+      "react/jsx-indent-props": [2, 4],
+      "react/jsx-key": 2,
+      "react/jsx-max-props-per-line": [2, {"maximum": 3}],
+      "react/jsx-no-bind": [2, {
+          "ignoreRefs": true,
+          "allowBind": true,
+          "allowArrowFunctions": true
+      }],
+      "react/jsx-no-duplicate-props": 2,
+      "react/jsx-no-undef": 2,
+      "react/jsx-pascal-case": 2,
+      "react/jsx-uses-react": 2,
+      "react/jsx-uses-vars": 2,
+      "react/no-deprecated": 2,
+      "react/no-did-mount-set-state": 0,
+      "react/no-did-update-set-state": 0,
+      "react/no-direct-mutation-state": 2,
+      "react/no-is-mounted": 2,
+      "react/no-multi-comp": 2,
+      "react/no-unknown-property": 2,
+      "react/prefer-es6-class": 2,
+      "react/prop-types": 2,
+      "react/react-in-jsx-scope": 2,
+      "react/self-closing-comp": 2,
+      "react/sort-comp": [2, {
+          "order": [
+              "lifecycle",
+              "/^handle.+$/",
+              "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+              "everything-else",
+              "/^render.+$/",
+              "render"
+          ]
+      }]
+    },
+    "settings": {
+      "react": {
+        "version": "16.2"
+      }
+    }
   }
 }

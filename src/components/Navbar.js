@@ -1,10 +1,10 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar () {
   const languages = [{
     name: 'All',
-    param: 'all'
+    param: 'all',
   }, {
     name: 'JavaScript',
     param: 'javascript',
@@ -17,7 +17,7 @@ export default function Navbar () {
   }, {
     name: 'Java',
     param: 'java',
-  }]
+  }];
 
   return (
     <ul>
@@ -29,5 +29,5 @@ export default function Navbar () {
         </li>
       ))}
     </ul>
-  )
+  );
 }

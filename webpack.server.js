@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 
 const serverConfig = {
-  entry: './src/server/index.js',
+  entry: './server/index.js',
   target: 'node',
   externals: [nodeExternals()],
   output: {
