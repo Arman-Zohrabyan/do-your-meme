@@ -1,6 +1,6 @@
-import Home from './Home';
-import Grid from './Grid';
-import { fetchPopularRepos } from './api';
+import Home from './components/Home';
+import Grid from './components/Grid';
+import { fetchPopularRepos } from './components/api';
 
 const routes =  [
   {
