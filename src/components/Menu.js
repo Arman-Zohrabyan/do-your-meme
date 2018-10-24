@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -26,12 +27,12 @@ class Menu extends Component {
     return (
       <Navbar color="light" light expand="md">
         <Container>
-          <NavbarBrand href="/">Do Your Meme</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">Do Your Meme</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components">ВКонтакте</NavLink>
+                <NavLink tag={Link} to="/vkontakte">ВКонтакте</NavLink>
               </NavItem>
               {/*<NavItem>
                 <NavLink href="https://github.com/arman-zohrabyan">GitHub</NavLink>
