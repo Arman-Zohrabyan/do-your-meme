@@ -8,9 +8,10 @@ import PageGenerator from './classes/PageGenerator';
 
 const app = express();
 
+/* Enables cors */
 app.use(cors());
+/* Tells the app to look for static files in these directories */
 app.use(express.static('public'));
-
 /* Sets custom middlewares */
 app.use(customMiddlewares);
 
