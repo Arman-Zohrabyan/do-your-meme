@@ -1,5 +1,6 @@
 import Home from './components/Home';
 import Vk from './components/Vk';
+import Fb from './components/Fb';
 import { fetchPopularRepos } from './components/api';
 
 const routes =  [
@@ -7,12 +8,26 @@ const routes =  [
     path: '/',
     exact: true,
     component: Home,
+    config: {
+      title: 'Развлекательный сайт',
+    },
   },
   {
     path: '/vkontakte',
     exact: true,
     component: Vk,
-  }
+    config: {
+      title: 'Создать переписку Вконтакте',
+    },
+  },
+  {
+    path: '/facebook',
+    exact: true,
+    component: Fb,
+    config: {
+      title: 'Создать переписку Фейсбук',
+    },
+  },
   // {
   //   path: '/popular/:id',
   //   component: Grid,

@@ -13,10 +13,14 @@ class App extends Component {
 
         <Container>
           <Switch>
-            {routes.map(({ path, exact, component: Component, ...rest }) => (
-              <Route key={path} path={path} exact={exact} render={(props) => (
-                  <Component {...props} {...rest} />
-                )}
+            {routes.map(({ config, path, exact, component: Page, ...rest }) => (
+              <Route key={path} path={path} exact={exact}
+                render={(props) => {
+                  if (__isBrowser__) {
+                    document.title = config.title;
+                  }
+                  return <Page {...props} {...rest} />;
+                }}
               />
             ))}
             <Route render={(props) => <NoMatch {...props} />} />

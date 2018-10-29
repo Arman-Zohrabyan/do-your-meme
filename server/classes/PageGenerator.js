@@ -57,7 +57,7 @@ class PageGenerator {
     return this.page({
       state: store.getState(),
       head,
-      body
+      body,
     });
   }
 

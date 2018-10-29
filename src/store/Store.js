@@ -12,7 +12,7 @@ class Store {
    */
   static getInitialReducers() {
     return {
-      test
+      test,
     };
   }
 
@@ -26,8 +26,8 @@ class Store {
   static init(initialState = {}) {
     return createStore(combineReducers(
       Store.getInitialReducers()),
-      initialState,
-      applyMiddleware(thunkMiddleware)
+    initialState,
+    applyMiddleware(thunkMiddleware)
     );
   }
 }
