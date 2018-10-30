@@ -26,6 +26,7 @@ class PageGenerator {
       '<meta name="viewport" content="width=device-width, initial-scale=1"/>',
       '<meta charset="utf-8">',
       '<script src="/bundle.js" defer></script>',
+      '<link href="/bundle.css" rel="stylesheet">',
       `<script>window.__INITIAL_STATE__ = ${serialize(state)}</script>`,
       '</head>',
 
