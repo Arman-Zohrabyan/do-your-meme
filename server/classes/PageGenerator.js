@@ -30,7 +30,7 @@ class PageGenerator {
       `<script>window.__INITIAL_STATE__ = ${serialize(state)}</script>`,
       '</head>',
 
-      '<body>',
+      `<body style="background-image: url('./assets/images/descont.png')">`,
       `<div id="app">${body}</div>`,
       '</body>',
       '</html>',

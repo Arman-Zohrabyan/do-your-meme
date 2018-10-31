@@ -7,6 +7,10 @@ class VkHeader extends Component {
     return (
       <div className='vk_header'>
         <div className='vk_header__left'>
+          <img
+            className='vk_header__back-image'
+            src='./assets/images/back.svg'
+          />
           <div className='vk_header__back'>
             Назад
           </div>
@@ -17,15 +21,25 @@ class VkHeader extends Component {
           </div>
           <div className='vk_header__online-status'>
             {time}
+            <img
+              className='vk_header__online-status-image'
+              src='./assets/images/mobile.png'
+            />
           </div>
         </div>
         <div className='vk_header__right'>
-          <div className='vk_header__search'>
-          </div>
-          <div className='vk_header__dots'>
-          </div>
-          <div className='vk_header__mini-img'>
-          </div>
+          <img
+            className='vk_header__mini-img'
+            src='./assets/images/user.png'
+          />
+          <img
+            className='vk_header__dots'
+            src='./assets/images/dots.svg'
+          />
+          <img
+            className='vk_header__search'
+            src='./assets/images/search.svg'
+          />
         </div>
       </div>
     );
