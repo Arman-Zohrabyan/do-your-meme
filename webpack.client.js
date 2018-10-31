@@ -3,9 +3,6 @@ const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractStyles = new ExtractTextPlugin({
-    filename: 'bundle.css'
-});
 
 const browserConfig = {
   entry: './browser/index.js',
@@ -22,29 +19,38 @@ const browserConfig = {
         exclude: /node_modules/
       }, {
         test: /\.(scss|css)$/,
-        use: extractStyles.extract({
-          use: [{
-            loader: 'css-loader',
-            options: {
-                url: false
-            }
-          }, {
-            loader: 'sass-loader',
-            options: {
-                url: false
-            }
-          }],
-          // use style-loader in development
-          fallback: 'style-loader'
+        use: ExtractTextPlugin.extract({
+          use: [
+              { loader: 'css-loader', options: {} },
+              { loader: 'sass-loader', options: {} },
+              {
+                loader: 'postcss-loader',
+                options: {
+                  ident: 'postcss',
+                  plugins: (loader) => [
+                    require('autoprefixer')({
+                      browsers: [
+                        '>1%',
+                        'last 4 versions',
+                        'Firefox ESR',
+                        'not ie < 9',  
+                      ],
+                      flexbox: 'no-2009',
+                    })
+                  ]
+                }
+              },
+            ],
+            fallback: 'style-loader'
         })
       }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: "true"
+      __isBrowser__: 'true'
     }),
-    extractStyles
+    new ExtractTextPlugin('bundle.css')
   ]
 };
 
