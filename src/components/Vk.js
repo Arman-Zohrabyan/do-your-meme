@@ -5,21 +5,19 @@ import VkFooter from './Vk/VkFooter';
 class Vk extends Component {
   render() {
     return (
-      <div>
-        <div className='vk_container'>
-          <VkHeader
-            name={'Тестовое Имя'}
-            time={'был в сети только что'}
-            img={''}
-          />
+      <div className='vk-widget'>
+        <VkHeader
+          name={'Тестовое Имя'}
+          time={'был в сети только что'}
+          img={''}
+        />
 
-          <div className='vk_body'>
-            <div className='vk_body__content vk_content'>
-            </div>
+        <div className='vk-widget_body'>
+          <div className='vk-widget_body__content vk-widget_content'>
           </div>
-
-          <VkFooter />
         </div>
+
+        <VkFooter />
       </div>
     );
   }

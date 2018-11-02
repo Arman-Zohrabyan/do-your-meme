@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <Menu />
 
-        <Container>
+        <Container className='page-container'>
           <Switch>
             {routes.map(({ config, path, exact, component: Page, ...rest }) => (
               <Route key={path} path={path} exact={exact}

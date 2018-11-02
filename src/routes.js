@@ -1,7 +1,7 @@
+import VkContainer from './containers/VkContainer';
 import Home from './components/Home';
-import Vk from './components/Vk';
 import Fb from './components/Fb';
-import { fetchPopularRepos } from './components/api';
+// import { fetchPopularRepos } from './components/api';
 
 const routes =  [
   {
@@ -15,7 +15,7 @@ const routes =  [
   {
     path: '/vkontakte',
     exact: true,
-    component: Vk,
+    component: VkContainer,
     config: {
       title: 'Создать переписку Вконтакте',
     },
