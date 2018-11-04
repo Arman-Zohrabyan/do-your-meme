@@ -11,6 +11,8 @@ import {
   NavLink,
   Container,
 } from 'reactstrap';
+import StringHelper from '../helpers/StringHelper';
+
 
 class Menu extends Component {
   state = {
@@ -37,7 +39,12 @@ class Menu extends Component {
     const { pathname } = this.props.location;
 
     return (
-      <Navbar color='light' light expand='md'>
+      <Navbar
+        color='light'
+        light
+        expand='md'
+        className={`navbar-${StringHelper.onlyEngLetters(pathname)}`}
+      >
         <Container>
           <NavbarBrand
             tag={Link}

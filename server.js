@@ -295,7 +295,7 @@ var PageGenerator = function () {
           head = _ref.head,
           body = _ref.body;
 
-      return ['<!DOCTYPE html>', '<html>', '<head>', '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', '<title>' + head.title + '</title>', '<meta name="viewport" content="width=650, initial-scale=0.55, maximum-scale=1"/>', '<meta charset="utf-8">', '<script src="/bundle.js" defer></script>', '<link href="/bundle.css" rel="stylesheet">', '<script>window.__INITIAL_STATE__ = ' + (0, _serializeJavascript2.default)(state) + '</script>', '</head>', '<body style="background-image: url(\'./assets/images/descont.png\')">', '<div id="app">' + body + '</div>', '</body>', '</html>'].join('\n');
+      return ['<!DOCTYPE html>', '<html>', '<head>', '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', '<title>' + head.title + '</title>', '<meta name="viewport" content="width=600, initial-scale=0.6, maximum-scale=1"/>', '<meta charset="utf-8">', '<script src="/bundle.js" defer></script>', '<link href="/bundle.css" rel="stylesheet">', '<script>window.__INITIAL_STATE__ = ' + (0, _serializeJavascript2.default)(state) + '</script>', '</head>', '<body>', '<div id="app">' + body + '</div>', '</body>', '</html>'].join('\n');
     }
 
     /**
@@ -463,20 +463,24 @@ var VkContainer = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactstrap.Row,
-        { className: 'vk-container' },
+        { className: '' },
         _react2.default.createElement(
           _reactstrap.Col,
-          { md: '12', lg: '8', style: { backgroundColor: 'red' } },
+          { md: '12', lg: '8', className: 'widget-left' /*style={{backgroundColor: 'red'}}*/ },
           _react2.default.createElement(
             'div',
-            { className: 'vk-chat' },
-            _react2.default.createElement(_Vk2.default, null)
+            { className: 'vk-container' },
+            _react2.default.createElement(
+              'div',
+              { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
+              _react2.default.createElement(_Vk2.default, null)
+            )
           )
         ),
         _react2.default.createElement(
           _reactstrap.Col,
-          { md: '12', lg: '4', style: { backgroundColor: 'green' } },
-          'a'
+          { md: '12', lg: '4', className: 'widget-right' /*style={{backgroundColor: 'green'}}*/ },
+          'functionality'
         )
       );
     }
@@ -595,7 +599,8 @@ var VkHeader = function (_Component) {
       var _props = this.props,
           name = _props.name,
           time = _props.time,
-          img = _props.img;
+          img = _props.img,
+          isMobile = _props.isMobile;
 
 
       return _react2.default.createElement(
@@ -626,10 +631,10 @@ var VkHeader = function (_Component) {
             'div',
             { className: 'vk-widget_header__online-status' },
             time,
-            _react2.default.createElement('img', {
+            isMobile ? _react2.default.createElement('img', {
               className: 'vk-widget_header__online-status-image',
               src: './assets/images/mobile.png'
-            })
+            }) : null
           )
         ),
         _react2.default.createElement(
@@ -714,9 +719,19 @@ var VkHeader = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'vk-widget_footer__message-text' },
-              '\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435...',
-              _react2.default.createElement('div', { className: 'vk-widget_footer__photo' }),
-              _react2.default.createElement('div', { className: 'vk-widget_footer__smile' })
+              _react2.default.createElement(
+                'div',
+                { className: 'vk-widget_footer__message-placeholder' },
+                '\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435...'
+              ),
+              _react2.default.createElement('img', {
+                className: 'vk-widget_footer__smile',
+                src: './assets/images/smile.svg'
+              }),
+              _react2.default.createElement('img', {
+                className: 'vk-widget_footer__photo',
+                src: './assets/images/photo.svg'
+              })
             )
           )
         ),
@@ -812,6 +827,10 @@ var _reactRouter = __webpack_require__(16);
 
 var _reactstrap = __webpack_require__(3);
 
+var _StringHelper = __webpack_require__(31);
+
+var _StringHelper2 = _interopRequireDefault(_StringHelper);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -861,7 +880,12 @@ var Menu = function (_Component) {
 
       return _react2.default.createElement(
         _reactstrap.Navbar,
-        { color: 'light', light: true, expand: 'md' },
+        {
+          color: 'light',
+          light: true,
+          expand: 'md',
+          className: 'navbar-' + _StringHelper2.default.onlyEngLetters(pathname)
+        },
         _react2.default.createElement(
           _reactstrap.Container,
           null,
@@ -1268,6 +1292,39 @@ function home(req, res) {
 };
 
 exports.router = router;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StringHelper = function () {
+  function StringHelper() {
+    _classCallCheck(this, StringHelper);
+  }
+
+  _createClass(StringHelper, null, [{
+    key: 'onlyEngLetters',
+    value: function onlyEngLetters(string) {
+      var reg = new RegExp('[^a-zA-Z]+', 'g');
+      return string.replace(reg, '');
+    }
+  }]);
+
+  return StringHelper;
+}();
+
+exports.default = StringHelper;
 
 /***/ })
 /******/ ]);

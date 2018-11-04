@@ -1,0 +1,10 @@
+body {
+  background: #edeef0;
+}
+
+.widget {
+  &-right,
+  &-left {
+    margin-top: 20px;
+  }
+}

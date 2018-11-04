@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class VkHeader extends Component {
   render() {
-    const { name, time, img } = this.props;
+    const { name, time, img, isMobile } = this.props;
 
     return (
       <div className='vk-widget_header'>
@@ -21,10 +21,12 @@ class VkHeader extends Component {
           </div>
           <div className='vk-widget_header__online-status'>
             {time}
-            <img
-              className='vk-widget_header__online-status-image'
-              src='./assets/images/mobile.png'
-            />
+            { isMobile ? 
+              <img
+                className='vk-widget_header__online-status-image'
+                src='./assets/images/mobile.png'
+              /> : null
+            }
           </div>
         </div>
         <div className='vk-widget_header__right'>

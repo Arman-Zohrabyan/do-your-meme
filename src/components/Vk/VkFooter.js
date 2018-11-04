@@ -13,11 +13,17 @@ class VkHeader extends Component {
         <div className='vk-widget_footer__center'>
           <div className='vk-widget_footer__message'>
             <div className='vk-widget_footer__message-text'>
-              Напишите сообщение...
-              <div className='vk-widget_footer__photo'>
+              <div className='vk-widget_footer__message-placeholder'>
+                Напишите сообщение...
               </div>
-              <div className='vk-widget_footer__smile'>
-              </div>
+              <img
+                className='vk-widget_footer__smile'
+                src='./assets/images/smile.svg'
+              />
+              <img
+                className='vk-widget_footer__photo'
+                src='./assets/images/photo.svg'
+              />
             </div>
           </div>
         </div>

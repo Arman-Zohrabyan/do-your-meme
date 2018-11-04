@@ -1,5 +1,12 @@
 .vk {
-	&-chat {
-		text-align: center;
-	}
+  &-container {
+    text-align: center;
+  }
+  &-chat {
+    text-align: center;
+    display: inline-block;
+    margin-left: -10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
 }
