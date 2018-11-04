@@ -38830,7 +38830,7 @@ exports.default = test;
 /* 117 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n      &&-text {\n      ^\n      Invalid CSS after \"&\": expected \"{\", was \"&-text\"\n\n\"&-text\" may only be used at the beginning of a compound selector.\n      in /home/dedarm/Desktop/do-your-meme/src/styles/_vkWidget.scss (line 113, column 8)\n    at runLoaders (/home/dedarm/Desktop/do-your-meme/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /home/dedarm/Desktop/do-your-meme/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /home/dedarm/Desktop/do-your-meme/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/home/dedarm/Desktop/do-your-meme/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.render [as callback] (/home/dedarm/Desktop/do-your-meme/node_modules/sass-loader/lib/loader.js:52:13)\n    at Object.done [as callback] (/home/dedarm/Desktop/do-your-meme/node_modules/neo-async/async.js:7974:18)\n    at options.error (/home/dedarm/Desktop/do-your-meme/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -110,5 +110,10 @@
       margin-top: 20px; }
     .vk-widget_footer__message {
       padding-top: 12px; }
+      .vk-widget_footer__message-text {
+        margin-bottom: 12px;
+        background: #fff;
+        border-radius: 6px;
+        border: solid 1px #d3d9de; }
   .vk-widget_body {
     height: 20px; }
