@@ -10,7 +10,7 @@
     border-radius: 5px;
   }
 
-  &_text {
+  &_form {
     &__inline {
       display: inline-block;
     }
@@ -24,6 +24,34 @@
       border-radius: 3px;
       padding: 2px 5px;
       outline: none;
+      width: 150px;
+    }
+    &__table {
+      .vk_form__label {
+        width: 100%;
+        text-align: left;
+        &-text {
+          display: inline-block;
+          padding-top: 3px;
+        }
+      }
+      .vk_form__input {
+        float: right;
+      }
+    }
+    &__checkbox {
+      cursor: pointer;
+
+      &-wrapper {
+        width: 150px;
+        display: inline-block;
+        float: right;
+        padding-top: 3px;
+        height: 25px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

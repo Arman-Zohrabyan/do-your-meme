@@ -10258,7 +10258,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextInput = exports.UserImage = undefined;
+exports.CheckBox = exports.TextInput = exports.UserImage = undefined;
 
 var _UserImage = __webpack_require__(109);
 
@@ -10268,10 +10268,15 @@ var _TextInput = __webpack_require__(110);
 
 var _TextInput2 = _interopRequireDefault(_TextInput);
 
+var _CheckBox = __webpack_require__(130);
+
+var _CheckBox2 = _interopRequireDefault(_CheckBox);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.UserImage = _UserImage2.default;
 exports.TextInput = _TextInput2.default;
+exports.CheckBox = _CheckBox2.default;
 
 /***/ }),
 /* 42 */
@@ -34563,7 +34568,11 @@ var VkContainer = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
-              _react2.default.createElement(_Vk2.default, { header: vk.header })
+              _react2.default.createElement(_Vk2.default, {
+                components: vk.components,
+                header: vk.header,
+                content: vk.content
+              })
             )
           )
         ),
@@ -34573,20 +34582,69 @@ var VkContainer = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'widget-right__wrapper' },
-            _react2.default.createElement(_mini.TextInput, {
-              label: 'Собеседник',
-              value: vk.header.companion,
-              onChange: function onChange(e) {
-                return _onChange(e.target.value, 'header', 'companion');
-              }
-            }),
-            _react2.default.createElement(_mini.TextInput, {
-              label: 'Время онлайн',
-              value: vk.header.time,
-              onChange: function onChange(e) {
-                return _onChange(e.target.value, 'header', 'time');
-              }
-            })
+            _react2.default.createElement(
+              'div',
+              { className: 'widget-right__config' },
+              _react2.default.createElement(
+                'h3',
+                { className: 'widget-right__config-title' },
+                '\u0420\u0430\u0437\u0434\u0435\u043B\u044B'
+              ),
+              _react2.default.createElement(_mini.CheckBox, {
+                label: 'Показать верхнюю часть',
+                checked: vk.components.header,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.checked, 'components', 'header');
+                },
+                table: true
+              }),
+              _react2.default.createElement(_mini.CheckBox, {
+                label: 'Показать нижнюю часть',
+                checked: vk.components.footer,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.checked, 'components', 'footer');
+                },
+                table: true
+              }),
+              _react2.default.createElement(
+                'h3',
+                { className: 'widget-right__config-title border-top' },
+                '\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0447\u0430\u0441\u0442\u044C'
+              ),
+              _react2.default.createElement(_mini.TextInput, {
+                label: 'Собеседник',
+                value: vk.header.companion,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.value, 'header', 'companion');
+                },
+                table: true
+              }),
+              _react2.default.createElement(_mini.TextInput, {
+                label: 'Время в сети',
+                value: vk.header.time,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.value, 'header', 'time');
+                },
+                table: true
+              }),
+              _react2.default.createElement(_mini.CheckBox, {
+                label: 'С мобильного',
+                checked: vk.header.mobile,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.checked, 'header', 'mobile');
+                },
+                table: true
+              }),
+              _react2.default.createElement(_mini.TextInput, {
+                label: 'Высота контента',
+                value: vk.content.height,
+                onChange: function onChange(e) {
+                  return _onChange(e.target.value, 'content', 'height');
+                },
+                type: 'number',
+                table: true
+              })
+            )
           )
         )
       );
@@ -38283,32 +38341,56 @@ var Vk = function (_Component) {
   _inherits(Vk, _Component);
 
   function Vk() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, Vk);
 
-    return _possibleConstructorReturn(this, (Vk.__proto__ || Object.getPrototypeOf(Vk)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Vk.__proto__ || Object.getPrototypeOf(Vk)).call.apply(_ref, [this].concat(args))), _this), _this.renderHeader = function () {
+      var _this$props = _this.props,
+          header = _this$props.header,
+          components = _this$props.components;
+
+      if (!components.header) {
+        return null;
+      }
+      return _react2.default.createElement(_VkHeader2.default, {
+        companion: header.companion,
+        time: header.time,
+        isMobile: header.mobile,
+        img: header.userImage
+      });
+    }, _this.renderFooter = function () {
+      var components = _this.props.components;
+
+      if (!components.footer) {
+        return null;
+      }
+      return _react2.default.createElement(_VkFooter2.default, null);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Vk, [{
     key: 'render',
     value: function render() {
-      var header = this.props.header;
+      var content = this.props.content;
 
 
       return _react2.default.createElement(
         'div',
         { className: 'vk-widget' },
-        _react2.default.createElement(_VkHeader2.default, {
-          companion: header.companion,
-          time: header.time,
-          isMobile: header.mobile,
-          img: header.userImage
-        }),
+        this.renderHeader(),
         _react2.default.createElement(
           'div',
-          { className: 'vk-widget_body' },
+          { className: 'vk-widget_body', style: { height: content.height + 'px' } },
           _react2.default.createElement('div', { className: 'vk-widget_body__content vk-widget_content' })
         ),
-        _react2.default.createElement(_VkFooter2.default, null)
+        this.renderFooter()
       );
     }
   }]);
@@ -38484,11 +38566,15 @@ function TextInput(_ref) {
   var label = _ref.label,
       value = _ref.value,
       onChange = _ref.onChange,
-      inline = _ref.inline;
+      inline = _ref.inline,
+      table = _ref.table,
+      _ref$type = _ref.type,
+      type = _ref$type === undefined ? 'text' : _ref$type;
 
   var wrapper = (0, _classnames2.default)({
-    'vk_text': true,
-    'vk_text__inline': inline
+    'vk_form': true,
+    'vk_form__inline': inline,
+    'vk_form__table': table
   });
 
   return _react2.default.createElement(
@@ -38496,11 +38582,15 @@ function TextInput(_ref) {
     { className: wrapper },
     _react2.default.createElement(
       'label',
-      { className: 'vk_text__label' },
-      label + ': ',
+      { className: 'vk_form__label' },
+      _react2.default.createElement(
+        'span',
+        { className: 'vk_form__label-text' },
+        label + ': '
+      ),
       _react2.default.createElement('input', {
-        type: 'text',
-        className: 'vk_text__input',
+        type: type,
+        className: 'vk_form__input',
         value: value,
         onChange: onChange
       })
@@ -39046,11 +39136,18 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var initialState = {
+  components: {
+    header: true,
+    footer: true
+  },
   header: {
     companion: 'Тестовое имя',
     time: 'был в сети только что',
-    mobile: true,
+    mobile: false,
     userImage: null
+  },
+  content: {
+    height: 100
   }
 };
 
@@ -39098,6 +39195,73 @@ var change = exports.change = function change(value, section, key) {
     key: key
   };
 };
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = __webpack_require__(96);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CheckBox(_ref) {
+  var label = _ref.label,
+      checked = _ref.checked,
+      onChange = _ref.onChange,
+      inline = _ref.inline,
+      table = _ref.table;
+
+  var wrapper = (0, _classnames2.default)({
+    'vk_form': true,
+    'vk_form__inline': inline,
+    'vk_form__table': table
+  });
+
+  var image = checked ? 'checked' : 'check';
+
+  return _react2.default.createElement(
+    'div',
+    { className: wrapper },
+    _react2.default.createElement(
+      'label',
+      { className: 'vk_form__label' },
+      _react2.default.createElement(
+        'span',
+        { className: 'vk_form__label-text' },
+        label + ': '
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__checkbox-wrapper' },
+        _react2.default.createElement('img', {
+          src: './assets/images/' + image + '.svg',
+          className: 'vk_form__checkbox'
+        }),
+        _react2.default.createElement('input', {
+          className: 'hide-element',
+          type: 'checkbox',
+          checked: checked,
+          onChange: onChange
+        })
+      )
+    )
+  );
+}
+
+exports.default = CheckBox;
 
 /***/ })
 /******/ ]);

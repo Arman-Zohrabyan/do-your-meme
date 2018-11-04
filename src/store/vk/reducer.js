@@ -1,9 +1,16 @@
 const initialState = {
+  components: {
+    header: true,
+    footer: true
+  },
   header: {
     companion: 'Тестовое имя',
     time: 'был в сети только что',
-    mobile: true,
+    mobile: false,
     userImage: null
+  },
+  content: {
+    height: 100
   }
 };
 
