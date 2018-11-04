@@ -4,7 +4,8 @@
   "main": "index.js",
   "author": "Arman Zohrabyan <arman.zohrabyan.96@gmail.com> (https://github.com/Arman-Zohrabyan)",
   "scripts": {
-    "start": "webpack -w & nodemon server.js",
+    "start": "node server.js",
+    "start:all": "webpack -w & nodemon server.js",
     "watch": "webpack -w",
     "nodemon": "nodemon server.js",
     "eslint": "eslint ./src ./server ./browser --ext .jsx --ext .js",
