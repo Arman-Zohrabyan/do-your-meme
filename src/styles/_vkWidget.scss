@@ -1,5 +1,10 @@
 .vk-widget {
+  text-align: initial;
   display: inline-block;
+  cursor: default;
+  user-select: none;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+
   &_header {
     width: 550px;
     border: solid 1px #edeef0;
@@ -9,7 +14,6 @@
     background: #fff;
     white-space: nowrap;
     font-size: 13px;
-    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
     line-height: 18px;
 
     &__left {
@@ -38,12 +42,14 @@
       }
     }
     &__user-name {
+      line-height: 15px;
       text-align: center;
       padding-top: 8px;
       color: #222;
       font-weight: bold;
     }
     &__online-status {
+      line-height: 15px;
       color: #939393;
       text-align: center;
 
@@ -70,5 +76,50 @@
       margin-top: 10px;
       float: right;
     }
+  }
+
+  &_footer {
+    width: 550px;
+    border: solid 1px #edeef0;
+    border-left: solid 1px #edeef0;
+    border-radius: 0 0 2px 2px;
+    height: 62px;
+    background: #fafbfc;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 18px;
+
+    &__left {
+      float: left;
+      width: 55px;
+      color: #818d99;
+    }
+    &__center {
+      float: left;
+      width: 438px;
+    }
+    &__right {
+      float: left;
+      width: 55px;
+    }
+    &__microphone,
+    &__clip {
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+    &__message {
+      padding-top: 12px;
+
+      &&-text {
+        margin-bottom: 12px;
+        background: #fff;
+        border-radius: 6px;
+        border: solid 1px #d3d9de;
+      }
+    }
+  }
+
+  &_body {
+    height: 20px;
   }
 }

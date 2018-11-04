@@ -39,7 +39,13 @@ class Menu extends Component {
     return (
       <Navbar color='light' light expand='md'>
         <Container>
-          <NavbarBrand tag={Link} to='/'>Do Your Meme</NavbarBrand>
+          <NavbarBrand
+            tag={Link}
+            to='/'
+            onClick={this.handleExpendCollapse}
+          >
+            Do Your Meme
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
