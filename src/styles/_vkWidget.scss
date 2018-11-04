@@ -62,9 +62,12 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      float: right;
-      margin-right: 15px;
-      margin-top: 7px;
+
+      &-container {
+        float: right;
+        margin-right: 15px;
+        margin-top: 7px;
+      }
     }
     &__dots {
       margin-left: 15px;
@@ -121,24 +124,22 @@
       }
       &-placeholder {
         width: 50%;
-        max-height: 200px;
         border-radius: 6px;
-        padding: 9px 0 10px 13px;
-        box-sizing: border-box;
+        padding: 10px 0 8px 13px;
         color: #828282;
         display: inline-block;
       }
     }
     &__smile {
       display: inline-block;
-      padding: 7px 14px 6px 3px;
+      padding: 6px 14px 6px 3px;
       float: right;
       opacity: 0.7;
     }
     &__photo {
       float: right;
       display: inline-block;
-      padding: 7px 7px 6px 5px;
+      padding: 6px 7px 6px 5px;
       opacity: 0.7;
     }
   }

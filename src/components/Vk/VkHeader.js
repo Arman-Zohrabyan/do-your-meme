@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { UserImage } from './mini';
 
 class VkHeader extends Component {
   render() {
-    const { name, time, img, isMobile } = this.props;
+    const { companion, time, img, isMobile } = this.props;
 
     return (
       <div className='vk-widget_header'>
@@ -17,7 +18,7 @@ class VkHeader extends Component {
         </div>
         <div className='vk-widget_header__center'>
           <div className='vk-widget_header__user-name'>
-            {name}
+            {companion}
           </div>
           <div className='vk-widget_header__online-status'>
             {time}
@@ -30,10 +31,9 @@ class VkHeader extends Component {
           </div>
         </div>
         <div className='vk-widget_header__right'>
-          <img
-            className='vk-widget_header__mini-img'
-            src='./assets/images/user.png'
-          />
+          <div className='vk-widget_header__mini-img-container'>
+            <UserImage imgUrl={img} />
+          </div>
           <img
             className='vk-widget_header__dots'
             src='./assets/images/dots.svg'

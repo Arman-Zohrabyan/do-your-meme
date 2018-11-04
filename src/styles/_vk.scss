@@ -9,4 +9,21 @@
     padding: 10px 15px;
     border-radius: 5px;
   }
+
+  &_text {
+    &__inline {
+      display: inline-block;
+    }
+    &__label {
+      color: #828282;
+      font-size: 13px;
+      margin: 5px 0;
+    }
+    &__input {
+      border: 1px solid #d3d9de;
+      border-radius: 3px;
+      padding: 2px 5px;
+      outline: none;
+    }
+  }
 }

@@ -4,12 +4,15 @@ import VkFooter from './Vk/VkFooter';
 
 class Vk extends Component {
   render() {
+    const { header } = this.props;
+
     return (
       <div className='vk-widget'>
         <VkHeader
-          name={'Тестовое Имя'}
-          time={'был в сети только что'}
-          img={''}
+          companion={header.companion}
+          time={header.time}
+          isMobile={header.mobile}
+          img={header.userImage}
         />
 
         <div className='vk-widget_body'>

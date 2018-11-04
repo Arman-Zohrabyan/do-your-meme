@@ -1,7 +1,7 @@
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import test from './test/testReducer';
+import vk from './vk/reducer';
 
 
 class Store {
@@ -12,7 +12,7 @@ class Store {
    */
   static getInitialReducers() {
     return {
-      test,
+      vk,
     };
   }
 
