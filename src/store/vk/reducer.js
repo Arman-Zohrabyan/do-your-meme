@@ -4,13 +4,19 @@ const initialState = {
     footer: true
   },
   header: {
-    companion: 'Тестовое имя',
     time: 'был в сети только что',
-    mobile: false,
-    userImage: null
+    mobile: false
   },
   content: {
     height: 100
+  },
+  companion: {
+    name: 'Собеседник Беседник',
+    image: null
+  },
+  current: {
+    name: 'Текущий пользователь',
+    image: null
   }
 };
 

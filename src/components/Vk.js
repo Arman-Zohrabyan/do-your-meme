@@ -4,16 +4,20 @@ import VkFooter from './Vk/VkFooter';
 
 class Vk extends Component {
   renderHeader = () => {
-    const { header, components } = this.props;
+    const {
+      header,
+      components,
+      companion
+    } = this.props;
     if (!components.header) {
       return null;
     }
     return (
       <VkHeader
-        companion={header.companion}
+        companion={companion.name}
         time={header.time}
         isMobile={header.mobile}
-        img={header.userImage}
+        img={companion.image}
       />
     );
   }

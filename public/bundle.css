@@ -60,13 +60,17 @@ body {
       font-size: 16px; }
       .widget-right__config-title.border-top {
         padding-top: 10px;
-        margin-top: 5px; }
+        margin-top: 5px;
+        border-top: 1px solid #dee2e6 !important; }
 
 .hide-element {
   display: none; }
 
 .vk-container {
   text-align: center; }
+  .vk-container__preview {
+    font-size: 20px;
+    color: #555; }
 
 .vk-chat {
   text-align: center;
