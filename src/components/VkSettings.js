@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, CheckBox } from './Vk/mini';
+import { TextInput, CheckBox, UserImageSelect } from './Vk/mini';
 
 class VkSettings extends Component {
   render() {
@@ -9,7 +9,9 @@ class VkSettings extends Component {
       companion,
       current,
       content,
-      onChange
+      temp,
+      onChange,
+      onChangeImage
     } = this.props;
 
     return (
@@ -28,6 +30,7 @@ class VkSettings extends Component {
             onChange={e => onChange(e.target.checked, 'header', 'mobile')}
             table
           />
+
           <h3 className='widget-right__config-title border-top'>Текущий пользователь</h3>
           <TextInput
             label={'Полное имя'}
@@ -35,6 +38,15 @@ class VkSettings extends Component {
             onChange={e => onChange(e.target.value, 'current', 'name')}
             table
           />
+          <UserImageSelect
+            label={'Аватар'}
+            imgUrl={current.image}
+            imgTemp={temp.currentImg}
+            tempKey='current'
+            onChange={onChange}
+            onChangeImage={onChangeImage}
+          />
+
           <h3 className='widget-right__config-title border-top'>Собеседник</h3>
           <TextInput
             label={'Полное имя'}
@@ -42,6 +54,15 @@ class VkSettings extends Component {
             onChange={e => onChange(e.target.value, 'companion', 'name')}
             table
           />
+          <UserImageSelect
+            label={'Аватар'}
+            imgUrl={companion.image}
+            imgTemp={temp.companionImg}
+            tempKey='companion'
+            onChange={onChange}
+            onChangeImage={onChangeImage}
+          />
+
           <h3 className='widget-right__config-title border-top'>Контент</h3>
           <TextInput
             label={'Высота контента'}
@@ -50,6 +71,7 @@ class VkSettings extends Component {
             type='number'
             table
           />
+
           <h3 className='widget-right__config-title border-top'>Разделы</h3>
           <CheckBox
             label={'Показать верхнюю часть'}

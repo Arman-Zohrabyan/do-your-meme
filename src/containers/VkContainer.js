@@ -3,19 +3,19 @@ import { Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import Vk from '../components/Vk';
 import VkSettings from '../components/VkSettings';
-import { change } from '../store/vk/actions';
+import { change, changeImage } from '../store/vk/actions';
 
 
 class VkContainer extends Component {
   render() {
-    const { vk, onChange } = this.props;
+    const { vk, onChange, onChangeImage } = this.props;
 
     return (
       <Row className=''>
         <Col md='12' lg='8' xl='7' className='widget-left'>
           <div className='vk-container'>
             <h2 className='vk-container__preview'>
-              Предварительный показ скриншота
+              Предварительный показ диалога
             </h2>
             <div className='vk-chat' style={{backgroundImage: 'url("./assets/images/descont.png")'}}>
               <Vk
@@ -34,7 +34,9 @@ class VkContainer extends Component {
             content={vk.content}
             current={vk.current}
             companion={vk.companion}
+            temp={vk.temp}
             onChange={onChange}
+            onChangeImage={onChangeImage}
           />
         </Col>
       </Row>
@@ -49,6 +51,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onChange: (value, section, key) => {
     dispatch(change(value, section, key));
+  },
+  onChangeImage: (type, key, img) => {
+    dispatch(changeImage(type, key, img))
   }
 });
 

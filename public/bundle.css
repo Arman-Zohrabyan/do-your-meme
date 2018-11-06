@@ -34,7 +34,8 @@ body {
   background: #edeef0; }
 
 .widget-right, .widget-left {
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .widget-right {
   text-align: center; }
@@ -79,6 +80,47 @@ body {
   padding: 10px 15px;
   border-radius: 5px; }
 
+.vk_form__img-select-button {
+  margin-top: 1px;
+  height: 25px;
+  background-color: #e5ebf1;
+  color: #55677d;
+  border-color: #d8d8d8 #d1d1d1 #bababa;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px 7px 2px;
+  outline: none;
+  opacity: 0.8; }
+  .vk_form__img-select-button:focus {
+    outline: none; }
+  .vk_form__img-select-button:hover {
+    opacity: 1;
+    cursor: pointer; }
+  .vk_form__img-select-button.upload-button {
+    width: 100%;
+    text-align: center; }
+
+.vk_form__img-select-label {
+  width: 100%;
+  margin-top: 8px; }
+
+.vk_form__img-select-input {
+  border: 1px solid #d3d9de;
+  border-radius: 3px;
+  padding: 2px 5px;
+  outline: none;
+  width: 130px; }
+
+.vk_form__img-select-right {
+  float: right;
+  padding: 2px 5px;
+  width: 70%;
+  text-align: right; }
+
+.vk_form__img-select-left {
+  display: inline-block;
+  margin-top: 16px; }
+
 .vk_form__inline {
   display: inline-block; }
 
@@ -111,7 +153,8 @@ body {
     display: inline-block;
     float: right;
     padding-top: 3px;
-    height: 25px; }
+    height: 25px;
+    text-align: center; }
   .vk_form__checkbox:hover {
     opacity: 0.7; }
 

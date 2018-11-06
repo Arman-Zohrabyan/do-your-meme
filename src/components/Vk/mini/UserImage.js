@@ -1,9 +1,6 @@
 import React from 'react';
-import constants from '../../../../config/constants';
 
-function UserImage({ imgUrl = constants.defaultImage }) {
-  imgUrl = imgUrl || constants.defaultImage;
-
+function UserImage({ imgUrl }) {
   return (
     <img
       className='vk-widget_header__mini-img'

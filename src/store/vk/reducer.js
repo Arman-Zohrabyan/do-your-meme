@@ -1,3 +1,6 @@
+import constants from '../../../config/constants';
+
+
 const initialState = {
   components: {
     header: true,
@@ -12,11 +15,15 @@ const initialState = {
   },
   companion: {
     name: 'Собеседник Беседник',
-    image: null
+    image: constants.defaultImage
   },
   current: {
     name: 'Текущий пользователь',
-    image: null
+    image: constants.defaultImage
+  },
+  temp: {
+    companionImg: '',
+    currentImg: ''
   }
 };
 
@@ -28,6 +35,12 @@ const vk = (state = initialState, action) => {
       const { section, key, value } = action;
       _state = { ...state };
       _state[section][key] = value;
+      return _state;
+    }
+    case 'VK_CHANGE_IMAGE': {
+      const { src, key } = action;
+      _state = { ...state };
+      _state[key].image = src;
       return _state;
     }
     default: {

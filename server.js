@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -110,11 +110,11 @@ var _routes = __webpack_require__(5);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _Menu = __webpack_require__(18);
+var _Menu = __webpack_require__(24);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _NoMatch = __webpack_require__(21);
+var _NoMatch = __webpack_require__(27);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
@@ -195,15 +195,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _VkContainer = __webpack_require__(10);
+var _VkContainer = __webpack_require__(12);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
-var _Home = __webpack_require__(16);
+var _Home = __webpack_require__(22);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Fb = __webpack_require__(17);
+var _Fb = __webpack_require__(23);
 
 var _Fb2 = _interopRequireDefault(_Fb);
 
@@ -238,6 +238,12 @@ exports.default = routes;
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -246,28 +252,39 @@ exports.default = routes;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CheckBox = exports.TextInput = exports.UserImage = undefined;
+exports.CheckBox = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
 
-var _UserImage = __webpack_require__(13);
+var _UserImage = __webpack_require__(15);
 
 var _UserImage2 = _interopRequireDefault(_UserImage);
 
-var _TextInput = __webpack_require__(14);
+var _UserImageSelect = __webpack_require__(40);
+
+var _UserImageSelect2 = _interopRequireDefault(_UserImageSelect);
+
+var _TextInput = __webpack_require__(17);
 
 var _TextInput2 = _interopRequireDefault(_TextInput);
 
-var _CheckBox = __webpack_require__(40);
+var _CheckBox = __webpack_require__(18);
 
 var _CheckBox2 = _interopRequireDefault(_CheckBox);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+exports.UserImageSelect = _UserImageSelect2.default;
 exports.UserImage = _UserImage2.default;
 exports.TextInput = _TextInput2.default;
 exports.CheckBox = _CheckBox2.default;
 
 /***/ }),
-/* 7 */
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("classnames");
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -284,17 +301,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(27);
+var _server = __webpack_require__(33);
 
 var _reactRouterDom = __webpack_require__(1);
 
-var _reactRedux = __webpack_require__(28);
+var _reactRedux = __webpack_require__(6);
 
-var _serializeJavascript = __webpack_require__(29);
+var _serializeJavascript = __webpack_require__(34);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _Store = __webpack_require__(30);
+var _Store = __webpack_require__(35);
 
 var _Store2 = _interopRequireDefault(_Store);
 
@@ -381,7 +398,7 @@ var PageGenerator = function () {
 exports.default = PageGenerator;
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -391,7 +408,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _cors = __webpack_require__(9);
+var _cors = __webpack_require__(11);
 
 var _cors2 = _interopRequireDefault(_cors);
 
@@ -399,13 +416,13 @@ var _App = __webpack_require__(4);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _customMiddlewares = __webpack_require__(22);
+var _customMiddlewares = __webpack_require__(28);
 
 var _customMiddlewares2 = _interopRequireDefault(_customMiddlewares);
 
-var _routerSocialPages = __webpack_require__(26);
+var _routerSocialPages = __webpack_require__(32);
 
-var _routerHome = __webpack_require__(34);
+var _routerHome = __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -443,13 +460,13 @@ app.listen(PORT, function () {
 });
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("cors");
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -467,17 +484,17 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactstrap = __webpack_require__(3);
 
-var _reactRedux = __webpack_require__(28);
+var _reactRedux = __webpack_require__(6);
 
-var _Vk = __webpack_require__(11);
+var _Vk = __webpack_require__(13);
 
 var _Vk2 = _interopRequireDefault(_Vk);
 
-var _VkSettings = __webpack_require__(41);
+var _VkSettings = __webpack_require__(20);
 
 var _VkSettings2 = _interopRequireDefault(_VkSettings);
 
-var _actions = __webpack_require__(39);
+var _actions = __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -501,7 +518,8 @@ var VkContainer = function (_Component) {
     value: function render() {
       var _props = this.props,
           vk = _props.vk,
-          onChange = _props.onChange;
+          onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
 
 
       return _react2.default.createElement(
@@ -516,7 +534,7 @@ var VkContainer = function (_Component) {
             _react2.default.createElement(
               'h2',
               { className: 'vk-container__preview' },
-              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0441\u043A\u0440\u0438\u043D\u0448\u043E\u0442\u0430'
+              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
             ),
             _react2.default.createElement(
               'div',
@@ -539,7 +557,9 @@ var VkContainer = function (_Component) {
             content: vk.content,
             current: vk.current,
             companion: vk.companion,
-            onChange: onChange
+            temp: vk.temp,
+            onChange: onChange,
+            onChangeImage: onChangeImage
           })
         )
       );
@@ -559,6 +579,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onChange: function onChange(value, section, key) {
       dispatch((0, _actions.change)(value, section, key));
+    },
+    onChangeImage: function onChangeImage(type, key, img) {
+      dispatch((0, _actions.changeImage)(type, key, img));
     }
   };
 };
@@ -566,7 +589,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -582,11 +605,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _VkHeader = __webpack_require__(12);
+var _VkHeader = __webpack_require__(14);
 
 var _VkHeader2 = _interopRequireDefault(_VkHeader);
 
-var _VkFooter = __webpack_require__(15);
+var _VkFooter = __webpack_require__(19);
 
 var _VkFooter2 = _interopRequireDefault(_VkFooter);
 
@@ -663,7 +686,7 @@ var Vk = function (_Component) {
 exports.default = Vk;
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -679,7 +702,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mini = __webpack_require__(6);
+var _mini = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -769,7 +792,7 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -783,17 +806,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__(37);
-
-var _constants2 = _interopRequireDefault(_constants);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function UserImage(_ref) {
-  var _ref$imgUrl = _ref.imgUrl,
-      imgUrl = _ref$imgUrl === undefined ? _constants2.default.defaultImage : _ref$imgUrl;
-
-  imgUrl = imgUrl || _constants2.default.defaultImage;
+  var imgUrl = _ref.imgUrl;
 
   return _react2.default.createElement('img', {
     className: 'vk-widget_header__mini-img',
@@ -804,7 +820,21 @@ function UserImage(_ref) {
 exports.default = UserImage;
 
 /***/ }),
-/* 14 */
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  defaultImage: './assets/images/user.png'
+};
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -818,7 +848,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(35);
+var _classnames = __webpack_require__(8);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -863,7 +893,74 @@ function TextInput(_ref) {
 exports.default = TextInput;
 
 /***/ }),
-/* 15 */
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = __webpack_require__(8);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CheckBox(_ref) {
+  var label = _ref.label,
+      checked = _ref.checked,
+      onChange = _ref.onChange,
+      inline = _ref.inline,
+      table = _ref.table;
+
+  var wrapper = (0, _classnames2.default)({
+    'vk_form': true,
+    'vk_form__inline': inline,
+    'vk_form__table': table
+  });
+
+  var image = checked ? 'checked' : 'check';
+
+  return _react2.default.createElement(
+    'div',
+    { className: wrapper },
+    _react2.default.createElement(
+      'label',
+      { className: 'vk_form__label' },
+      _react2.default.createElement(
+        'span',
+        { className: 'vk_form__label-text' },
+        label + ': '
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__checkbox-wrapper' },
+        _react2.default.createElement('img', {
+          src: './assets/images/' + image + '.svg',
+          className: 'vk_form__checkbox'
+        }),
+        _react2.default.createElement('input', {
+          className: 'hide-element',
+          type: 'checkbox',
+          checked: checked,
+          onChange: onChange
+        })
+      )
+    )
+  );
+}
+
+exports.default = CheckBox;
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -953,7 +1050,215 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 16 */
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _mini = __webpack_require__(7);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VkSettings = function (_Component) {
+  _inherits(VkSettings, _Component);
+
+  function VkSettings() {
+    _classCallCheck(this, VkSettings);
+
+    return _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).apply(this, arguments));
+  }
+
+  _createClass(VkSettings, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          header = _props.header,
+          components = _props.components,
+          companion = _props.companion,
+          current = _props.current,
+          content = _props.content,
+          temp = _props.temp,
+          _onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'widget-right__wrapper' },
+        _react2.default.createElement(
+          'div',
+          { className: 'widget-right__config' },
+          _react2.default.createElement(
+            'h3',
+            { className: 'widget-right__config-title' },
+            '\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0447\u0430\u0441\u0442\u044C'
+          ),
+          _react2.default.createElement(_mini.TextInput, {
+            label: 'Время в сети',
+            value: header.time,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'header', 'time');
+            },
+            table: true
+          }),
+          _react2.default.createElement(_mini.CheckBox, {
+            label: 'С мобильного',
+            checked: header.mobile,
+            onChange: function onChange(e) {
+              return _onChange(e.target.checked, 'header', 'mobile');
+            },
+            table: true
+          }),
+          _react2.default.createElement(
+            'h3',
+            { className: 'widget-right__config-title border-top' },
+            '\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C'
+          ),
+          _react2.default.createElement(_mini.TextInput, {
+            label: 'Полное имя',
+            value: current.name,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'current', 'name');
+            },
+            table: true
+          }),
+          _react2.default.createElement(_mini.UserImageSelect, {
+            label: 'Аватар',
+            imgUrl: current.image,
+            imgTemp: temp.currentImg,
+            tempKey: 'current',
+            onChange: _onChange,
+            onChangeImage: onChangeImage
+          }),
+          _react2.default.createElement(
+            'h3',
+            { className: 'widget-right__config-title border-top' },
+            '\u0421\u043E\u0431\u0435\u0441\u0435\u0434\u043D\u0438\u043A'
+          ),
+          _react2.default.createElement(_mini.TextInput, {
+            label: 'Полное имя',
+            value: companion.name,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'companion', 'name');
+            },
+            table: true
+          }),
+          _react2.default.createElement(_mini.UserImageSelect, {
+            label: 'Аватар',
+            imgUrl: companion.image,
+            imgTemp: temp.companionImg,
+            tempKey: 'companion',
+            onChange: _onChange,
+            onChangeImage: onChangeImage
+          }),
+          _react2.default.createElement(
+            'h3',
+            { className: 'widget-right__config-title border-top' },
+            '\u041A\u043E\u043D\u0442\u0435\u043D\u0442'
+          ),
+          _react2.default.createElement(_mini.TextInput, {
+            label: 'Высота контента',
+            value: content.height,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'content', 'height');
+            },
+            type: 'number',
+            table: true
+          }),
+          _react2.default.createElement(
+            'h3',
+            { className: 'widget-right__config-title border-top' },
+            '\u0420\u0430\u0437\u0434\u0435\u043B\u044B'
+          ),
+          _react2.default.createElement(_mini.CheckBox, {
+            label: 'Показать верхнюю часть',
+            checked: components.header,
+            onChange: function onChange(e) {
+              return _onChange(e.target.checked, 'components', 'header');
+            },
+            table: true
+          }),
+          _react2.default.createElement(_mini.CheckBox, {
+            label: 'Показать нижнюю часть',
+            checked: components.footer,
+            onChange: function onChange(e) {
+              return _onChange(e.target.checked, 'components', 'footer');
+            },
+            table: true
+          })
+        )
+      );
+    }
+  }]);
+
+  return VkSettings;
+}(_react.Component);
+
+exports.default = VkSettings;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var change = exports.change = function change(value, section, key) {
+  return {
+    type: 'VK_CHANGE_DATA',
+    section: section,
+    value: value,
+    key: key
+  };
+};
+
+var changeImage = exports.changeImage = function changeImage(type, key, img) {
+  return function (dispatch) {
+    if (type === 'temp') {
+      dispatch({
+        type: 'VK_CHANGE_IMAGE',
+        src: img,
+        key: key
+      });
+    } else {
+      var reader = new FileReader();
+      reader.readAsDataURL(img.target.files[0]);
+      reader.onload = function () {
+        dispatch({
+          type: 'VK_CHANGE_IMAGE',
+          src: reader.result,
+          key: key
+        });
+      };
+      reader.onerror = function (error) {
+        console.log('Error: ', error);
+      };
+    }
+  };
+};
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -979,7 +1284,7 @@ function Home() {
 }
 
 /***/ }),
-/* 17 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1005,7 +1310,7 @@ function Fb() {
 }
 
 /***/ }),
-/* 18 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1023,11 +1328,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(1);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(25);
 
 var _reactstrap = __webpack_require__(3);
 
-var _StringHelper = __webpack_require__(20);
+var _StringHelper = __webpack_require__(26);
 
 var _StringHelper2 = _interopRequireDefault(_StringHelper);
 
@@ -1158,13 +1463,13 @@ var Menu = function (_Component) {
 exports.default = (0, _reactRouter.withRouter)(Menu);
 
 /***/ }),
-/* 19 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router");
 
 /***/ }),
-/* 20 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1197,7 +1502,7 @@ var StringHelper = function () {
 exports.default = StringHelper;
 
 /***/ }),
-/* 21 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1223,7 +1528,7 @@ function NoMatch() {
 }
 
 /***/ }),
-/* 22 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1233,7 +1538,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _RequestHandlers = __webpack_require__(23);
+var _RequestHandlers = __webpack_require__(29);
 
 var _RequestHandlers2 = _interopRequireDefault(_RequestHandlers);
 
@@ -1249,7 +1554,7 @@ var customMiddlewares = function customMiddlewares(req, res, next) {
 exports.default = customMiddlewares;
 
 /***/ }),
-/* 23 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1261,11 +1566,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _reactRouterDom = __webpack_require__(1);
 
-var _geoipLite = __webpack_require__(24);
+var _geoipLite = __webpack_require__(30);
 
 var _geoipLite2 = _interopRequireDefault(_geoipLite);
 
-var _requestIp = __webpack_require__(25);
+var _requestIp = __webpack_require__(31);
 
 var _requestIp2 = _interopRequireDefault(_requestIp);
 
@@ -1299,19 +1604,19 @@ RequestHandlers.getLanguage = function (req) {
 exports.default = RequestHandlers;
 
 /***/ }),
-/* 24 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("geoip-lite");
 
 /***/ }),
-/* 25 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("request-ip");
 
 /***/ }),
-/* 26 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1326,7 +1631,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _PageGenerator = __webpack_require__(7);
+var _PageGenerator = __webpack_require__(9);
 
 var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
 
@@ -1355,25 +1660,19 @@ function facebook(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 27 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-redux");
-
-/***/ }),
-/* 29 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 30 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1385,9 +1684,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _redux = __webpack_require__(31);
+var _redux = __webpack_require__(36);
 
-var _reduxThunk = __webpack_require__(32);
+var _reduxThunk = __webpack_require__(37);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
@@ -1441,75 +1740,16 @@ var Store = function () {
 exports.default = Store;
 
 /***/ }),
-/* 31 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 32 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
-
-/***/ }),
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.router = undefined;
-
-var _express = __webpack_require__(2);
-
-var _express2 = _interopRequireDefault(_express);
-
-var _PageGenerator = __webpack_require__(7);
-
-var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import Promise from 'bluebird';
-
-
-var router = _express2.default.Router();
-
-router.get('/', home);
-
-function home(req, res) {
-  var activeRoute = res.locals.activeRoute;
-
-  res.send(_PageGenerator2.default.getPage({}, activeRoute.config, req.url));
-};
-
-exports.router = router;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-module.exports = require("classnames");
-
-/***/ }),
-/* 36 */,
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  defaultImage: './assets/images/user.png'
-};
 
 /***/ }),
 /* 38 */
@@ -1523,6 +1763,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _constants = __webpack_require__(16);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var initialState = {
   components: {
@@ -1538,11 +1784,15 @@ var initialState = {
   },
   companion: {
     name: 'Собеседник Беседник',
-    image: null
+    image: _constants2.default.defaultImage
   },
   current: {
     name: 'Текущий пользователь',
-    image: null
+    image: _constants2.default.defaultImage
+  },
+  temp: {
+    companionImg: '',
+    currentImg: ''
   }
 };
 
@@ -1561,6 +1811,15 @@ var vk = function vk() {
 
         _state = _extends({}, state);
         _state[section][key] = value;
+        return _state;
+      }
+    case 'VK_CHANGE_IMAGE':
+      {
+        var src = action.src,
+            _key = action.key;
+
+        _state = _extends({}, state);
+        _state[_key].image = src;
         return _state;
       }
     default:
@@ -1582,14 +1841,32 @@ exports.default = vk;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var change = exports.change = function change(value, section, key) {
-  return {
-    type: 'VK_CHANGE_DATA',
-    section: section,
-    value: value,
-    key: key
-  };
+exports.router = undefined;
+
+var _express = __webpack_require__(2);
+
+var _express2 = _interopRequireDefault(_express);
+
+var _PageGenerator = __webpack_require__(9);
+
+var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Promise from 'bluebird';
+
+
+var router = _express2.default.Router();
+
+router.get('/', home);
+
+function home(req, res) {
+  var activeRoute = res.locals.activeRoute;
+
+  res.send(_PageGenerator2.default.getPage({}, activeRoute.config, req.url));
 };
+
+exports.router = router;
 
 /***/ }),
 /* 40 */
@@ -1606,203 +1883,83 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(35);
+var _UserImage = __webpack_require__(15);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _UserImage2 = _interopRequireDefault(_UserImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function CheckBox(_ref) {
-  var label = _ref.label,
-      checked = _ref.checked,
-      onChange = _ref.onChange,
-      inline = _ref.inline,
-      table = _ref.table;
-
-  var wrapper = (0, _classnames2.default)({
-    'vk_form': true,
-    'vk_form__inline': inline,
-    'vk_form__table': table
-  });
-
-  var image = checked ? 'checked' : 'check';
+function UserImageSelect(_ref) {
+  var imgUrl = _ref.imgUrl,
+      label = _ref.label,
+      imgTemp = _ref.imgTemp,
+      onChangeImage = _ref.onChangeImage,
+      _onChange = _ref.onChange,
+      tempKey = _ref.tempKey;
 
   return _react2.default.createElement(
     'div',
-    { className: wrapper },
+    { className: 'vk_form vk_form__table' },
     _react2.default.createElement(
-      'label',
-      { className: 'vk_form__label' },
+      'div',
+      { className: 'vk_form__label clearfix' },
       _react2.default.createElement(
-        'span',
-        { className: 'vk_form__label-text' },
-        label + ': '
+        'div',
+        { className: 'vk_form__img-select-left' },
+        label,
+        ': ',
+        _react2.default.createElement(_UserImage2.default, { imgUrl: imgUrl })
       ),
       _react2.default.createElement(
         'div',
-        { className: 'vk_form__checkbox-wrapper' },
-        _react2.default.createElement('img', {
-          src: './assets/images/' + image + '.svg',
-          className: 'vk_form__checkbox'
-        }),
-        _react2.default.createElement('input', {
-          className: 'hide-element',
-          type: 'checkbox',
-          checked: checked,
-          onChange: onChange
-        })
+        { className: 'vk_form__img-select-right' },
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('input', {
+            className: 'vk_form__img-select-input',
+            type: 'text',
+            placeholder: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E \u0441\u0441\u044B\u043B\u043A\u0435',
+            value: imgTemp,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'temp', tempKey + 'Img');
+            }
+          }),
+          _react2.default.createElement(
+            'button',
+            {
+              className: 'vk_form__img-select-button',
+              onClick: function onClick() {
+                return onChangeImage('temp', tempKey, imgTemp);
+              }
+            },
+            '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C'
+          )
+        ),
+        _react2.default.createElement(
+          'label',
+          { className: 'vk_form__img-select-label' },
+          _react2.default.createElement(
+            'div',
+            {
+              className: 'vk_form__img-select-button upload-button'
+            },
+            '\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0430\u0432\u0430\u0442\u0430\u0440'
+          ),
+          _react2.default.createElement('input', {
+            className: 'd-none',
+            type: 'file',
+            onChange: function onChange(image) {
+              return onChangeImage('file', tempKey, image);
+            }
+          })
+        )
       )
     )
   );
 }
 
-exports.default = CheckBox;
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _mini = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var VkSettings = function (_Component) {
-  _inherits(VkSettings, _Component);
-
-  function VkSettings() {
-    _classCallCheck(this, VkSettings);
-
-    return _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).apply(this, arguments));
-  }
-
-  _createClass(VkSettings, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          header = _props.header,
-          components = _props.components,
-          companion = _props.companion,
-          current = _props.current,
-          content = _props.content,
-          _onChange = _props.onChange;
-
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'widget-right__wrapper' },
-        _react2.default.createElement(
-          'div',
-          { className: 'widget-right__config' },
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title' },
-            '\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0447\u0430\u0441\u0442\u044C'
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: 'Время в сети',
-            value: header.time,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'header', 'time');
-            },
-            table: true
-          }),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: 'С мобильного',
-            checked: header.mobile,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'header', 'mobile');
-            },
-            table: true
-          }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            '\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C'
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: 'Полное имя',
-            value: current.name,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'current', 'name');
-            },
-            table: true
-          }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            '\u0421\u043E\u0431\u0435\u0441\u0435\u0434\u043D\u0438\u043A'
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: 'Полное имя',
-            value: companion.name,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'companion', 'name');
-            },
-            table: true
-          }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            '\u041A\u043E\u043D\u0442\u0435\u043D\u0442'
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: 'Высота контента',
-            value: content.height,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'content', 'height');
-            },
-            type: 'number',
-            table: true
-          }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            '\u0420\u0430\u0437\u0434\u0435\u043B\u044B'
-          ),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: 'Показать верхнюю часть',
-            checked: components.header,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'components', 'header');
-            },
-            table: true
-          }),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: 'Показать нижнюю часть',
-            checked: components.footer,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'components', 'footer');
-            },
-            table: true
-          })
-        )
-      );
-    }
-  }]);
-
-  return VkSettings;
-}(_react.Component);
-
-exports.default = VkSettings;
+exports.default = UserImageSelect;
 
 /***/ })
 /******/ ]);
