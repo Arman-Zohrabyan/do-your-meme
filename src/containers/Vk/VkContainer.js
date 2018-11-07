@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
-import Vk from '../components/Vk';
-import VkSettings from '../components/VkSettings';
-import { change, changeImage } from '../store/vk/actions';
+import Vk from '../../components/Vk';
+import VkSettings from '../../components/VkSettings';
+import { change, changeImage } from '../../store/vk/actions';
 
 
 class VkContainer extends Component {

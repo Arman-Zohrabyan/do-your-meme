@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -195,7 +195,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _VkContainer = __webpack_require__(12);
+var _VkContainer = __webpack_require__(41);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
@@ -254,11 +254,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CheckBox = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
 
-var _UserImage = __webpack_require__(15);
+var _UserImage = __webpack_require__(8);
 
 var _UserImage2 = _interopRequireDefault(_UserImage);
 
-var _UserImageSelect = __webpack_require__(40);
+var _UserImageSelect = __webpack_require__(16);
 
 var _UserImageSelect2 = _interopRequireDefault(_UserImageSelect);
 
@@ -279,12 +279,40 @@ exports.CheckBox = _CheckBox2.default;
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function UserImage(_ref) {
+  var imgUrl = _ref.imgUrl;
+
+  return _react2.default.createElement('img', {
+    className: 'vk-widget_header__mini-img',
+    src: imgUrl
+  });
+}
+
+exports.default = UserImage;
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -398,7 +426,7 @@ var PageGenerator = function () {
 exports.default = PageGenerator;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -408,7 +436,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _cors = __webpack_require__(11);
+var _cors = __webpack_require__(12);
 
 var _cors2 = _interopRequireDefault(_cors);
 
@@ -422,7 +450,7 @@ var _customMiddlewares2 = _interopRequireDefault(_customMiddlewares);
 
 var _routerSocialPages = __webpack_require__(32);
 
-var _routerHome = __webpack_require__(39);
+var _routerHome = __webpack_require__(40);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -460,13 +488,14 @@ app.listen(PORT, function () {
 });
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("cors");
 
 /***/ }),
-/* 12 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -482,130 +511,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactstrap = __webpack_require__(3);
-
-var _reactRedux = __webpack_require__(6);
-
-var _Vk = __webpack_require__(13);
-
-var _Vk2 = _interopRequireDefault(_Vk);
-
-var _VkSettings = __webpack_require__(20);
-
-var _VkSettings2 = _interopRequireDefault(_VkSettings);
-
-var _actions = __webpack_require__(21);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var VkContainer = function (_Component) {
-  _inherits(VkContainer, _Component);
-
-  function VkContainer() {
-    _classCallCheck(this, VkContainer);
-
-    return _possibleConstructorReturn(this, (VkContainer.__proto__ || Object.getPrototypeOf(VkContainer)).apply(this, arguments));
-  }
-
-  _createClass(VkContainer, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          vk = _props.vk,
-          onChange = _props.onChange,
-          onChangeImage = _props.onChangeImage;
-
-
-      return _react2.default.createElement(
-        _reactstrap.Row,
-        { className: '' },
-        _react2.default.createElement(
-          _reactstrap.Col,
-          { md: '12', lg: '8', xl: '7', className: 'widget-left' },
-          _react2.default.createElement(
-            'div',
-            { className: 'vk-container' },
-            _react2.default.createElement(
-              'h2',
-              { className: 'vk-container__preview' },
-              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
-              _react2.default.createElement(_Vk2.default, {
-                components: vk.components,
-                header: vk.header,
-                content: vk.content,
-                companion: vk.companion
-              })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _reactstrap.Col,
-          { md: '12', lg: '4', xl: '5', className: 'widget-right' },
-          _react2.default.createElement(_VkSettings2.default, {
-            components: vk.components,
-            header: vk.header,
-            content: vk.content,
-            current: vk.current,
-            companion: vk.companion,
-            temp: vk.temp,
-            onChange: onChange,
-            onChangeImage: onChangeImage
-          })
-        )
-      );
-    }
-  }]);
-
-  return VkContainer;
-}(_react.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    vk: state.vk
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    onChange: function onChange(value, section, key) {
-      dispatch((0, _actions.change)(value, section, key));
-    },
-    onChangeImage: function onChangeImage(type, key, img) {
-      dispatch((0, _actions.changeImage)(type, key, img));
-    }
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _VkHeader = __webpack_require__(14);
+var _VkHeader = __webpack_require__(15);
 
 var _VkHeader2 = _interopRequireDefault(_VkHeader);
 
@@ -686,7 +592,7 @@ var Vk = function (_Component) {
 exports.default = Vk;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -792,7 +698,7 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -806,32 +712,83 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _UserImage = __webpack_require__(8);
+
+var _UserImage2 = _interopRequireDefault(_UserImage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function UserImage(_ref) {
-  var imgUrl = _ref.imgUrl;
+function UserImageSelect(_ref) {
+  var imgUrl = _ref.imgUrl,
+      label = _ref.label,
+      imgTemp = _ref.imgTemp,
+      onChangeImage = _ref.onChangeImage,
+      _onChange = _ref.onChange,
+      tempKey = _ref.tempKey;
 
-  return _react2.default.createElement('img', {
-    className: 'vk-widget_header__mini-img',
-    src: imgUrl
-  });
+  return _react2.default.createElement(
+    'div',
+    { className: 'vk_form vk_form__table' },
+    _react2.default.createElement(
+      'div',
+      { className: 'vk_form__label clearfix' },
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__img-select-left' },
+        label,
+        ': ',
+        _react2.default.createElement(_UserImage2.default, { imgUrl: imgUrl })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__img-select-right' },
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('input', {
+            className: 'vk_form__img-select-input',
+            type: 'text',
+            placeholder: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E \u0441\u0441\u044B\u043B\u043A\u0435',
+            value: imgTemp,
+            onChange: function onChange(e) {
+              return _onChange(e.target.value, 'temp', tempKey + 'Img');
+            }
+          }),
+          _react2.default.createElement(
+            'button',
+            {
+              className: 'vk_form__img-select-button',
+              onClick: function onClick() {
+                return onChangeImage('temp', tempKey, imgTemp);
+              }
+            },
+            '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C'
+          )
+        ),
+        _react2.default.createElement(
+          'label',
+          { className: 'vk_form__img-select-label' },
+          _react2.default.createElement(
+            'div',
+            {
+              className: 'vk_form__img-select-button upload-button'
+            },
+            '\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0430\u0432\u0430\u0442\u0430\u0440'
+          ),
+          _react2.default.createElement('input', {
+            className: 'd-none',
+            type: 'file',
+            onChange: function onChange(image) {
+              return onChangeImage('file', tempKey, image);
+            }
+          })
+        )
+      )
+    )
+  );
 }
 
-exports.default = UserImage;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  defaultImage: './assets/images/user.png'
-};
+exports.default = UserImageSelect;
 
 /***/ }),
 /* 17 */
@@ -848,7 +805,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(8);
+var _classnames = __webpack_require__(9);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -907,7 +864,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(8);
+var _classnames = __webpack_require__(9);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1631,7 +1588,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _PageGenerator = __webpack_require__(9);
+var _PageGenerator = __webpack_require__(10);
 
 var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
 
@@ -1764,7 +1721,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _constants = __webpack_require__(16);
+var _constants = __webpack_require__(39);
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -1841,13 +1798,27 @@ exports.default = vk;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = {
+  defaultImage: './assets/images/user.png'
+};
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.router = undefined;
 
 var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _PageGenerator = __webpack_require__(9);
+var _PageGenerator = __webpack_require__(10);
 
 var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
 
@@ -1869,7 +1840,7 @@ function home(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1879,87 +1850,117 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _UserImage = __webpack_require__(15);
+var _reactstrap = __webpack_require__(3);
 
-var _UserImage2 = _interopRequireDefault(_UserImage);
+var _reactRedux = __webpack_require__(6);
+
+var _Vk = __webpack_require__(14);
+
+var _Vk2 = _interopRequireDefault(_Vk);
+
+var _VkSettings = __webpack_require__(20);
+
+var _VkSettings2 = _interopRequireDefault(_VkSettings);
+
+var _actions = __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function UserImageSelect(_ref) {
-  var imgUrl = _ref.imgUrl,
-      label = _ref.label,
-      imgTemp = _ref.imgTemp,
-      onChangeImage = _ref.onChangeImage,
-      _onChange = _ref.onChange,
-      tempKey = _ref.tempKey;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return _react2.default.createElement(
-    'div',
-    { className: 'vk_form vk_form__table' },
-    _react2.default.createElement(
-      'div',
-      { className: 'vk_form__label clearfix' },
-      _react2.default.createElement(
-        'div',
-        { className: 'vk_form__img-select-left' },
-        label,
-        ': ',
-        _react2.default.createElement(_UserImage2.default, { imgUrl: imgUrl })
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'vk_form__img-select-right' },
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VkContainer = function (_Component) {
+  _inherits(VkContainer, _Component);
+
+  function VkContainer() {
+    _classCallCheck(this, VkContainer);
+
+    return _possibleConstructorReturn(this, (VkContainer.__proto__ || Object.getPrototypeOf(VkContainer)).apply(this, arguments));
+  }
+
+  _createClass(VkContainer, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          vk = _props.vk,
+          onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
+
+
+      return _react2.default.createElement(
+        _reactstrap.Row,
+        { className: '' },
         _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement('input', {
-            className: 'vk_form__img-select-input',
-            type: 'text',
-            placeholder: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E \u0441\u0441\u044B\u043B\u043A\u0435',
-            value: imgTemp,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'temp', tempKey + 'Img');
-            }
-          }),
+          _reactstrap.Col,
+          { md: '12', lg: '8', xl: '7', className: 'widget-left' },
           _react2.default.createElement(
-            'button',
-            {
-              className: 'vk_form__img-select-button',
-              onClick: function onClick() {
-                return onChangeImage('temp', tempKey, imgTemp);
-              }
-            },
-            '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C'
+            'div',
+            { className: 'vk-container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'vk-container__preview' },
+              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
+              _react2.default.createElement(_Vk2.default, {
+                components: vk.components,
+                header: vk.header,
+                content: vk.content,
+                companion: vk.companion
+              })
+            )
           )
         ),
         _react2.default.createElement(
-          'label',
-          { className: 'vk_form__img-select-label' },
-          _react2.default.createElement(
-            'div',
-            {
-              className: 'vk_form__img-select-button upload-button'
-            },
-            '\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0430\u0432\u0430\u0442\u0430\u0440'
-          ),
-          _react2.default.createElement('input', {
-            className: 'd-none',
-            type: 'file',
-            onChange: function onChange(image) {
-              return onChangeImage('file', tempKey, image);
-            }
+          _reactstrap.Col,
+          { md: '12', lg: '4', xl: '5', className: 'widget-right' },
+          _react2.default.createElement(_VkSettings2.default, {
+            components: vk.components,
+            header: vk.header,
+            content: vk.content,
+            current: vk.current,
+            companion: vk.companion,
+            temp: vk.temp,
+            onChange: onChange,
+            onChangeImage: onChangeImage
           })
         )
-      )
-    )
-  );
-}
+      );
+    }
+  }]);
 
-exports.default = UserImageSelect;
+  return VkContainer;
+}(_react.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    vk: state.vk
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    onChange: function onChange(value, section, key) {
+      dispatch((0, _actions.change)(value, section, key));
+    },
+    onChangeImage: function onChangeImage(type, key, img) {
+      dispatch((0, _actions.changeImage)(type, key, img));
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
 
 /***/ })
 /******/ ]);

@@ -1,4 +1,4 @@
-import VkContainer from './containers/VkContainer';
+import VkContainer from './containers/Vk/VkContainer';
 import Home from './components/Home';
 import Fb from './components/Fb';
 // import { fetchPopularRepos } from './components/api';
