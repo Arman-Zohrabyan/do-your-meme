@@ -1,24 +1,22 @@
 export default {
   'ru': {
-    'header': {
-
+    'titles': {
+      'home': 'Развлекательный сайт',
+      'vk': 'Создать переписку Вконтакте',
+      'fb': 'Создать переписку Фейсбук'
     },
-    'footer': {
-
-    },
-    'content': {
-
-    }
+    'header': '',
+    'footer': '',
+    'content': ''
   },
   'en': {
-    'header': {
-
+    'titles': {
+      'home': 'Entertaining web site',
+      'vk': 'Create a correspondence Vkontakte',
+      'fb': 'Create a correspondence FaceBook'
     },
-    'footer': {
-
-    },
-    'content': {
-
-    }
+    'header': '',
+    'footer': '',
+    'content': ''
   }
 };

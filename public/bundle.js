@@ -34567,8 +34567,6 @@ var _Fb2 = _interopRequireDefault(_Fb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import { fetchPopularRepos } from './components/api';
-
 var routes = [{
   path: '/',
   exact: true,
