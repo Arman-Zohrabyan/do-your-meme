@@ -38429,7 +38429,19 @@ var VkWidget = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'vk-widget_body', style: { height: content.height + 'px' } },
-          _react2.default.createElement('div', { className: 'vk-widget_body__content vk-widget_content' })
+          _react2.default.createElement(
+            'div',
+            { className: 'vk-widget_body__content vk-widget_content' },
+            _react2.default.createElement(
+              'h5',
+              { className: 'vk-widget_content__separator' },
+              _react2.default.createElement(
+                'span',
+                { className: 'vk-widget_content__separator-content' },
+                '6 \u043D\u043E\u044F\u0431\u0440\u044F'
+              )
+            )
+          )
         ),
         this.renderFooter()
       );

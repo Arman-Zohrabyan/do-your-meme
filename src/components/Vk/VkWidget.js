@@ -39,6 +39,9 @@ class VkWidget extends Component {
 
         <div className='vk-widget_body' style={{height: `${content.height}px`}}>
           <div className='vk-widget_body__content vk-widget_content'>
+            <h5 className='vk-widget_content__separator'>
+              <span className='vk-widget_content__separator-content'>6 ноября</span>
+            </h5>
           </div>
         </div>
 

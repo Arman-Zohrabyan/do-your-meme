@@ -146,9 +146,36 @@
 
   &_body {
     width: 550px;
+    padding-top: 14px;
+    padding-bottom: 34px;
     overflow: hidden;
     background: #fff;
     border-left: solid 1px #edeef0;
     border-right: solid 1px #edeef0;
+  }
+
+  &_content {
+    &__separator {
+      color: #828282;
+      text-align: center;
+      font-size: 12.5px;
+      background: #fff;
+      font-weight: 400;
+      position: relative;
+      margin: 0;
+      border: none;
+      padding: 0;
+
+      &-content {
+        line-height: 18px;
+        border-radius: 20px;
+        padding: 3px 15px;
+        position: relative;
+        top: 7px;
+        margin: 10px 0;
+        border: 1px solid transparent;
+        transition: box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+      }
+    }
   }
 }
