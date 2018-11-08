@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { TextInput, CheckBox, UserImageSelect } from './Vk/mini';
-import Language from '../classes/Language';
+import { TextInput, CheckBox, UserImageSelect } from './mini';
+import Language from '../../classes/Language';
 
 class VkSettings extends Component {
   render() {

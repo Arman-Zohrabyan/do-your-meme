@@ -1,8 +1,8 @@
-import RequestHandlers from './RequestHandlers';
+import MiddlewaresHandler from './MiddlewaresHandler';
 
 const customMiddlewares = (req, res, next) => {
-  res.locals.language = RequestHandlers.getLanguage(req);
-  res.locals.activeRoute = RequestHandlers.getActiveRoute(req);
+  res.locals.language = MiddlewaresHandler.getLanguage(req, res);
+  res.locals.activeRoute = MiddlewaresHandler.getActiveRoute(req);
 
   next();
 };

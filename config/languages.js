@@ -1,5 +1,6 @@
 export default {
   'ru': {
+    'store.vk.online': 'был в сети 19 минут назад',
     'titles.home': 'Развлекательный сайт',
     'titles.vk': 'Создать переписку Вконтакте',
     'titles.fb': 'Создать переписку Фейсбук',
@@ -27,11 +28,12 @@ export default {
     'config.imageSelect.upload': 'Загрузить аватар'
   },
   'en': {
+    'store.vk.online': 'was online 19 minutes ago',
     'titles.home': 'Entertaining web site',
     'titles.vk': 'Create a correspondence VKontakte',
     'titles.fb': 'Create a correspondence FaceBook',
     'menu.vk': 'VKontakte',
-    'menu.fb': 'FaceBook',
+    'menu.fb': 'Facebook',
     'content.dialog.title': 'Dialogue preview',
     'content.back': 'Back',
     'content.writeMessage': 'Write a message...',
@@ -49,7 +51,7 @@ export default {
     'config.sections.title': 'Sections',
     'config.sections.top': 'Show top side',
     'config.sections.bottom': 'Show bottom side',
-    'config.imageSelect.link': 'Link to avatar',
+    'config.imageSelect.link': 'Avatar link',
     'config.imageSelect.button': 'Add',
     'config.imageSelect.upload': 'Upload image'
   }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import VkHeader from './Vk/VkHeader';
-import VkFooter from './Vk/VkFooter';
+import VkHeader from './VkHeader';
+import VkFooter from './VkFooter';
 
-class Vk extends Component {
+class VkWidget extends Component {
   renderHeader = () => {
     const {
       header,
@@ -48,4 +48,4 @@ class Vk extends Component {
   }
 }
 
-export default Vk;
+export default VkWidget;

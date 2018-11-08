@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
-import Vk from '../../components/Vk';
-import VkSettings from '../../components/VkSettings';
+import VkWidget from '../../components/Vk/VkWidget';
+import VkSettings from '../../components/Vk/VkSettings';
 import { change, changeImage } from '../../store/vk/actions';
 import Language from '../../classes/Language';
 
@@ -19,7 +19,7 @@ class VkContainer extends Component {
               {Language.take('content.dialog.title')}
             </h2>
             <div className='vk-chat' style={{backgroundImage: 'url("./assets/images/descont.png")'}}>
-              <Vk
+              <VkWidget
                 components={vk.components}
                 header={vk.header}
                 content={vk.content}

@@ -52,7 +52,7 @@ class PageGenerator {
     const body = renderToString(
       <Provider store={store}>
         <StaticRouter location={url} context={{state}}>
-          <App />
+          <App language={state.app.language} />
         </StaticRouter>
       </Provider>
     );
