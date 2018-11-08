@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Language from '../../classes/Language';
 
 class VkHeader extends Component {
   render() {
@@ -14,7 +15,7 @@ class VkHeader extends Component {
           <div className='vk-widget_footer__message'>
             <div className='vk-widget_footer__message-text'>
               <div className='vk-widget_footer__message-placeholder'>
-                Напишите сообщение...
+                {Language.take('content.writeMessage')}
               </div>
               <img
                 className='vk-widget_footer__smile'

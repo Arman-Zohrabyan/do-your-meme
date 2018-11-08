@@ -12,7 +12,7 @@ class RequestHandlers {
     if (geo.country) {
       return geo.country.toLowerCase();
     }
-    return 'ru';
+    return 'en';
   }
 }
 

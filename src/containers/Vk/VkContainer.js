@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Vk from '../../components/Vk';
 import VkSettings from '../../components/VkSettings';
 import { change, changeImage } from '../../store/vk/actions';
+import Language from '../../classes/Language';
 
 
 class VkContainer extends Component {
@@ -15,7 +16,7 @@ class VkContainer extends Component {
         <Col md='12' lg='8' xl='7' className='widget-left'>
           <div className='vk-container'>
             <h2 className='vk-container__preview'>
-              Предварительный показ диалога
+              {Language.take('content.dialog.title')}
             </h2>
             <div className='vk-chat' style={{backgroundImage: 'url("./assets/images/descont.png")'}}>
               <Vk

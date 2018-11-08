@@ -1,5 +1,6 @@
 import React from 'react';
 import UserImage from './UserImage';
+import Language from '../../../classes/Language';
 
 function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, tempKey }) {
   return (
@@ -13,7 +14,7 @@ function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, temp
             <input
               className='vk_form__img-select-input'
               type='text'
-              placeholder='Добавить по ссылке'
+              placeholder={Language.take('config.imageSelect.link')}
               value={imgTemp}
               onChange={e => onChange(e.target.value, 'temp', `${tempKey}Img`)}
             />
@@ -21,14 +22,14 @@ function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, temp
               className='vk_form__img-select-button'
               onClick={() => onChangeImage('temp', tempKey, imgTemp)}
             >
-              Добавить
+              {Language.take('config.imageSelect.button')}
             </button>
           </div>
           <label className='vk_form__img-select-label'>
             <div
               className='vk_form__img-select-button upload-button'
             >
-              Загрузить аватар
+              {Language.take('config.imageSelect.upload')}
             </div>
             <input
               className='d-none'

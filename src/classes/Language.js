@@ -2,7 +2,7 @@ import lang from '../../config/languages';
 
 
 class Language {
-	language = 'ru';
+	language = '';
 
 	setCurrentLang = language => {
 		this.language = language;

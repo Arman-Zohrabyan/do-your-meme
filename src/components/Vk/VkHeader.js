@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { UserImage } from './mini';
+import Language from '../../classes/Language';
 
 class VkHeader extends Component {
   render() {
@@ -13,7 +14,7 @@ class VkHeader extends Component {
             src='./assets/images/back.svg'
           />
           <div className='vk-widget_header__back'>
-            Назад
+            {Language.take('content.back')}
           </div>
         </div>
         <div className='vk-widget_header__center'>

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,24 +71,63 @@ module.exports = require("react");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-router-dom");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _languages = __webpack_require__(20);
+
+var _languages2 = _interopRequireDefault(_languages);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Language = function Language() {
+	var _this = this;
+
+	_classCallCheck(this, Language);
+
+	this.language = '';
+
+	this.setCurrentLang = function (language) {
+		_this.language = language;
+	};
+
+	this.take = function (key) {
+		var language = _this.language;
+
+		return _languages2.default[language][key];
+	};
+};
+
+exports.default = new Language();
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("express");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("reactstrap");
+module.exports = require("express");
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("reactstrap");
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -106,23 +145,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _reactstrap = __webpack_require__(3);
+var _reactstrap = __webpack_require__(4);
 
-var _routes = __webpack_require__(5);
+var _routes = __webpack_require__(6);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _Menu = __webpack_require__(24);
+var _Menu = __webpack_require__(26);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _NoMatch = __webpack_require__(27);
+var _NoMatch = __webpack_require__(29);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
-var _Language = __webpack_require__(43);
+var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
 
@@ -194,7 +233,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -204,15 +243,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _VkContainer = __webpack_require__(13);
+var _VkContainer = __webpack_require__(14);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
-var _Home = __webpack_require__(22);
+var _Home = __webpack_require__(24);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Fb = __webpack_require__(23);
+var _Fb = __webpack_require__(25);
 
 var _Fb2 = _interopRequireDefault(_Fb);
 
@@ -246,13 +285,13 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -263,19 +302,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CheckBox = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
 
-var _UserImage = __webpack_require__(8);
+var _UserImage = __webpack_require__(9);
 
 var _UserImage2 = _interopRequireDefault(_UserImage);
 
-var _UserImageSelect = __webpack_require__(16);
+var _UserImageSelect = __webpack_require__(17);
 
 var _UserImageSelect2 = _interopRequireDefault(_UserImageSelect);
 
-var _TextInput = __webpack_require__(17);
+var _TextInput = __webpack_require__(18);
 
 var _TextInput2 = _interopRequireDefault(_TextInput);
 
-var _CheckBox = __webpack_require__(18);
+var _CheckBox = __webpack_require__(19);
 
 var _CheckBox2 = _interopRequireDefault(_CheckBox);
 
@@ -287,7 +326,7 @@ exports.TextInput = _TextInput2.default;
 exports.CheckBox = _CheckBox2.default;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -315,13 +354,13 @@ function UserImage(_ref) {
 exports.default = UserImage;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -338,25 +377,25 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(33);
+var _server = __webpack_require__(35);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(7);
 
-var _serializeJavascript = __webpack_require__(34);
+var _serializeJavascript = __webpack_require__(36);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _Store = __webpack_require__(35);
+var _Store = __webpack_require__(37);
 
 var _Store2 = _interopRequireDefault(_Store);
 
-var _App = __webpack_require__(4);
+var _App = __webpack_require__(5);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Language = __webpack_require__(43);
+var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
 
@@ -441,31 +480,31 @@ var PageGenerator = function () {
 exports.default = PageGenerator;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _express = __webpack_require__(2);
+var _express = __webpack_require__(3);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _cors = __webpack_require__(12);
+var _cors = __webpack_require__(13);
 
 var _cors2 = _interopRequireDefault(_cors);
 
-var _App = __webpack_require__(4);
+var _App = __webpack_require__(5);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _customMiddlewares = __webpack_require__(28);
+var _customMiddlewares = __webpack_require__(30);
 
 var _customMiddlewares2 = _interopRequireDefault(_customMiddlewares);
 
-var _routerSocialPages = __webpack_require__(32);
+var _routerSocialPages = __webpack_require__(34);
 
-var _routerHome = __webpack_require__(40);
+var _routerHome = __webpack_require__(43);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -503,13 +542,13 @@ app.listen(PORT, function () {
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("cors");
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -525,19 +564,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactstrap = __webpack_require__(3);
+var _reactstrap = __webpack_require__(4);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(7);
 
-var _Vk = __webpack_require__(14);
+var _Vk = __webpack_require__(15);
 
 var _Vk2 = _interopRequireDefault(_Vk);
 
-var _VkSettings = __webpack_require__(20);
+var _VkSettings = __webpack_require__(22);
 
 var _VkSettings2 = _interopRequireDefault(_VkSettings);
 
-var _actions = __webpack_require__(21);
+var _actions = __webpack_require__(23);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -577,7 +620,7 @@ var VkContainer = function (_Component) {
             _react2.default.createElement(
               'h2',
               { className: 'vk-container__preview' },
-              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
+              _Language2.default.take('content.dialog.title')
             ),
             _react2.default.createElement(
               'div',
@@ -632,7 +675,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -648,11 +691,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _VkHeader = __webpack_require__(15);
+var _VkHeader = __webpack_require__(16);
 
 var _VkHeader2 = _interopRequireDefault(_VkHeader);
 
-var _VkFooter = __webpack_require__(19);
+var _VkFooter = __webpack_require__(21);
 
 var _VkFooter2 = _interopRequireDefault(_VkFooter);
 
@@ -729,7 +772,7 @@ var Vk = function (_Component) {
 exports.default = Vk;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -745,7 +788,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mini = __webpack_require__(7);
+var _mini = __webpack_require__(8);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -787,7 +834,7 @@ var VkHeader = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'vk-widget_header__back' },
-            '\u041D\u0430\u0437\u0430\u0434'
+            _Language2.default.take('content.back')
           )
         ),
         _react2.default.createElement(
@@ -835,7 +882,7 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -849,9 +896,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _UserImage = __webpack_require__(8);
+var _UserImage = __webpack_require__(9);
 
 var _UserImage2 = _interopRequireDefault(_UserImage);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -885,7 +936,7 @@ function UserImageSelect(_ref) {
           _react2.default.createElement('input', {
             className: 'vk_form__img-select-input',
             type: 'text',
-            placeholder: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E \u0441\u0441\u044B\u043B\u043A\u0435',
+            placeholder: _Language2.default.take('config.imageSelect.link'),
             value: imgTemp,
             onChange: function onChange(e) {
               return _onChange(e.target.value, 'temp', tempKey + 'Img');
@@ -899,7 +950,7 @@ function UserImageSelect(_ref) {
                 return onChangeImage('temp', tempKey, imgTemp);
               }
             },
-            '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C'
+            _Language2.default.take('config.imageSelect.button')
           )
         ),
         _react2.default.createElement(
@@ -910,7 +961,7 @@ function UserImageSelect(_ref) {
             {
               className: 'vk_form__img-select-button upload-button'
             },
-            '\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0430\u0432\u0430\u0442\u0430\u0440'
+            _Language2.default.take('config.imageSelect.upload')
           ),
           _react2.default.createElement('input', {
             className: 'd-none',
@@ -928,7 +979,7 @@ function UserImageSelect(_ref) {
 exports.default = UserImageSelect;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -942,7 +993,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(9);
+var _classnames = __webpack_require__(10);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -987,7 +1038,7 @@ function TextInput(_ref) {
 exports.default = TextInput;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1001,7 +1052,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(9);
+var _classnames = __webpack_require__(10);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1054,7 +1105,74 @@ function CheckBox(_ref) {
 exports.default = CheckBox;
 
 /***/ }),
-/* 19 */
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  'ru': {
+    'titles.home': 'Развлекательный сайт',
+    'titles.vk': 'Создать переписку Вконтакте',
+    'titles.fb': 'Создать переписку Фейсбук',
+    'menu.vk': 'ВКонтакте',
+    'menu.fb': 'Фейсбук',
+    'content.dialog.title': 'Предварительный показ диалога',
+    'content.back': 'Назад',
+    'content.writeMessage': 'Напишите сообщение...',
+    'config.top.title': 'Верхняя часть',
+    'config.top.online': 'Время в сети',
+    'config.top.mobile': 'С мобильного',
+    'config.current.title': 'Текущий пользователь',
+    'config.current.fullName': 'Полное имя',
+    'config.current.avatar': 'Аватар',
+    'config.companion.title': 'Собеседник',
+    'config.companion.fullName': 'Полное имя',
+    'config.companion.avatar': 'Аватар',
+    'config.content.title': 'Контент',
+    'config.content.height': 'Высота контента',
+    'config.sections.title': 'Разделы',
+    'config.sections.top': 'Показать верхнюю часть',
+    'config.sections.bottom': 'Показать нижнюю часть',
+    'config.imageSelect.link': 'Ссылка на аватар',
+    'config.imageSelect.button': 'Добавить',
+    'config.imageSelect.upload': 'Загрузить аватар'
+  },
+  'en': {
+    'titles.home': 'Entertaining web site',
+    'titles.vk': 'Create a correspondence VKontakte',
+    'titles.fb': 'Create a correspondence FaceBook',
+    'menu.vk': 'VKontakte',
+    'menu.fb': 'FaceBook',
+    'content.dialog.title': 'Dialogue preview',
+    'content.back': 'Back',
+    'content.writeMessage': 'Write a message...',
+    'config.top.title': 'Top part',
+    'config.top.online': 'Online time',
+    'config.top.mobile': 'From mobile',
+    'config.current.title': 'Current user',
+    'config.current.fullName': 'Full name',
+    'config.current.avatar': 'Avatar',
+    'config.companion.title': 'Interlocutor',
+    'config.companion.fullName': 'Full name',
+    'config.companion.avatar': 'Avatar',
+    'config.content.title': 'Interlocutor',
+    'config.content.height': 'Content height',
+    'config.sections.title': 'Sections',
+    'config.sections.top': 'Show top side',
+    'config.sections.bottom': 'Show bottom side',
+    'config.imageSelect.link': 'Link to avatar',
+    'config.imageSelect.button': 'Add',
+    'config.imageSelect.upload': 'Upload image'
+  }
+};
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1069,6 +1187,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1113,7 +1235,7 @@ var VkHeader = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'vk-widget_footer__message-placeholder' },
-                '\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435...'
+                _Language2.default.take('content.writeMessage')
               ),
               _react2.default.createElement('img', {
                 className: 'vk-widget_footer__smile',
@@ -1144,7 +1266,7 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1160,7 +1282,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mini = __webpack_require__(7);
+var _mini = __webpack_require__(8);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1202,10 +1328,10 @@ var VkSettings = function (_Component) {
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title' },
-            '\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0447\u0430\u0441\u0442\u044C'
+            _Language2.default.take('config.top.title')
           ),
           _react2.default.createElement(_mini.TextInput, {
-            label: 'Время в сети',
+            label: _Language2.default.take('config.top.online'),
             value: header.time,
             onChange: function onChange(e) {
               return _onChange(e.target.value, 'header', 'time');
@@ -1213,7 +1339,7 @@ var VkSettings = function (_Component) {
             table: true
           }),
           _react2.default.createElement(_mini.CheckBox, {
-            label: 'С мобильного',
+            label: _Language2.default.take('config.top.mobile'),
             checked: header.mobile,
             onChange: function onChange(e) {
               return _onChange(e.target.checked, 'header', 'mobile');
@@ -1223,10 +1349,10 @@ var VkSettings = function (_Component) {
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title border-top' },
-            '\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C'
+            _Language2.default.take('config.current.title')
           ),
           _react2.default.createElement(_mini.TextInput, {
-            label: 'Полное имя',
+            label: _Language2.default.take('config.current.fullName'),
             value: current.name,
             onChange: function onChange(e) {
               return _onChange(e.target.value, 'current', 'name');
@@ -1234,7 +1360,7 @@ var VkSettings = function (_Component) {
             table: true
           }),
           _react2.default.createElement(_mini.UserImageSelect, {
-            label: 'Аватар',
+            label: _Language2.default.take('config.current.avatar'),
             imgUrl: current.image,
             imgTemp: temp.currentImg,
             tempKey: 'current',
@@ -1244,10 +1370,10 @@ var VkSettings = function (_Component) {
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title border-top' },
-            '\u0421\u043E\u0431\u0435\u0441\u0435\u0434\u043D\u0438\u043A'
+            _Language2.default.take('config.companion.title')
           ),
           _react2.default.createElement(_mini.TextInput, {
-            label: 'Полное имя',
+            label: _Language2.default.take('config.companion.fullName'),
             value: companion.name,
             onChange: function onChange(e) {
               return _onChange(e.target.value, 'companion', 'name');
@@ -1255,7 +1381,7 @@ var VkSettings = function (_Component) {
             table: true
           }),
           _react2.default.createElement(_mini.UserImageSelect, {
-            label: 'Аватар',
+            label: _Language2.default.take('config.companion.avatar'),
             imgUrl: companion.image,
             imgTemp: temp.companionImg,
             tempKey: 'companion',
@@ -1265,10 +1391,10 @@ var VkSettings = function (_Component) {
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title border-top' },
-            '\u041A\u043E\u043D\u0442\u0435\u043D\u0442'
+            _Language2.default.take('config.content.title')
           ),
           _react2.default.createElement(_mini.TextInput, {
-            label: 'Высота контента',
+            label: _Language2.default.take('config.content.height'),
             value: content.height,
             onChange: function onChange(e) {
               return _onChange(e.target.value, 'content', 'height');
@@ -1279,10 +1405,10 @@ var VkSettings = function (_Component) {
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title border-top' },
-            '\u0420\u0430\u0437\u0434\u0435\u043B\u044B'
+            _Language2.default.take('config.sections.title')
           ),
           _react2.default.createElement(_mini.CheckBox, {
-            label: 'Показать верхнюю часть',
+            label: _Language2.default.take('config.sections.top'),
             checked: components.header,
             onChange: function onChange(e) {
               return _onChange(e.target.checked, 'components', 'header');
@@ -1290,7 +1416,7 @@ var VkSettings = function (_Component) {
             table: true
           }),
           _react2.default.createElement(_mini.CheckBox, {
-            label: 'Показать нижнюю часть',
+            label: _Language2.default.take('config.sections.bottom'),
             checked: components.footer,
             onChange: function onChange(e) {
               return _onChange(e.target.checked, 'components', 'footer');
@@ -1308,7 +1434,7 @@ var VkSettings = function (_Component) {
 exports.default = VkSettings;
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1352,7 +1478,7 @@ var changeImage = exports.changeImage = function changeImage(type, key, img) {
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1378,7 +1504,7 @@ function Home() {
 }
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1404,7 +1530,7 @@ function Fb() {
 }
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1420,17 +1546,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(27);
 
-var _reactstrap = __webpack_require__(3);
+var _reactstrap = __webpack_require__(4);
 
-var _StringHelper = __webpack_require__(26);
+var _StringHelper = __webpack_require__(28);
 
 var _StringHelper2 = _interopRequireDefault(_StringHelper);
 
-var _Language = __webpack_require__(43);
+var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
 
@@ -1561,13 +1687,13 @@ var Menu = function (_Component) {
 exports.default = (0, _reactRouter.withRouter)(Menu);
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router");
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1600,7 +1726,7 @@ var StringHelper = function () {
 exports.default = StringHelper;
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1626,7 +1752,7 @@ function NoMatch() {
 }
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1636,7 +1762,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _RequestHandlers = __webpack_require__(29);
+var _RequestHandlers = __webpack_require__(31);
 
 var _RequestHandlers2 = _interopRequireDefault(_RequestHandlers);
 
@@ -1652,7 +1778,7 @@ var customMiddlewares = function customMiddlewares(req, res, next) {
 exports.default = customMiddlewares;
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1662,17 +1788,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(2);
 
-var _geoipLite = __webpack_require__(30);
+var _geoipLite = __webpack_require__(32);
 
 var _geoipLite2 = _interopRequireDefault(_geoipLite);
 
-var _requestIp = __webpack_require__(31);
+var _requestIp = __webpack_require__(33);
 
 var _requestIp2 = _interopRequireDefault(_requestIp);
 
-var _routes = __webpack_require__(5);
+var _routes = __webpack_require__(6);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -1696,25 +1822,25 @@ RequestHandlers.getLanguage = function (req) {
   if (geo.country) {
     return geo.country.toLowerCase();
   }
-  return 'ru';
+  return 'en';
 };
 
 exports.default = RequestHandlers;
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("geoip-lite");
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("request-ip");
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1725,11 +1851,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.router = undefined;
 
-var _express = __webpack_require__(2);
+var _express = __webpack_require__(3);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _PageGenerator = __webpack_require__(10);
+var _PageGenerator = __webpack_require__(11);
 
 var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
 
@@ -1764,19 +1890,19 @@ function facebook(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1788,17 +1914,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _redux = __webpack_require__(36);
+var _redux = __webpack_require__(38);
 
-var _reduxThunk = __webpack_require__(37);
+var _reduxThunk = __webpack_require__(39);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducer = __webpack_require__(38);
+var _reducer = __webpack_require__(40);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
-var _reducer3 = __webpack_require__(44);
+var _reducer3 = __webpack_require__(42);
 
 var _reducer4 = _interopRequireDefault(_reducer3);
 
@@ -1849,19 +1975,19 @@ var Store = function () {
 exports.default = Store;
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1873,7 +1999,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _constants = __webpack_require__(39);
+var _constants = __webpack_require__(41);
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -1941,7 +2067,7 @@ var vk = function vk() {
 exports.default = vk;
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1955,114 +2081,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.router = undefined;
-
-var _express = __webpack_require__(2);
-
-var _express2 = _interopRequireDefault(_express);
-
-var _PageGenerator = __webpack_require__(10);
-
-var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import Promise from 'bluebird';
-
-
-var router = _express2.default.Router();
-
-router.get('/', home);
-
-function home(req, res) {
-  var app = {};
-
-  var activeRoute = res.locals.activeRoute;
-  app.language = res.locals.language;
-
-  res.send(_PageGenerator2.default.getPage({ app: app }, activeRoute.config, req.url));
-};
-
-exports.router = router;
-
-/***/ }),
-/* 41 */,
 /* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  'ru': {
-    'titles.home': 'Развлекательный сайт',
-    'titles.vk': 'Создать переписку Вконтакте',
-    'titles.fb': 'Создать переписку Фейсбук',
-    'menu.vk': 'ВКонтакте',
-    'menu.fb': 'Фейсбук'
-  },
-  'en': {
-    'titles.home': 'Entertaining web site',
-    'titles.vk': 'Create a correspondence VKontakte',
-    'titles.fb': 'Create a correspondence FaceBook',
-    'menu.vk': 'VKontakte',
-    'menu.fb': 'FaceBook'
-  }
-};
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _languages = __webpack_require__(42);
-
-var _languages2 = _interopRequireDefault(_languages);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Language = function Language() {
-	var _this = this;
-
-	_classCallCheck(this, Language);
-
-	this.language = 'ru';
-
-	this.setCurrentLang = function (language) {
-		_this.language = language;
-	};
-
-	this.take = function (key) {
-		var language = _this.language;
-
-		return _languages2.default[language][key];
-	};
-};
-
-exports.default = new Language();
-
-/***/ }),
-/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2090,6 +2109,46 @@ var app = function app() {
 };
 
 exports.default = app;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.router = undefined;
+
+var _express = __webpack_require__(3);
+
+var _express2 = _interopRequireDefault(_express);
+
+var _PageGenerator = __webpack_require__(11);
+
+var _PageGenerator2 = _interopRequireDefault(_PageGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Promise from 'bluebird';
+
+
+var router = _express2.default.Router();
+
+router.get('/', home);
+
+function home(req, res) {
+  var app = {};
+
+  var activeRoute = res.locals.activeRoute;
+  app.language = res.locals.language;
+
+  res.send(_PageGenerator2.default.getPage({ app: app }, activeRoute.config, req.url));
+};
+
+exports.router = router;
 
 /***/ })
 /******/ ]);

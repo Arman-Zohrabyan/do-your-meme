@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TextInput, CheckBox, UserImageSelect } from './Vk/mini';
+import Language from '../classes/Language';
 
 class VkSettings extends Component {
   render() {
@@ -17,29 +18,29 @@ class VkSettings extends Component {
     return (
       <div className='widget-right__wrapper'>
         <div className='widget-right__config'>
-          <h3 className='widget-right__config-title'>Верхняя часть</h3>
+          <h3 className='widget-right__config-title'>{Language.take('config.top.title')}</h3>
           <TextInput
-            label={'Время в сети'}
+            label={Language.take('config.top.online')}
             value={header.time}
             onChange={e => onChange(e.target.value, 'header', 'time')}
             table
           />
           <CheckBox
-            label={'С мобильного'}
+            label={Language.take('config.top.mobile')}
             checked={header.mobile}
             onChange={e => onChange(e.target.checked, 'header', 'mobile')}
             table
           />
 
-          <h3 className='widget-right__config-title border-top'>Текущий пользователь</h3>
+          <h3 className='widget-right__config-title border-top'>{Language.take('config.current.title')}</h3>
           <TextInput
-            label={'Полное имя'}
+            label={Language.take('config.current.fullName')}
             value={current.name}
             onChange={e => onChange(e.target.value, 'current', 'name')}
             table
           />
           <UserImageSelect
-            label={'Аватар'}
+            label={Language.take('config.current.avatar')}
             imgUrl={current.image}
             imgTemp={temp.currentImg}
             tempKey='current'
@@ -47,15 +48,15 @@ class VkSettings extends Component {
             onChangeImage={onChangeImage}
           />
 
-          <h3 className='widget-right__config-title border-top'>Собеседник</h3>
+          <h3 className='widget-right__config-title border-top'>{Language.take('config.companion.title')}</h3>
           <TextInput
-            label={'Полное имя'}
+            label={Language.take('config.companion.fullName')}
             value={companion.name}
             onChange={e => onChange(e.target.value, 'companion', 'name')}
             table
           />
           <UserImageSelect
-            label={'Аватар'}
+            label={Language.take('config.companion.avatar')}
             imgUrl={companion.image}
             imgTemp={temp.companionImg}
             tempKey='companion'
@@ -63,24 +64,24 @@ class VkSettings extends Component {
             onChangeImage={onChangeImage}
           />
 
-          <h3 className='widget-right__config-title border-top'>Контент</h3>
+          <h3 className='widget-right__config-title border-top'>{Language.take('config.content.title')}</h3>
           <TextInput
-            label={'Высота контента'}
+            label={Language.take('config.content.height')}
             value={content.height}
             onChange={e => onChange(e.target.value, 'content', 'height')}
             type='number'
             table
           />
 
-          <h3 className='widget-right__config-title border-top'>Разделы</h3>
+          <h3 className='widget-right__config-title border-top'>{Language.take('config.sections.title')}</h3>
           <CheckBox
-            label={'Показать верхнюю часть'}
+            label={Language.take('config.sections.top')}
             checked={components.header}
             onChange={e => onChange(e.target.checked, 'components', 'header')}
             table
           />
           <CheckBox
-            label={'Показать нижнюю часть'}
+            label={Language.take('config.sections.bottom')}
             checked={components.footer}
             onChange={e => onChange(e.target.checked, 'components', 'footer')}
             table
