@@ -7,6 +7,7 @@ import serialize from 'serialize-javascript';
 
 import Store from '../../src/store/Store';
 import App from '../../src/components/App';
+import Language from '../../src/classes/Language';
 
 
 class PageGenerator {
@@ -22,7 +23,7 @@ class PageGenerator {
       '<html>',
       '<head>',
       '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">',
-      `<title>${head.title}</title>`,
+      `<title>${Language.take(head.title)}</title>`,
       '<meta name="viewport" content="width=600, initial-scale=0.6, maximum-scale=1"/>',
       '<meta charset="utf-8">',
       '<script src="/bundle.js" defer></script>',
@@ -44,6 +45,8 @@ class PageGenerator {
    * @return {string}            Page html.
    */
   static getPage(state = {}, head = {}, url = '/') {
+    Language.setCurrentLang(state.app.language);
+
     const store = Store.init(state);
 
     const body = renderToString(

@@ -9,10 +9,13 @@ router.get('/', home);
 
 
 function home(req, res) {
+  const app = {};
+
   const activeRoute = res.locals.activeRoute;
+  app.language = res.locals.language;
 
   res.send(PageGenerator.getPage(
-    {},
+    { app },
     activeRoute.config,
     req.url
   ));

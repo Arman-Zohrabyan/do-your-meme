@@ -5,6 +5,7 @@ import routes from '../../src/routes';
 
 class RequestHandlers {
   static getActiveRoute = (req) => routes.find((route) => matchPath(req.url, route)) || {}
+
   static getLanguage = (req) => {
     const userIp = requestIp.getClientIp(req);
     const geo = geoip.lookup(userIp) || {};

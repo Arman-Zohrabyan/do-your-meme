@@ -2,6 +2,7 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import vk from './vk/reducer';
+import app from './app/reducer';
 
 
 class Store {
@@ -13,6 +14,7 @@ class Store {
   static getInitialReducers() {
     return {
       vk,
+      app
     };
   }
 
@@ -24,10 +26,12 @@ class Store {
    * @return {Object}                 Store object
    */
   static init(initialState = {}) {
-    return createStore(combineReducers(
-      Store.getInitialReducers()),
-    initialState,
-    applyMiddleware(thunkMiddleware)
+    return createStore(
+      combineReducers(
+        Store.getInitialReducers()
+      ),
+      initialState,
+      applyMiddleware(thunkMiddleware)
     );
   }
 }

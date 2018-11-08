@@ -106,6 +106,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(1);
+
+var _reactstrap = __webpack_require__(3);
+
 var _routes = __webpack_require__(5);
 
 var _routes2 = _interopRequireDefault(_routes);
@@ -118,9 +122,9 @@ var _NoMatch = __webpack_require__(27);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
-var _reactRouterDom = __webpack_require__(1);
+var _Language = __webpack_require__(43);
 
-var _reactstrap = __webpack_require__(3);
+var _Language2 = _interopRequireDefault(_Language);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -135,10 +139,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var App = function (_Component) {
   _inherits(App, _Component);
 
-  function App() {
+  function App(props) {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    if (false) {
+      _Language2.default.setCurrentLang(props.language);
+    }
+    return _this;
   }
 
   _createClass(App, [{
@@ -164,7 +173,7 @@ var App = function (_Component) {
               return _react2.default.createElement(_reactRouterDom.Route, { key: path, path: path, exact: exact,
                 render: function render(props) {
                   if (false) {
-                    document.title = config.title;
+                    document.title = _Language2.default.take(config.title);
                   }
                   return _react2.default.createElement(Page, _extends({}, props, rest));
                 }
@@ -195,7 +204,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _VkContainer = __webpack_require__(41);
+var _VkContainer = __webpack_require__(13);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
@@ -209,26 +218,28 @@ var _Fb2 = _interopRequireDefault(_Fb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Language from './classes/Language';
+
 var routes = [{
   path: '/',
   exact: true,
   component: _Home2.default,
   config: {
-    title: 'Развлекательный сайт'
+    title: 'titles.home'
   }
 }, {
   path: '/vkontakte',
   exact: true,
   component: _VkContainer2.default,
   config: {
-    title: 'Создать переписку Вконтакте'
+    title: 'titles.vk'
   }
 }, {
   path: '/facebook',
   exact: true,
   component: _Fb2.default,
   config: {
-    title: 'Создать переписку Фейсбук'
+    title: 'titles.fb'
   }
 }];
 
@@ -345,6 +356,10 @@ var _App = __webpack_require__(4);
 
 var _App2 = _interopRequireDefault(_App);
 
+var _Language = __webpack_require__(43);
+
+var _Language2 = _interopRequireDefault(_Language);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -368,7 +383,7 @@ var PageGenerator = function () {
           head = _ref.head,
           body = _ref.body;
 
-      return ['<!DOCTYPE html>', '<html>', '<head>', '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', '<title>' + head.title + '</title>', '<meta name="viewport" content="width=600, initial-scale=0.6, maximum-scale=1"/>', '<meta charset="utf-8">', '<script src="/bundle.js" defer></script>', '<link href="/bundle.css" rel="stylesheet">', '<script>window.__INITIAL_STATE__ = ' + (0, _serializeJavascript2.default)(state) + '</script>', '</head>', '<body>', '<div id="app">' + body + '</div>', '</body>', '</html>'].join('\n');
+      return ['<!DOCTYPE html>', '<html>', '<head>', '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', '<title>' + _Language2.default.take(head.title) + '</title>', '<meta name="viewport" content="width=600, initial-scale=0.6, maximum-scale=1"/>', '<meta charset="utf-8">', '<script src="/bundle.js" defer></script>', '<link href="/bundle.css" rel="stylesheet">', '<script>window.__INITIAL_STATE__ = ' + (0, _serializeJavascript2.default)(state) + '</script>', '</head>', '<body>', '<div id="app">' + body + '</div>', '</body>', '</html>'].join('\n');
     }
 
     /**
@@ -384,6 +399,8 @@ var PageGenerator = function () {
       var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var head = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var url = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '/';
+
+      _Language2.default.setCurrentLang(state.app.language);
 
       var store = _Store2.default.init(state);
 
@@ -492,7 +509,129 @@ app.listen(PORT, function () {
 module.exports = require("cors");
 
 /***/ }),
-/* 13 */,
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactstrap = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(6);
+
+var _Vk = __webpack_require__(14);
+
+var _Vk2 = _interopRequireDefault(_Vk);
+
+var _VkSettings = __webpack_require__(20);
+
+var _VkSettings2 = _interopRequireDefault(_VkSettings);
+
+var _actions = __webpack_require__(21);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VkContainer = function (_Component) {
+  _inherits(VkContainer, _Component);
+
+  function VkContainer() {
+    _classCallCheck(this, VkContainer);
+
+    return _possibleConstructorReturn(this, (VkContainer.__proto__ || Object.getPrototypeOf(VkContainer)).apply(this, arguments));
+  }
+
+  _createClass(VkContainer, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          vk = _props.vk,
+          onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
+
+
+      return _react2.default.createElement(
+        _reactstrap.Row,
+        { className: '' },
+        _react2.default.createElement(
+          _reactstrap.Col,
+          { md: '12', lg: '8', xl: '7', className: 'widget-left' },
+          _react2.default.createElement(
+            'div',
+            { className: 'vk-container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'vk-container__preview' },
+              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
+              _react2.default.createElement(_Vk2.default, {
+                components: vk.components,
+                header: vk.header,
+                content: vk.content,
+                companion: vk.companion
+              })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactstrap.Col,
+          { md: '12', lg: '4', xl: '5', className: 'widget-right' },
+          _react2.default.createElement(_VkSettings2.default, {
+            components: vk.components,
+            header: vk.header,
+            content: vk.content,
+            current: vk.current,
+            companion: vk.companion,
+            temp: vk.temp,
+            onChange: onChange,
+            onChangeImage: onChangeImage
+          })
+        )
+      );
+    }
+  }]);
+
+  return VkContainer;
+}(_react.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    vk: state.vk
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    onChange: function onChange(value, section, key) {
+      dispatch((0, _actions.change)(value, section, key));
+    },
+    onChangeImage: function onChangeImage(type, key, img) {
+      dispatch((0, _actions.changeImage)(type, key, img));
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1291,6 +1430,10 @@ var _StringHelper = __webpack_require__(26);
 
 var _StringHelper2 = _interopRequireDefault(_StringHelper);
 
+var _Language = __webpack_require__(43);
+
+var _Language2 = _interopRequireDefault(_Language);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1376,7 +1519,7 @@ var Menu = function (_Component) {
                     active: pathname === '/vkontakte',
                     onClick: this.handleExpendCollapse
                   },
-                  '\u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435'
+                  _Language2.default.take('menu.vk')
                 )
               ),
               _react2.default.createElement(
@@ -1390,7 +1533,7 @@ var Menu = function (_Component) {
                     active: pathname === '/facebook',
                     onClick: this.handleExpendCollapse
                   },
-                  '\u0424\u0435\u0439\u0441\u0431\u0443\u043A'
+                  _Language2.default.take('menu.fb')
                 )
               ),
               _react2.default.createElement(
@@ -1500,8 +1643,8 @@ var _RequestHandlers2 = _interopRequireDefault(_RequestHandlers);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var customMiddlewares = function customMiddlewares(req, res, next) {
-  res.locals.activeRoute = _RequestHandlers2.default.getActiveRoute(req);
   res.locals.language = _RequestHandlers2.default.getLanguage(req);
+  res.locals.activeRoute = _RequestHandlers2.default.getActiveRoute(req);
 
   next();
 };
@@ -1601,15 +1744,21 @@ router.get('/vkontakte', vkontakte);
 router.get('/facebook', facebook);
 
 function vkontakte(req, res) {
-  var activeRoute = res.locals.activeRoute;
+  var app = {};
 
-  res.send(_PageGenerator2.default.getPage({}, activeRoute.config, req.url));
+  var activeRoute = res.locals.activeRoute;
+  app.language = res.locals.language;
+
+  res.send(_PageGenerator2.default.getPage({ app: app }, activeRoute.config, req.url));
 };
 
 function facebook(req, res) {
-  var activeRoute = res.locals.activeRoute;
+  var app = {};
 
-  res.send(_PageGenerator2.default.getPage({}, activeRoute.config, req.url));
+  var activeRoute = res.locals.activeRoute;
+  app.language = res.locals.language;
+
+  res.send(_PageGenerator2.default.getPage({ app: app }, activeRoute.config, req.url));
 };
 
 exports.router = router;
@@ -1649,6 +1798,10 @@ var _reducer = __webpack_require__(38);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
+var _reducer3 = __webpack_require__(44);
+
+var _reducer4 = _interopRequireDefault(_reducer3);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1668,7 +1821,8 @@ var Store = function () {
      */
     value: function getInitialReducers() {
       return {
-        vk: _reducer2.default
+        vk: _reducer2.default,
+        app: _reducer4.default
       };
     }
 
@@ -1830,15 +1984,19 @@ var router = _express2.default.Router();
 router.get('/', home);
 
 function home(req, res) {
-  var activeRoute = res.locals.activeRoute;
+  var app = {};
 
-  res.send(_PageGenerator2.default.getPage({}, activeRoute.config, req.url));
+  var activeRoute = res.locals.activeRoute;
+  app.language = res.locals.language;
+
+  res.send(_PageGenerator2.default.getPage({ app: app }, activeRoute.config, req.url));
 };
 
 exports.router = router;
 
 /***/ }),
-/* 41 */
+/* 41 */,
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1847,118 +2005,91 @@ exports.router = router;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = {
+  'ru': {
+    'titles.home': 'Развлекательный сайт',
+    'titles.vk': 'Создать переписку Вконтакте',
+    'titles.fb': 'Создать переписку Фейсбук',
+    'menu.vk': 'ВКонтакте',
+    'menu.fb': 'Фейсбук'
+  },
+  'en': {
+    'titles.home': 'Entertaining web site',
+    'titles.vk': 'Create a correspondence VKontakte',
+    'titles.fb': 'Create a correspondence FaceBook',
+    'menu.vk': 'VKontakte',
+    'menu.fb': 'FaceBook'
+  }
+};
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var _react = __webpack_require__(0);
+"use strict";
 
-var _react2 = _interopRequireDefault(_react);
 
-var _reactstrap = __webpack_require__(3);
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
-var _reactRedux = __webpack_require__(6);
+var _languages = __webpack_require__(42);
 
-var _Vk = __webpack_require__(14);
-
-var _Vk2 = _interopRequireDefault(_Vk);
-
-var _VkSettings = __webpack_require__(20);
-
-var _VkSettings2 = _interopRequireDefault(_VkSettings);
-
-var _actions = __webpack_require__(21);
+var _languages2 = _interopRequireDefault(_languages);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var Language = function Language() {
+	var _this = this;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	_classCallCheck(this, Language);
 
-var VkContainer = function (_Component) {
-  _inherits(VkContainer, _Component);
+	this.language = 'ru';
 
-  function VkContainer() {
-    _classCallCheck(this, VkContainer);
+	this.setCurrentLang = function (language) {
+		_this.language = language;
+	};
 
-    return _possibleConstructorReturn(this, (VkContainer.__proto__ || Object.getPrototypeOf(VkContainer)).apply(this, arguments));
+	this.take = function (key) {
+		var language = _this.language;
+
+		return _languages2.default[language][key];
+	};
+};
+
+exports.default = new Language();
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var initialState = {
+  language: ''
+};
+
+var app = function app() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments[1];
+
+  // let _state;
+
+  switch (action.type) {
+    default:
+      {
+        return state;
+      }
   }
-
-  _createClass(VkContainer, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          vk = _props.vk,
-          onChange = _props.onChange,
-          onChangeImage = _props.onChangeImage;
-
-
-      return _react2.default.createElement(
-        _reactstrap.Row,
-        { className: '' },
-        _react2.default.createElement(
-          _reactstrap.Col,
-          { md: '12', lg: '8', xl: '7', className: 'widget-left' },
-          _react2.default.createElement(
-            'div',
-            { className: 'vk-container' },
-            _react2.default.createElement(
-              'h2',
-              { className: 'vk-container__preview' },
-              '\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437 \u0434\u0438\u0430\u043B\u043E\u0433\u0430'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'vk-chat', style: { backgroundImage: 'url("./assets/images/descont.png")' } },
-              _react2.default.createElement(_Vk2.default, {
-                components: vk.components,
-                header: vk.header,
-                content: vk.content,
-                companion: vk.companion
-              })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _reactstrap.Col,
-          { md: '12', lg: '4', xl: '5', className: 'widget-right' },
-          _react2.default.createElement(_VkSettings2.default, {
-            components: vk.components,
-            header: vk.header,
-            content: vk.content,
-            current: vk.current,
-            companion: vk.companion,
-            temp: vk.temp,
-            onChange: onChange,
-            onChangeImage: onChangeImage
-          })
-        )
-      );
-    }
-  }]);
-
-  return VkContainer;
-}(_react.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    vk: state.vk
-  };
 };
 
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    onChange: function onChange(value, section, key) {
-      dispatch((0, _actions.change)(value, section, key));
-    },
-    onChangeImage: function onChangeImage(type, key, img) {
-      dispatch((0, _actions.changeImage)(type, key, img));
-    }
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(VkContainer);
+exports.default = app;
 
 /***/ })
 /******/ ]);

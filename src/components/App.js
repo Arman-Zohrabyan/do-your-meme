@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Container } from 'reactstrap';
 import routes from '../routes';
 import Menu from './Menu';
 import NoMatch from './NoMatch';
-import { Route, Switch } from 'react-router-dom';
-import { Container } from 'reactstrap';
+import Language from '../classes/Language';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    if (__isBrowser__) {
+      Language.setCurrentLang(props.language);
+    }
+  }
+
   render() {
     return (
       <div>
@@ -17,7 +25,7 @@ class App extends Component {
               <Route key={path} path={path} exact={exact}
                 render={(props) => {
                   if (__isBrowser__) {
-                    document.title = config.title;
+                    document.title = Language.take(config.title);
                   }
                   return <Page {...props} {...rest} />;
                 }}

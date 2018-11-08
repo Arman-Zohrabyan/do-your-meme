@@ -16,7 +16,7 @@ window.store = store;
 hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <App language={state.app.language} />
     </BrowserRouter>
   </Provider>,
   document.getElementById('app')

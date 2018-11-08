@@ -12,6 +12,7 @@ import {
   Container,
 } from 'reactstrap';
 import StringHelper from '../helpers/StringHelper';
+import Language from '../classes/Language';
 
 
 class Menu extends Component {
@@ -62,7 +63,7 @@ class Menu extends Component {
                   to='/vkontakte'
                   active={pathname === '/vkontakte'}
                   onClick={this.handleExpendCollapse}
-                >ВКонтакте</NavLink>
+                >{Language.take('menu.vk')}</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -70,7 +71,7 @@ class Menu extends Component {
                   to='/facebook'
                   active={pathname === '/facebook'}
                   onClick={this.handleExpendCollapse}
-                >Фейсбук</NavLink>
+                >{Language.take('menu.fb')}</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink

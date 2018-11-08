@@ -1,14 +1,15 @@
 import VkContainer from './containers/Vk/VkContainer';
 import Home from './components/Home';
 import Fb from './components/Fb';
+// import Language from './classes/Language';
 
-const routes =  [
+const routes = [
   {
     path: '/',
     exact: true,
     component: Home,
     config: {
-      title: 'Развлекательный сайт',
+      title: 'titles.home',
     },
   },
   {
@@ -16,7 +17,7 @@ const routes =  [
     exact: true,
     component: VkContainer,
     config: {
-      title: 'Создать переписку Вконтакте',
+      title: 'titles.vk',
     },
   },
   {
@@ -24,7 +25,7 @@ const routes =  [
     exact: true,
     component: Fb,
     config: {
-      title: 'Создать переписку Фейсбук',
+      title: 'titles.fb',
     },
   },
   // {
