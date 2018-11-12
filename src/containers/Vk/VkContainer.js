@@ -36,12 +36,12 @@ class VkContainer extends Component {
                 companion={vk.companion}
               />
             </div>
-            <div>
+            <div className='text-center'>
               <button
-                className='vk_form__img-select-button'
+                className='vk_download-btn'
                 onClick={this.downloadImage}
               >
-                {Language.take('download')}
+                {Language.take('download').toUpperCase()}
               </button>
             </div>
           </div>

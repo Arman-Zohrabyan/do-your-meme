@@ -720,14 +720,14 @@ var VkContainer = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              null,
+              { className: 'text-center' },
               _react2.default.createElement(
                 'button',
                 {
-                  className: 'vk_form__img-select-button',
+                  className: 'vk_download-btn',
                   onClick: this.downloadImage
                 },
-                _Language2.default.take('download')
+                _Language2.default.take('download').toUpperCase()
               )
             )
           )
