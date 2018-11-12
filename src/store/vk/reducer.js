@@ -11,7 +11,7 @@ const initialState = {
     mobile: false
   },
   content: {
-    height: 100
+    height: 200
   },
   companion: {
     name: 'Собеседник Беседник',

@@ -70,6 +70,9 @@ body {
         margin-top: 5px;
         border-top: 1px solid #dee2e6 !important; }
 
+label {
+  margin: 0; }
+
 .hide-element {
   display: none; }
 
@@ -82,6 +85,7 @@ body {
   border: 0;
   font-size: 14px;
   line-height: 20px;
+  align-items: center;
   border-radius: 3px;
   margin-top: 15px; }
   .vk_download-btn:focus {
@@ -106,6 +110,32 @@ body {
   margin-left: -10px;
   padding: 10px 15px;
   border-radius: 5px; }
+
+.vk_form__setting-button {
+  padding: 4px 16px 5px;
+  font-size: 12.5px;
+  cursor: pointer;
+  outline: none;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  line-height: 15px;
+  text-align: center;
+  background-color: #5181b8;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  vertical-align: top;
+  margin: 5px 0; }
+  .vk_form__setting-button:focus {
+    outline: none; }
+  .vk_form__setting-button:hover {
+    background-color: #5b88bd;
+    text-decoration: none; }
+  .vk_form__setting-button:active {
+    background-color: #4872a3;
+    padding-top: 5px;
+    padding-bottom: 4px; }
+  .vk_form__setting-button-full {
+    width: 100%; }
 
 .vk_form__img-select-button {
   margin-top: 1px;
@@ -315,16 +345,51 @@ body {
     font-size: 12.5px;
     background: #fff;
     font-weight: 400;
-    position: relative;
     margin: 0;
     border: none;
     padding: 0; }
     .vk-widget_content__separator-content {
+      display: inline-block;
       line-height: 18px;
       border-radius: 20px;
       padding: 3px 15px;
-      position: relative;
       top: 7px;
       margin: 10px 0;
       border: 1px solid transparent;
       transition: box-shadow 0.2s ease-out, border-color 0.2s ease-out; }
+  .vk-widget_content__user-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fafbfc;
+    background-color: inherit; }
+  .vk-widget_content__user-name {
+    max-width: 240px;
+    color: #42648b;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 15px; }
+  .vk-widget_content__message-data {
+    line-height: 16px;
+    padding-top: 2px; }
+  .vk-widget_content__message-time {
+    color: rgba(120, 127, 140, 0.6);
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 7px;
+    line-height: 15px;
+    vertical-align: top; }
+  .vk-widget_content__messages-wrapper {
+    display: flex; }
+  .vk-widget_content__message-section {
+    font-size: 13px;
+    padding: 11px 0; }
+  .vk-widget_content__message-left {
+    margin-left: 36px;
+    margin-right: 10px; }
+  .vk-widget_content__message-right {
+    width: 387px; }

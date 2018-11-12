@@ -42,6 +42,55 @@ class VkWidget extends Component {
             <h5 className='vk-widget_content__separator'>
               <span className='vk-widget_content__separator-content'>6 ноября</span>
             </h5>
+
+            <div className='vk-widget_content__message-section'>
+              <div className='vk-widget_content__messages-wrapper'>
+                <div className='vk-widget_content__message-left'>
+                  <img
+                    className='vk-widget_content__user-image'
+                    src='./assets/images/user.png'
+                  />
+                </div>
+                <div className='vk-widget_content__message-right'>
+                  <div className='vk-widget_content__message vk-widget_content__message-data'>
+                    <span className='vk-widget_content__user-name'>
+                      valodik
+                    </span>
+                    <span className='vk-widget_content__message-time'>
+                      14:00
+                    </span>
+                  </div>
+                  <div className='vk-widget_content__message'>
+                    Ладно братец. ^^) Вернусь домой, попробую.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className='vk-widget_content__message-section'>
+              <div className='vk-widget_content__messages-wrapper'>
+                <div className='vk-widget_content__message-left'>
+                  <img
+                    className='vk-widget_content__user-image'
+                    src='./assets/images/user.png'
+                  />
+                </div>
+                <div className='vk-widget_content__message-right'>
+                  <div className='vk-widget_content__message vk-widget_content__message-data'>
+                    <span className='vk-widget_content__user-name'>
+                      valodik
+                    </span>
+                    <span className='vk-widget_content__message-time'>
+                      14:00
+                    </span>
+                  </div>
+                  <div className='vk-widget_content__message'>
+                    Ладно братец. ^^) Вернусь домой, попробую.
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 

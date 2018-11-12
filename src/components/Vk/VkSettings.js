@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, CheckBox, UserImageSelect } from './mini';
+import { TextInput, CheckBox, UserImageSelect, SettingButton } from './mini';
 import Language from '../../classes/Language';
 
 class VkSettings extends Component {
@@ -49,6 +49,7 @@ class VkSettings extends Component {
             onChange={onChange}
             onChangeImage={onChangeImage}
           />
+          <SettingButton content={Language.take('config.current.message')} full />
 
           <h3 className='widget-right__config-title border-top'>{Language.take('config.companion.title')}</h3>
           <TextInput
@@ -66,6 +67,7 @@ class VkSettings extends Component {
             onChange={onChange}
             onChangeImage={onChangeImage}
           />
+          <SettingButton content={Language.take('config.companion.message')} full />
 
           <h3 className='widget-right__config-title border-top'>{Language.take('config.content.title')}</h3>
           <TextInput
@@ -76,6 +78,7 @@ class VkSettings extends Component {
             required
             table
           />
+          <SettingButton content={Language.take('config.content.separator')} full />
 
           <h3 className='widget-right__config-title border-top'>{Language.take('config.sections.title')}</h3>
           <CheckBox
