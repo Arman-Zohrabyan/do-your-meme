@@ -306,7 +306,7 @@ exports.default = {
     'config.companion.title': 'Interlocutor',
     'config.companion.fullName': 'Full name',
     'config.companion.avatar': 'Avatar',
-    'config.content.title': 'Interlocutor',
+    'config.content.title': 'Content',
     'config.content.height': 'Content height',
     'config.sections.title': 'Sections',
     'config.sections.top': 'Show top side',
