@@ -34,7 +34,7 @@ class VkWidget extends Component {
     const { content } = this.props;
 
     return (
-      <div className='vk-widget'>
+      <div className='vk-widget' id='vk-chat-widget'>
         {this.renderHeader()}
 
         <div className='vk-widget_body' style={{height: `${content.height}px`}}>

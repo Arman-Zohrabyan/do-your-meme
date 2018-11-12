@@ -5,9 +5,19 @@ import VkWidget from '../../components/Vk/VkWidget';
 import VkSettings from '../../components/Vk/VkSettings';
 import { change, changeImage } from '../../store/vk/actions';
 import Language from '../../classes/Language';
+import html2canvas from 'html2canvas';
 
 
 class VkContainer extends Component {
+  downloadImage = () => {
+    html2canvas(document.querySelector('#vk-chat-widget')).then(canvas => {
+      const link = document.createElement('a');
+      link.setAttribute('download', 'screenshot.png');
+      link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+      link.click();
+    });
+  }
+
   render() {
     const { vk, onChange, onChangeImage } = this.props;
 
@@ -25,6 +35,14 @@ class VkContainer extends Component {
                 content={vk.content}
                 companion={vk.companion}
               />
+            </div>
+            <div>
+              <button
+                className='vk_form__img-select-button'
+                onClick={this.downloadImage}
+              >
+                {Language.take('download')}
+              </button>
             </div>
           </div>
         </Col>

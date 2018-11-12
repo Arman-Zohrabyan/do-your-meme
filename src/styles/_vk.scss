@@ -105,5 +105,9 @@
         opacity: 0.7;
       }
     }
+
+    input:invalid {
+      border-color: rgb(219, 112, 147)
+    }
   }
 }

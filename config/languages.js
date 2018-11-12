@@ -25,7 +25,8 @@ export default {
     'config.sections.bottom': 'Показать нижнюю часть',
     'config.imageSelect.link': 'Ссылка на аватар',
     'config.imageSelect.button': 'Добавить',
-    'config.imageSelect.upload': 'Загрузить аватар'
+    'config.imageSelect.upload': 'Загрузить аватар',
+    'download': 'скачать'
   },
   'en': {
     'store.vk.online': 'was online 19 minutes ago',
@@ -53,6 +54,7 @@ export default {
     'config.sections.bottom': 'Show bottom side',
     'config.imageSelect.link': 'Avatar link',
     'config.imageSelect.button': 'Add',
-    'config.imageSelect.upload': 'Upload image'
+    'config.imageSelect.upload': 'Upload image',
+    'download': 'download'
   }
 };

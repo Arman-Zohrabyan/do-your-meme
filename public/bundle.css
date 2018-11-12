@@ -158,6 +158,9 @@ body {
   .vk_form__checkbox:hover {
     opacity: 0.7; }
 
+.vk_form input:invalid {
+  border-color: palevioletred; }
+
 .vk-widget {
   text-align: initial;
   display: inline-block;

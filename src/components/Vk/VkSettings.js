@@ -23,6 +23,7 @@ class VkSettings extends Component {
             label={Language.take('config.top.online')}
             value={header.time}
             onChange={e => onChange(e.target.value, 'header', 'time')}
+            required
             table
           />
           <CheckBox
@@ -37,6 +38,7 @@ class VkSettings extends Component {
             label={Language.take('config.current.fullName')}
             value={current.name}
             onChange={e => onChange(e.target.value, 'current', 'name')}
+            required
             table
           />
           <UserImageSelect
@@ -53,6 +55,7 @@ class VkSettings extends Component {
             label={Language.take('config.companion.fullName')}
             value={companion.name}
             onChange={e => onChange(e.target.value, 'companion', 'name')}
+            required
             table
           />
           <UserImageSelect
@@ -70,6 +73,7 @@ class VkSettings extends Component {
             value={content.height}
             onChange={e => onChange(e.target.value, 'content', 'height')}
             type='number'
+            required
             table
           />
 

@@ -12,8 +12,8 @@ function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, temp
         <div className='vk_form__img-select-right'>
           <div>
             <input
+              type='url'
               className='vk_form__img-select-input'
-              type='text'
               placeholder={Language.take('config.imageSelect.link')}
               value={imgTemp}
               onChange={e => onChange(e.target.value, 'temp', `${tempKey}Img`)}
