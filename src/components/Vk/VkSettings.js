@@ -8,14 +8,14 @@ class VkSettings extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isFlipped: false
+    };
+
     this.front = React.createRef();
     this.back = React.createRef();
     this.section = React.createRef();
   }
-
-  state = {
-    isFlipped: false
-  };
 
   showBack = () => {
     this.setState({

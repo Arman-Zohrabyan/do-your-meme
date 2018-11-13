@@ -1501,10 +1501,6 @@ var VkSettings = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).call(this, props));
 
-    _this.state = {
-      isFlipped: false
-    };
-
     _this.showBack = function () {
       _this.setState({
         isFlipped: true
@@ -1515,6 +1511,10 @@ var VkSettings = function (_Component) {
       _this.setState({
         isFlipped: false
       });
+    };
+
+    _this.state = {
+      isFlipped: false
     };
 
     _this.front = _react2.default.createRef();
