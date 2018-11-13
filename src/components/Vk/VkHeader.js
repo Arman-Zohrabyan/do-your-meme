@@ -33,7 +33,7 @@ class VkHeader extends Component {
         </div>
         <div className='vk-widget_header__right'>
           <div className='vk-widget_header__mini-img-container'>
-            <UserImage imgUrl={img} />
+            <UserImage src={img} />
           </div>
           <img
             className='vk-widget_header__dots'

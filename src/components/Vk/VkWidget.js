@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import VkHeader from './VkHeader';
 import VkFooter from './VkFooter';
+import { UserImage } from './mini';
 
 class VkWidget extends Component {
   renderHeader = () => {
@@ -46,9 +47,9 @@ class VkWidget extends Component {
             <div className='vk-widget_content__message-section'>
               <div className='vk-widget_content__messages-wrapper'>
                 <div className='vk-widget_content__message-left'>
-                  <img
-                    className='vk-widget_content__user-image'
+                  <UserImage
                     src='./assets/images/user.png'
+                    size='medium'
                   />
                 </div>
                 <div className='vk-widget_content__message-right'>
@@ -70,9 +71,9 @@ class VkWidget extends Component {
             <div className='vk-widget_content__message-section'>
               <div className='vk-widget_content__messages-wrapper'>
                 <div className='vk-widget_content__message-left'>
-                  <img
-                    className='vk-widget_content__user-image'
+                  <UserImage
                     src='./assets/images/user.png'
+                    size='medium'
                   />
                 </div>
                 <div className='vk-widget_content__message-right'>

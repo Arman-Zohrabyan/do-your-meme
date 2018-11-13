@@ -13,7 +13,7 @@ class VkContainer extends Component {
     html2canvas(document.querySelector('#vk-chat-widget')).then(canvas => {
       const link = document.createElement('a');
       link.setAttribute('download', 'screenshot.png');
-      link.setAttribute('href', canvas.toDataURL().replace("image/png", "image/octet-stream"));
+      link.setAttribute('href', canvas.toDataURL());
       link.click();
     });
   }

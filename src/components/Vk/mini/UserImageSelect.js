@@ -7,7 +7,7 @@ function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, temp
     <div className='vk_form vk_form__table'>
       <div className='vk_form__label clearfix'>
         <div className='vk_form__img-select-left'>
-          {label}: <UserImage imgUrl={imgUrl} />
+          {label}: <UserImage src={imgUrl} />
         </div>
         <div className='vk_form__img-select-right'>
           <div>

@@ -80,7 +80,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _languages = __webpack_require__(9);
+var _languages = __webpack_require__(10);
 
 var _languages2 = _interopRequireDefault(_languages);
 
@@ -118,16 +118,62 @@ module.exports = require("react-router-dom");
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("express");
+module.exports = require("classnames");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("reactstrap");
+module.exports = require("express");
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("reactstrap");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CheckBox = exports.SettingButton = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
+
+var _UserImage = __webpack_require__(9);
+
+var _UserImage2 = _interopRequireDefault(_UserImage);
+
+var _UserImageSelect = __webpack_require__(22);
+
+var _UserImageSelect2 = _interopRequireDefault(_UserImageSelect);
+
+var _TextInput = __webpack_require__(23);
+
+var _TextInput2 = _interopRequireDefault(_TextInput);
+
+var _CheckBox = __webpack_require__(24);
+
+var _CheckBox2 = _interopRequireDefault(_CheckBox);
+
+var _SettingButton = __webpack_require__(25);
+
+var _SettingButton2 = _interopRequireDefault(_SettingButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.UserImageSelect = _UserImageSelect2.default;
+exports.UserImage = _UserImage2.default;
+exports.TextInput = _TextInput2.default;
+exports.SettingButton = _SettingButton2.default;
+exports.CheckBox = _CheckBox2.default;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -141,11 +187,11 @@ var _VkContainer = __webpack_require__(19);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
-var _Home = __webpack_require__(29);
+var _Home = __webpack_require__(31);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Fb = __webpack_require__(30);
+var _Fb = __webpack_require__(32);
 
 var _Fb2 = _interopRequireDefault(_Fb);
 
@@ -179,53 +225,13 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.CheckBox = exports.SettingButton = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
-
-var _UserImage = __webpack_require__(8);
-
-var _UserImage2 = _interopRequireDefault(_UserImage);
-
-var _UserImageSelect = __webpack_require__(22);
-
-var _UserImageSelect2 = _interopRequireDefault(_UserImageSelect);
-
-var _TextInput = __webpack_require__(23);
-
-var _TextInput2 = _interopRequireDefault(_TextInput);
-
-var _CheckBox = __webpack_require__(24);
-
-var _CheckBox2 = _interopRequireDefault(_CheckBox);
-
-var _SettingButton = __webpack_require__(46);
-
-var _SettingButton2 = _interopRequireDefault(_SettingButton);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.UserImageSelect = _UserImageSelect2.default;
-exports.UserImage = _UserImage2.default;
-exports.TextInput = _TextInput2.default;
-exports.SettingButton = _SettingButton2.default;
-exports.CheckBox = _CheckBox2.default;
-
-/***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -239,21 +245,33 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function UserImage(_ref) {
-  var imgUrl = _ref.imgUrl;
+  var src = _ref.src,
+      _ref$size = _ref.size,
+      size = _ref$size === undefined ? 'small' : _ref$size;
+
+  var imageClasses = (0, _classnames2.default)(_defineProperty({
+    'vk-widget__user-img': true
+  }, 'vk-widget__user-img-' + size, true));
 
   return _react2.default.createElement('img', {
-    className: 'vk-widget_header__mini-img',
-    src: imgUrl
+    className: imageClasses,
+    src: src
   });
 }
 
 exports.default = UserImage;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -330,12 +348,6 @@ exports.default = {
 };
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = require("classnames");
-
-/***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -353,21 +365,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(32);
+var _server = __webpack_require__(34);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(8);
 
-var _serializeJavascript = __webpack_require__(33);
+var _serializeJavascript = __webpack_require__(35);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _Store = __webpack_require__(34);
+var _Store = __webpack_require__(36);
 
 var _Store2 = _interopRequireDefault(_Store);
 
-var _App = __webpack_require__(40);
+var _App = __webpack_require__(42);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -462,7 +474,7 @@ exports.default = PageGenerator;
 "use strict";
 
 
-var _express = __webpack_require__(3);
+var _express = __webpack_require__(4);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -478,9 +490,9 @@ var _customMiddlewares = __webpack_require__(15);
 
 var _customMiddlewares2 = _interopRequireDefault(_customMiddlewares);
 
-var _routerSocialPages = __webpack_require__(31);
+var _routerSocialPages = __webpack_require__(33);
 
-var _routerHome = __webpack_require__(45);
+var _routerHome = __webpack_require__(47);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -564,11 +576,11 @@ var _requestIp = __webpack_require__(18);
 
 var _requestIp2 = _interopRequireDefault(_requestIp);
 
-var _routes = __webpack_require__(5);
+var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _languages = __webpack_require__(9);
+var _languages = __webpack_require__(10);
 
 var _languages2 = _interopRequireDefault(_languages);
 
@@ -642,25 +654,25 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactstrap = __webpack_require__(4);
+var _reactstrap = __webpack_require__(5);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(8);
 
 var _VkWidget = __webpack_require__(20);
 
 var _VkWidget2 = _interopRequireDefault(_VkWidget);
 
-var _VkSettings = __webpack_require__(26);
+var _VkSettings = __webpack_require__(27);
 
 var _VkSettings2 = _interopRequireDefault(_VkSettings);
 
-var _actions = __webpack_require__(27);
+var _actions = __webpack_require__(29);
 
 var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
 
-var _html2canvas = __webpack_require__(28);
+var _html2canvas = __webpack_require__(30);
 
 var _html2canvas2 = _interopRequireDefault(_html2canvas);
 
@@ -690,7 +702,7 @@ var VkContainer = function (_Component) {
       (0, _html2canvas2.default)(document.querySelector('#vk-chat-widget')).then(function (canvas) {
         var link = document.createElement('a');
         link.setAttribute('download', 'screenshot.png');
-        link.setAttribute('href', canvas.toDataURL().replace("image/png", "image/octet-stream"));
+        link.setAttribute('href', canvas.toDataURL());
         link.click();
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -804,9 +816,11 @@ var _VkHeader = __webpack_require__(21);
 
 var _VkHeader2 = _interopRequireDefault(_VkHeader);
 
-var _VkFooter = __webpack_require__(25);
+var _VkFooter = __webpack_require__(26);
 
 var _VkFooter2 = _interopRequireDefault(_VkFooter);
+
+var _mini = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -889,9 +903,9 @@ var VkWidget = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'vk-widget_content__message-left' },
-                  _react2.default.createElement('img', {
-                    className: 'vk-widget_content__user-image',
-                    src: './assets/images/user.png'
+                  _react2.default.createElement(_mini.UserImage, {
+                    src: './assets/images/user.png',
+                    size: 'medium'
                   })
                 ),
                 _react2.default.createElement(
@@ -928,9 +942,9 @@ var VkWidget = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'vk-widget_content__message-left' },
-                  _react2.default.createElement('img', {
-                    className: 'vk-widget_content__user-image',
-                    src: './assets/images/user.png'
+                  _react2.default.createElement(_mini.UserImage, {
+                    src: './assets/images/user.png',
+                    size: 'medium'
                   })
                 ),
                 _react2.default.createElement(
@@ -987,7 +1001,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mini = __webpack_require__(7);
+var _mini = __webpack_require__(6);
 
 var _Language = __webpack_require__(1);
 
@@ -1060,7 +1074,7 @@ var VkHeader = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'vk-widget_header__mini-img-container' },
-            _react2.default.createElement(_mini.UserImage, { imgUrl: img })
+            _react2.default.createElement(_mini.UserImage, { src: img })
           ),
           _react2.default.createElement('img', {
             className: 'vk-widget_header__dots',
@@ -1095,7 +1109,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _UserImage = __webpack_require__(8);
+var _UserImage = __webpack_require__(9);
 
 var _UserImage2 = _interopRequireDefault(_UserImage);
 
@@ -1124,7 +1138,7 @@ function UserImageSelect(_ref) {
         { className: 'vk_form__img-select-left' },
         label,
         ': ',
-        _react2.default.createElement(_UserImage2.default, { imgUrl: imgUrl })
+        _react2.default.createElement(_UserImage2.default, { src: imgUrl })
       ),
       _react2.default.createElement(
         'div',
@@ -1192,7 +1206,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(10);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1254,7 +1268,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(10);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1308,6 +1322,46 @@ exports.default = CheckBox;
 
 /***/ }),
 /* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function SettingButton(_ref) {
+  var content = _ref.content,
+      full = _ref.full,
+      handleClick = _ref.handleClick;
+
+  var wrapper = (0, _classnames2.default)({
+    'vk_form__setting-button': true,
+    'vk_form__setting-button-full': !!full
+  });
+
+  return _react2.default.createElement(
+    'button',
+    { className: wrapper, onClick: handleClick },
+    content
+  );
+}
+
+exports.default = SettingButton;
+
+/***/ }),
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1401,7 +1455,7 @@ var VkHeader = function (_Component) {
 exports.default = VkHeader;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1417,11 +1471,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mini = __webpack_require__(7);
+var _reactDom = __webpack_require__(48);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
 
 var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
+
+var _reactCardFlip = __webpack_require__(28);
+
+var _reactCardFlip2 = _interopRequireDefault(_reactCardFlip);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1434,13 +1496,44 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var VkSettings = function (_Component) {
   _inherits(VkSettings, _Component);
 
-  function VkSettings() {
+  function VkSettings(props) {
     _classCallCheck(this, VkSettings);
 
-    return _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).call(this, props));
+
+    _this.state = {
+      isFlipped: false
+    };
+
+    _this.showBack = function () {
+      _this.setState({
+        isFlipped: true
+      });
+    };
+
+    _this.showFront = function () {
+      _this.setState({
+        isFlipped: false
+      });
+    };
+
+    _this.front = _react2.default.createRef();
+    _this.back = _react2.default.createRef();
+    _this.section = _react2.default.createRef();
+    return _this;
   }
 
   _createClass(VkSettings, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var frontHeight = _reactDom2.default.findDOMNode(this.front.current).offsetHeight;
+      var backHeight = _reactDom2.default.findDOMNode(this.back.current).offsetHeight;
+      var section = _reactDom2.default.findDOMNode(this.section.current);
+
+      var height = frontHeight > backHeight ? frontHeight : backHeight;
+      section.style.height = height + 5 + 'px';
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -1529,21 +1622,55 @@ var VkSettings = function (_Component) {
           }),
           _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.companion.message'), full: true }),
           _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            _Language2.default.take('config.content.title')
+            'div',
+            { ref: this.section, style: { 'height': '112px' } },
+            _react2.default.createElement(
+              _reactCardFlip2.default,
+              {
+                isFlipped: this.state.isFlipped
+              },
+              _react2.default.createElement(
+                'div',
+                { key: 'front', ref: this.front },
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'widget-right__config-title border-top' },
+                  _Language2.default.take('config.content.title')
+                ),
+                _react2.default.createElement(_mini.TextInput, {
+                  label: _Language2.default.take('config.content.height'),
+                  value: content.height,
+                  onChange: function onChange(e) {
+                    return _onChange(e.target.value, 'content', 'height');
+                  },
+                  type: 'number',
+                  required: true,
+                  table: true
+                }),
+                _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.content.separator'), full: true, handleClick: this.showBack })
+              ),
+              _react2.default.createElement(
+                'div',
+                { key: 'back', ref: this.back },
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'widget-right__config-title border-top' },
+                  _Language2.default.take('config.sections.title')
+                ),
+                _react2.default.createElement(_mini.TextInput, {
+                  label: _Language2.default.take('config.content.height'),
+                  value: content.height,
+                  onChange: function onChange(e) {
+                    return _onChange(e.target.value, 'content', 'height');
+                  },
+                  type: 'number',
+                  required: true,
+                  table: true
+                }),
+                _react2.default.createElement(_mini.SettingButton, { content: 'asdasd', full: true, handleClick: this.showFront })
+              )
+            )
           ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: _Language2.default.take('config.content.height'),
-            value: content.height,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'content', 'height');
-            },
-            type: 'number',
-            required: true,
-            table: true
-          }),
-          _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.content.separator'), full: true }),
           _react2.default.createElement(
             'h3',
             { className: 'widget-right__config-title border-top' },
@@ -1576,7 +1703,13 @@ var VkSettings = function (_Component) {
 exports.default = VkSettings;
 
 /***/ }),
-/* 27 */
+/* 28 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-card-flip");
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1620,13 +1753,13 @@ var changeImage = exports.changeImage = function changeImage(type, key, img) {
 };
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("html2canvas");
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1652,7 +1785,7 @@ function Home() {
 }
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1678,7 +1811,7 @@ function Fb() {
 }
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1689,7 +1822,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.router = undefined;
 
-var _express = __webpack_require__(3);
+var _express = __webpack_require__(4);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -1728,19 +1861,19 @@ function facebook(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1752,17 +1885,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _redux = __webpack_require__(35);
+var _redux = __webpack_require__(37);
 
-var _reduxThunk = __webpack_require__(36);
+var _reduxThunk = __webpack_require__(38);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducer = __webpack_require__(37);
+var _reducer = __webpack_require__(39);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
-var _reducer3 = __webpack_require__(39);
+var _reducer3 = __webpack_require__(41);
 
 var _reducer4 = _interopRequireDefault(_reducer3);
 
@@ -1813,19 +1946,19 @@ var Store = function () {
 exports.default = Store;
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1837,7 +1970,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _constants = __webpack_require__(38);
+var _constants = __webpack_require__(40);
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -1905,7 +2038,7 @@ var vk = function vk() {
 exports.default = vk;
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1919,7 +2052,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1949,7 +2082,7 @@ var app = function app() {
 exports.default = app;
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1969,17 +2102,17 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _reactstrap = __webpack_require__(4);
+var _reactstrap = __webpack_require__(5);
 
-var _routes = __webpack_require__(5);
+var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _Menu = __webpack_require__(41);
+var _Menu = __webpack_require__(43);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _NoMatch = __webpack_require__(44);
+var _NoMatch = __webpack_require__(46);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
@@ -2055,7 +2188,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2073,11 +2206,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _reactRouter = __webpack_require__(42);
+var _reactRouter = __webpack_require__(44);
 
-var _reactstrap = __webpack_require__(4);
+var _reactstrap = __webpack_require__(5);
 
-var _StringHelper = __webpack_require__(43);
+var _StringHelper = __webpack_require__(45);
 
 var _StringHelper2 = _interopRequireDefault(_StringHelper);
 
@@ -2212,13 +2345,13 @@ var Menu = function (_Component) {
 exports.default = (0, _reactRouter.withRouter)(Menu);
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router");
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2251,7 +2384,7 @@ var StringHelper = function () {
 exports.default = StringHelper;
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2277,7 +2410,7 @@ function NoMatch() {
 }
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2288,7 +2421,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.router = undefined;
 
-var _express = __webpack_require__(3);
+var _express = __webpack_require__(4);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -2317,43 +2450,10 @@ function home(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 48 */
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _classnames = __webpack_require__(10);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function SettingButton(_ref) {
-  var content = _ref.content,
-      full = _ref.full;
-
-  var wrapper = (0, _classnames2.default)({
-    'vk_form__setting-button': true,
-    'vk_form__setting-button-full': !!full
-  });
-
-  return _react2.default.createElement(
-    'button',
-    { className: wrapper },
-    content
-  );
-}
-
-exports.default = SettingButton;
+module.exports = require("react-dom");
 
 /***/ })
 /******/ ]);

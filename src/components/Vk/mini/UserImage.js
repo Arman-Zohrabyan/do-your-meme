@@ -1,10 +1,16 @@
 import React from 'react';
+import classNames from 'classnames';
 
-function UserImage({ imgUrl }) {
+function UserImage({ src, size = 'small' }) {
+  const imageClasses = classNames({
+    'vk-widget__user-img': true,
+    [`vk-widget__user-img-${size}`]: true
+  });
+
   return (
     <img
-      className='vk-widget_header__mini-img'
-      src={imgUrl}
+      className={imageClasses}
+      src={src}
     />
   );
 }

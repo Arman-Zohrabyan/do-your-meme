@@ -224,6 +224,14 @@ label {
   cursor: default;
   user-select: none;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; }
+  .vk-widget__user-img {
+    border-radius: 50%; }
+    .vk-widget__user-img-small {
+      width: 30px;
+      height: 30px; }
+    .vk-widget__user-img-medium {
+      width: 36px;
+      height: 36px; }
   .vk-widget_header {
     width: 550px;
     border: solid 1px #edeef0;
@@ -266,14 +274,10 @@ label {
       .vk-widget_header__online-status-image {
         display: inline-block;
         padding-left: 5px; }
-    .vk-widget_header__mini-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%; }
-      .vk-widget_header__mini-img-container {
-        float: right;
-        margin-right: 15px;
-        margin-top: 7px; }
+    .vk-widget_header__mini-img-container {
+      float: right;
+      margin-right: 15px;
+      margin-top: 7px; }
     .vk-widget_header__dots {
       margin-left: 15px;
       margin-right: 15px;
@@ -357,12 +361,6 @@ label {
       margin: 10px 0;
       border: 1px solid transparent;
       transition: box-shadow 0.2s ease-out, border-color 0.2s ease-out; }
-  .vk-widget_content__user-image {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #fafbfc;
-    background-color: inherit; }
   .vk-widget_content__user-name {
     max-width: 240px;
     color: #42648b;

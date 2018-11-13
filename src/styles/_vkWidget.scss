@@ -5,6 +5,17 @@
   user-select: none;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 
+  &__user-img {
+    border-radius: 50%;
+    &-small {
+      width: 30px;
+      height: 30px;
+    }
+    &-medium {
+      width: 36px;
+      height: 36px;
+    }
+  }
   &_header {
     width: 550px;
     border: solid 1px #edeef0;
@@ -58,16 +69,10 @@
         padding-left: 5px;
       }
     }
-    &__mini-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-
-      &-container {
-        float: right;
-        margin-right: 15px;
-        margin-top: 7px;
-      }
+    &__mini-img-container {
+      float: right;
+      margin-right: 15px;
+      margin-top: 7px;
     }
     &__dots {
       margin-left: 15px;
@@ -177,13 +182,6 @@
       }
     }
     &__user {
-      &-image {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background-color: #fafbfc;
-        background-color: inherit;
-      }
       &-name {
         max-width: 240px;
         color: #42648b;
