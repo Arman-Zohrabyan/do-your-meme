@@ -28,7 +28,7 @@ class MiddlewaresHandler {
       return cookieLanguage;
     }
     const language = MiddlewaresHandler.languageAction(req);
-    res.cookie('language', language, { maxAge: 30*24*60*60 });
+    res.cookie('language', language, { expire: new Date()+30*24*60*60 });
     return language;
   }
 }

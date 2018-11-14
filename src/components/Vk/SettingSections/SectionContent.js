@@ -45,12 +45,12 @@ class SectionContent extends Component {
     } = this.props;
 
     return (
-      <div ref={this.section} style={{'height': '112px'}}>
+      <div ref={this.section} style={{'height': '101px'}} className='widget-right__section-border-top widget-right__section'>
         <ReactCardFlip
           isFlipped={this.state.isFlipped}
         >
           <div key="front" ref={this.front}>
-            <h3 className='widget-right__config-title border-top'>{Language.take('config.content.title')}</h3>
+            <h3 className='widget-right__config-title'>{Language.take('config.content.title')}</h3>
             <TextInput
               label={Language.take('config.content.height')}
               value={content.height}
@@ -62,7 +62,7 @@ class SectionContent extends Component {
             <SettingButton content={Language.take('config.content.separator')} full handleClick={this.showBack} />
           </div>
           <div key="back" ref={this.back}>
-            <h3 className='widget-right__config-title border-top'>{Language.take('config.content.separator')}</h3>
+            <h3 className='widget-right__config-title'>{Language.take('config.content.separator')}</h3>
             <TextInput
               label={Language.take('config.content.separator.label')}
               placeholder={Language.take('config.content.separator.placeholder')}

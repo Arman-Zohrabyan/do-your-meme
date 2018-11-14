@@ -16,11 +16,15 @@ const initialState = {
   },
   companion: {
     name: 'Собеседник Беседник',
-    image: constants.defaultImage
+    image: constants.defaultImage,
+    msgTime: '',
+    message: ''
   },
   current: {
     name: 'Текущий пользователь',
-    image: constants.defaultImage
+    image: constants.defaultImage,
+    msgTime: '',
+    message: ''
   },
   temp: {
     companionImg: '',

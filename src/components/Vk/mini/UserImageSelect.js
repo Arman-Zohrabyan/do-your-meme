@@ -6,28 +6,28 @@ function UserImageSelect({ imgUrl, label, imgTemp, onChangeImage, onChange, temp
   return (
     <div className='vk_form vk_form__table'>
       <div className='vk_form__label clearfix'>
-        <div className='vk_form__img-select-left'>
+        <div className='vk_form__section-left'>
           {label}: <UserImage src={imgUrl} />
         </div>
-        <div className='vk_form__img-select-right'>
+        <div className='vk_form__section-right'>
           <div>
             <input
               type='url'
-              className='vk_form__img-select-input'
+              className='vk_form__section-input'
               placeholder={Language.take('config.imageSelect.link')}
               value={imgTemp}
               onChange={e => onChange(e.target.value, 'temp', `${tempKey}Img`)}
             />
             <button
-              className='vk_form__img-select-button'
+              className='vk_form__section-button'
               onClick={() => onChangeImage('temp', tempKey, imgTemp)}
             >
               {Language.take('config.imageSelect.button')}
             </button>
           </div>
-          <label className='vk_form__img-select-label'>
+          <label className='vk_form__section-label'>
             <div
-              className='vk_form__img-select-button upload-button'
+              className='vk_form__section-button upload-button'
             >
               {Language.take('config.imageSelect.upload')}
             </div>

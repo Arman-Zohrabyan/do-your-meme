@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { TextInput, UserImageSelect, SettingButton } from '../mini';
+import { TextInput, UserImageSelect, SettingButton, MessageBox } from '../mini';
 import Language from '../../../classes/Language';
 import ReactCardFlip from 'react-card-flip';
 
@@ -47,12 +47,12 @@ class SectionCurrentUser extends Component {
     } = this.props;
 
     return (
-      <div ref={this.section} style={{'height': '186px'}}>
+      <div ref={this.section} style={{'height': '175px'}} className='widget-right__section-border-top widget-right__section'>
         <ReactCardFlip
           isFlipped={this.state.isFlipped}
         >
           <div key="front" ref={this.front}>
-            <h3 className='widget-right__config-title border-top'>{Language.take('config.current.title')}</h3>
+            <h3 className='widget-right__config-title'>{Language.take('config.current.title')}</h3>
             <TextInput
               label={Language.take('config.current.fullName')}
               value={current.name}
@@ -71,21 +71,21 @@ class SectionCurrentUser extends Component {
             <SettingButton content={Language.take('config.current.message')} full handleClick={this.showBack} />
           </div>
           <div key="back" ref={this.back}>
-            <h3 className='widget-right__config-title border-top'>{Language.take('config.current.title')}</h3>
+            <h3 className='widget-right__config-title'>{Language.take('config.current.msg.title')}</h3>
             <TextInput
-              label={Language.take('config.current.fullName')}
-              value={current.name}
-              onChange={e => onChange(e.target.value, 'current', 'name')}
+              label={Language.take('config.msgTime.label')}
+              placeholder={Language.take('config.msgTime.placeholder')}
+              value={current.msgTime}
+              onChange={e => onChange(e.target.value, 'current', 'msgTime')}
               required
               table
             />
-            <UserImageSelect
-              label={Language.take('config.current.avatar')}
-              imgUrl={current.image}
-              imgTemp={temp.currentImg}
-              tempKey='current'
-              onChange={onChange}
-              onChangeImage={onChangeImage}
+            <MessageBox
+              label={Language.take('config.msg.label')}
+              placeholder={Language.take('content.writeMessage')}
+              value={current.message}
+              onChange={e => onChange(e.target.value, 'current', 'message')}
+              required
             />
             <SettingButton
               content={Language.take('cancel')}

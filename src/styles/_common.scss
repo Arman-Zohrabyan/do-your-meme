@@ -41,12 +41,15 @@ body {
       &-title {
         color: #696969;
         font-size: 16px;
+      }
+    }
+    &__section {
+      margin-bottom: 15px;
 
-        &.border-top {
-          padding-top: 10px;
-          margin-top: 5px;
-          border-top: 1px solid #dee2e6 !important;
-        }
+      &-border-top {
+        padding-top: 10px;
+        margin-top: 5px;
+        border-top: 1px solid #dee2e6 !important;
       }
     }
   }

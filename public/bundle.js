@@ -9668,7 +9668,7 @@ var UncontrolledTooltip = function (_Component) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CheckBox = exports.SettingButton = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
+exports.CheckBox = exports.MessageBox = exports.SettingButton = exports.TextInput = exports.UserImage = exports.UserImageSelect = undefined;
 
 var _UserImage = __webpack_require__(60);
 
@@ -9686,6 +9686,10 @@ var _CheckBox = __webpack_require__(141);
 
 var _CheckBox2 = _interopRequireDefault(_CheckBox);
 
+var _MessageBox = __webpack_require__(199);
+
+var _MessageBox2 = _interopRequireDefault(_MessageBox);
+
 var _SettingButton = __webpack_require__(142);
 
 var _SettingButton2 = _interopRequireDefault(_SettingButton);
@@ -9696,6 +9700,7 @@ exports.UserImageSelect = _UserImageSelect2.default;
 exports.UserImage = _UserImage2.default;
 exports.TextInput = _TextInput2.default;
 exports.SettingButton = _SettingButton2.default;
+exports.MessageBox = _MessageBox2.default;
 exports.CheckBox = _CheckBox2.default;
 
 /***/ }),
@@ -41989,20 +41994,20 @@ function UserImageSelect(_ref) {
       { className: 'vk_form__label clearfix' },
       _react2.default.createElement(
         'div',
-        { className: 'vk_form__img-select-left' },
+        { className: 'vk_form__section-left' },
         label,
         ': ',
         _react2.default.createElement(_UserImage2.default, { src: imgUrl })
       ),
       _react2.default.createElement(
         'div',
-        { className: 'vk_form__img-select-right' },
+        { className: 'vk_form__section-right' },
         _react2.default.createElement(
           'div',
           null,
           _react2.default.createElement('input', {
             type: 'url',
-            className: 'vk_form__img-select-input',
+            className: 'vk_form__section-input',
             placeholder: _Language2.default.take('config.imageSelect.link'),
             value: imgTemp,
             onChange: function onChange(e) {
@@ -42012,7 +42017,7 @@ function UserImageSelect(_ref) {
           _react2.default.createElement(
             'button',
             {
-              className: 'vk_form__img-select-button',
+              className: 'vk_form__section-button',
               onClick: function onClick() {
                 return onChangeImage('temp', tempKey, imgTemp);
               }
@@ -42022,11 +42027,11 @@ function UserImageSelect(_ref) {
         ),
         _react2.default.createElement(
           'label',
-          { className: 'vk_form__img-select-label' },
+          { className: 'vk_form__section-label' },
           _react2.default.createElement(
             'div',
             {
-              className: 'vk_form__img-select-button upload-button'
+              className: 'vk_form__section-button upload-button'
             },
             _Language2.default.take('config.imageSelect.upload')
           ),
@@ -42073,6 +42078,11 @@ exports.default = {
     'config.current.fullName': 'Полное имя',
     'config.current.message': 'Добавить сообщение',
     'config.current.avatar': 'Аватар',
+    'config.current.msg.title': 'Сообщение пользователя',
+    'config.msg.label': 'Сообщение',
+    'config.msgTime.label': 'Время отправки',
+    'config.msgTime.placeholder': 'пример: 14:00',
+    'config.companion.msg.title': 'Сообщение собеседник',
     'config.companion.title': 'Собеседник',
     'config.companion.fullName': 'Полное имя',
     'config.companion.avatar': 'Аватар',
@@ -42109,6 +42119,11 @@ exports.default = {
     'config.current.fullName': 'Full name',
     'config.current.avatar': 'Avatar',
     'config.current.message': 'Add new message',
+    'config.current.msg.title': 'User message',
+    'config.msg.label': 'message',
+    'config.msgTime.label': 'User message',
+    'config.msgTime.placeholder': 'example: 14:00',
+    'config.companion.msg.title': 'Interlocutor message',
     'config.companion.title': 'Interlocutor',
     'config.companion.fullName': 'Full name',
     'config.companion.avatar': 'Avatar',
@@ -42423,7 +42438,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _mini = __webpack_require__(36);
 
-var _SettingSections = __webpack_require__(194);
+var _SettingSections = __webpack_require__(193);
 
 var _Language = __webpack_require__(6);
 
@@ -50044,11 +50059,15 @@ var initialState = {
   },
   companion: {
     name: 'Собеседник Беседник',
-    image: _constants2.default.defaultImage
+    image: _constants2.default.defaultImage,
+    msgTime: '',
+    message: ''
   },
   current: {
     name: 'Текущий пользователь',
-    image: _constants2.default.defaultImage
+    image: _constants2.default.defaultImage,
+    msgTime: '',
+    message: ''
   },
   temp: {
     companionImg: '',
@@ -50146,8 +50165,7 @@ exports.default = app;
 /* 190 */,
 /* 191 */,
 /* 192 */,
-/* 193 */,
-/* 194 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50158,23 +50176,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SectionSections = exports.SectionTopPart = exports.SectionCurrentUser = exports.SectionInterlocutor = exports.SectionContent = undefined;
 
-var _SectionTopPart = __webpack_require__(202);
+var _SectionTopPart = __webpack_require__(194);
 
 var _SectionTopPart2 = _interopRequireDefault(_SectionTopPart);
 
-var _SectionContent = __webpack_require__(199);
+var _SectionContent = __webpack_require__(195);
 
 var _SectionContent2 = _interopRequireDefault(_SectionContent);
 
-var _SectionInterlocutor = __webpack_require__(200);
+var _SectionInterlocutor = __webpack_require__(196);
 
 var _SectionInterlocutor2 = _interopRequireDefault(_SectionInterlocutor);
 
-var _SectionSections = __webpack_require__(201);
+var _SectionSections = __webpack_require__(197);
 
 var _SectionSections2 = _interopRequireDefault(_SectionSections);
 
-var _SectionCurrentUser = __webpack_require__(203);
+var _SectionCurrentUser = __webpack_require__(198);
 
 var _SectionCurrentUser2 = _interopRequireDefault(_SectionCurrentUser);
 
@@ -50187,11 +50205,93 @@ exports.SectionTopPart = _SectionTopPart2.default;
 exports.SectionSections = _SectionSections2.default;
 
 /***/ }),
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(36);
+
+var _Language = __webpack_require__(6);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionTopPart = function (_Component) {
+  _inherits(SectionTopPart, _Component);
+
+  function SectionTopPart() {
+    _classCallCheck(this, SectionTopPart);
+
+    return _possibleConstructorReturn(this, (SectionTopPart.__proto__ || Object.getPrototypeOf(SectionTopPart)).apply(this, arguments));
+  }
+
+  _createClass(SectionTopPart, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          header = _props.header,
+          _onChange = _props.onChange;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'widget-right__section' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'widget-right__config-title' },
+          _Language2.default.take('config.top.title')
+        ),
+        _react2.default.createElement(_mini.TextInput, {
+          label: _Language2.default.take('config.top.online'),
+          value: header.time,
+          onChange: function onChange(e) {
+            return _onChange(e.target.value, 'header', 'time');
+          },
+          required: true,
+          table: true
+        }),
+        _react2.default.createElement(_mini.CheckBox, {
+          label: _Language2.default.take('config.top.mobile'),
+          checked: header.mobile,
+          onChange: function onChange(e) {
+            return _onChange(e.target.checked, 'header', 'mobile');
+          },
+          table: true
+        })
+      );
+    }
+  }]);
+
+  return SectionTopPart;
+}(_react.Component);
+
+exports.default = SectionTopPart;
+
+/***/ }),
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50279,7 +50379,7 @@ var SectionContent = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { ref: this.section, style: { 'height': '112px' } },
+        { ref: this.section, style: { 'height': '101px' }, className: 'widget-right__section-border-top widget-right__section' },
         _react2.default.createElement(
           _reactCardFlip2.default,
           {
@@ -50290,7 +50390,7 @@ var SectionContent = function (_Component) {
             { key: 'front', ref: this.front },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
+              { className: 'widget-right__config-title' },
               _Language2.default.take('config.content.title')
             ),
             _react2.default.createElement(_mini.TextInput, {
@@ -50310,7 +50410,7 @@ var SectionContent = function (_Component) {
             { key: 'back', ref: this.back },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
+              { className: 'widget-right__config-title' },
               _Language2.default.take('config.content.separator')
             ),
             _react2.default.createElement(_mini.TextInput, {
@@ -50346,7 +50446,7 @@ var SectionContent = function (_Component) {
 exports.default = SectionContent;
 
 /***/ }),
-/* 200 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50436,7 +50536,7 @@ var SectionInterlocutor = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { ref: this.section, style: { 'height': '186px' } },
+        { ref: this.section, style: { 'height': '175px' }, className: 'widget-right__section-border-top widget-right__section' },
         _react2.default.createElement(
           _reactCardFlip2.default,
           {
@@ -50447,7 +50547,7 @@ var SectionInterlocutor = function (_Component) {
             { key: 'front', ref: this.front },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
+              { className: 'widget-right__config-title' },
               _Language2.default.take('config.companion.title')
             ),
             _react2.default.createElement(_mini.TextInput, {
@@ -50474,25 +50574,27 @@ var SectionInterlocutor = function (_Component) {
             { key: 'back', ref: this.back },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
-              _Language2.default.take('config.companion.title')
+              { className: 'widget-right__config-title' },
+              _Language2.default.take('config.companion.msg.title')
             ),
             _react2.default.createElement(_mini.TextInput, {
-              label: _Language2.default.take('config.companion.fullName'),
-              value: companion.name,
+              label: _Language2.default.take('config.msgTime.label'),
+              placeholder: _Language2.default.take('config.msgTime.placeholder'),
+              value: companion.msgTime,
               onChange: function onChange(e) {
-                return _onChange(e.target.value, 'companion', 'name');
+                return _onChange(e.target.value, 'companion', 'msgTime');
               },
               required: true,
               table: true
             }),
-            _react2.default.createElement(_mini.UserImageSelect, {
-              label: _Language2.default.take('config.companion.avatar'),
-              imgUrl: companion.image,
-              imgTemp: temp.companionImg,
-              tempKey: 'companion',
-              onChange: _onChange,
-              onChangeImage: onChangeImage
+            _react2.default.createElement(_mini.MessageBox, {
+              label: _Language2.default.take('config.msg.label'),
+              placeholder: _Language2.default.take('content.writeMessage'),
+              value: companion.message,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'companion', 'message');
+              },
+              required: true
             }),
             _react2.default.createElement(_mini.SettingButton, {
               content: _Language2.default.take('cancel'),
@@ -50517,7 +50619,7 @@ var SectionInterlocutor = function (_Component) {
 exports.default = SectionInterlocutor;
 
 /***/ }),
-/* 201 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50569,11 +50671,11 @@ var SectionSections = function (_Component) {
 
 
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
+        'div',
+        { className: 'widget-right__section widget-right__section-border-top' },
         _react2.default.createElement(
           'h3',
-          { className: 'widget-right__config-title border-top' },
+          { className: 'widget-right__config-title' },
           _Language2.default.take('config.sections.title')
         ),
         _react2.default.createElement(_mini.CheckBox, {
@@ -50602,93 +50704,7 @@ var SectionSections = function (_Component) {
 exports.default = SectionSections;
 
 /***/ }),
-/* 202 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(28);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _mini = __webpack_require__(36);
-
-var _Language = __webpack_require__(6);
-
-var _Language2 = _interopRequireDefault(_Language);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SectionTopPart = function (_Component) {
-  _inherits(SectionTopPart, _Component);
-
-  function SectionTopPart() {
-    _classCallCheck(this, SectionTopPart);
-
-    return _possibleConstructorReturn(this, (SectionTopPart.__proto__ || Object.getPrototypeOf(SectionTopPart)).apply(this, arguments));
-  }
-
-  _createClass(SectionTopPart, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          header = _props.header,
-          _onChange = _props.onChange;
-
-
-      return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        _react2.default.createElement(
-          'h3',
-          { className: 'widget-right__config-title' },
-          _Language2.default.take('config.top.title')
-        ),
-        _react2.default.createElement(_mini.TextInput, {
-          label: _Language2.default.take('config.top.online'),
-          value: header.time,
-          onChange: function onChange(e) {
-            return _onChange(e.target.value, 'header', 'time');
-          },
-          required: true,
-          table: true
-        }),
-        _react2.default.createElement(_mini.CheckBox, {
-          label: _Language2.default.take('config.top.mobile'),
-          checked: header.mobile,
-          onChange: function onChange(e) {
-            return _onChange(e.target.checked, 'header', 'mobile');
-          },
-          table: true
-        })
-      );
-    }
-  }]);
-
-  return SectionTopPart;
-}(_react.Component);
-
-exports.default = SectionTopPart;
-
-/***/ }),
-/* 203 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50778,7 +50794,7 @@ var SectionCurrentUser = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { ref: this.section, style: { 'height': '186px' } },
+        { ref: this.section, style: { 'height': '175px' }, className: 'widget-right__section-border-top widget-right__section' },
         _react2.default.createElement(
           _reactCardFlip2.default,
           {
@@ -50789,7 +50805,7 @@ var SectionCurrentUser = function (_Component) {
             { key: 'front', ref: this.front },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
+              { className: 'widget-right__config-title' },
               _Language2.default.take('config.current.title')
             ),
             _react2.default.createElement(_mini.TextInput, {
@@ -50816,25 +50832,27 @@ var SectionCurrentUser = function (_Component) {
             { key: 'back', ref: this.back },
             _react2.default.createElement(
               'h3',
-              { className: 'widget-right__config-title border-top' },
-              _Language2.default.take('config.current.title')
+              { className: 'widget-right__config-title' },
+              _Language2.default.take('config.current.msg.title')
             ),
             _react2.default.createElement(_mini.TextInput, {
-              label: _Language2.default.take('config.current.fullName'),
-              value: current.name,
+              label: _Language2.default.take('config.msgTime.label'),
+              placeholder: _Language2.default.take('config.msgTime.placeholder'),
+              value: current.msgTime,
               onChange: function onChange(e) {
-                return _onChange(e.target.value, 'current', 'name');
+                return _onChange(e.target.value, 'current', 'msgTime');
               },
               required: true,
               table: true
             }),
-            _react2.default.createElement(_mini.UserImageSelect, {
-              label: _Language2.default.take('config.current.avatar'),
-              imgUrl: current.image,
-              imgTemp: temp.currentImg,
-              tempKey: 'current',
-              onChange: _onChange,
-              onChangeImage: onChangeImage
+            _react2.default.createElement(_mini.MessageBox, {
+              label: _Language2.default.take('config.msg.label'),
+              placeholder: _Language2.default.take('content.writeMessage'),
+              value: current.message,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'current', 'message');
+              },
+              required: true
             }),
             _react2.default.createElement(_mini.SettingButton, {
               content: _Language2.default.take('cancel'),
@@ -50857,6 +50875,64 @@ var SectionCurrentUser = function (_Component) {
 }(_react.Component);
 
 exports.default = SectionCurrentUser;
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Language = __webpack_require__(6);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function MessageBox(_ref) {
+  var value = _ref.value,
+      label = _ref.label,
+      onChange = _ref.onChange,
+      required = _ref.required,
+      _ref$placeholder = _ref.placeholder,
+      placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'vk_form vk_form__table' },
+    _react2.default.createElement(
+      'div',
+      { className: 'vk_form__label clearfix' },
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__section-left' },
+        label,
+        ':'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'vk_form__section-right' },
+        _react2.default.createElement('textarea', {
+          className: 'vk_form__section-textarea',
+          required: required,
+          placeholder: placeholder,
+          value: value,
+          onChange: onChange
+        })
+      )
+    )
+  );
+}
+
+exports.default = MessageBox;
 
 /***/ })
 /******/ ]);
