@@ -11,7 +11,8 @@ const initialState = {
     mobile: false
   },
   content: {
-    height: 200
+    height: 200,
+    separatorText: ''
   },
   companion: {
     name: 'Собеседник Беседник',

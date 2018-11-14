@@ -70,6 +70,26 @@
       &-full {
         width: 100%;
       }
+      &-distance {
+        margin: 5px 20px;
+      }
+      &-ligth {
+        background-color: #e5ebf1;
+        color: #55677d;
+        border-color: #d8d8d8 #d1d1d1 #bababa;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #e5ebf1;
+          text-decoration: none;
+        }
+        &:active {
+          background-color: #e5ebf1;
+          padding-top: 5px;
+          padding-bottom: 4px;
+        }
+      }
     }
     &__img-select {
       &-button {

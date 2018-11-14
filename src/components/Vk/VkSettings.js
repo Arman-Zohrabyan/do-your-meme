@@ -1,43 +1,16 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { TextInput, CheckBox, UserImageSelect, SettingButton } from './mini';
+import {
+  SectionContent,
+  SectionCurrentUser,
+  SectionInterlocutor,
+  SectionTopPart,
+  SectionSections
+} from './SettingSections';
 import Language from '../../classes/Language';
-import ReactCardFlip from 'react-card-flip';
 
 class VkSettings extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isFlipped: false
-    };
-
-    this.front = React.createRef();
-    this.back = React.createRef();
-    this.section = React.createRef();
-  }
-
-  showBack = () => {
-    this.setState({
-      isFlipped: true
-    });
-  }
- 
-  showFront = () => {
-    this.setState({
-      isFlipped: false
-    });
-  }
-
-  componentDidMount() {
-    const frontHeight = ReactDOM.findDOMNode(this.front.current).offsetHeight;
-    const backHeight = ReactDOM.findDOMNode(this.back.current).offsetHeight;
-    const section = ReactDOM.findDOMNode(this.section.current);
-
-    const height = frontHeight > backHeight ? frontHeight : backHeight;
-    section.style.height = `${height+5}px`;
-  }
-
   render() {
     const {
       header,
@@ -53,122 +26,29 @@ class VkSettings extends Component {
     return (
       <div className='widget-right__wrapper'>
         <div className='widget-right__config'>
-          <h3 className='widget-right__config-title'>{Language.take('config.top.title')}</h3>
-          <TextInput
-            label={Language.take('config.top.online')}
-            value={header.time}
-            onChange={e => onChange(e.target.value, 'header', 'time')}
-            required
-            table
+          <SectionTopPart
+            header={header}
+            onChange={onChange}
           />
-          <CheckBox
-            label={Language.take('config.top.mobile')}
-            checked={header.mobile}
-            onChange={e => onChange(e.target.checked, 'header', 'mobile')}
-            table
-          />
-
-
-
-
-
-
-
-          <h3 className='widget-right__config-title border-top'>{Language.take('config.current.title')}</h3>
-          <TextInput
-            label={Language.take('config.current.fullName')}
-            value={current.name}
-            onChange={e => onChange(e.target.value, 'current', 'name')}
-            required
-            table
-          />
-          <UserImageSelect
-            label={Language.take('config.current.avatar')}
-            imgUrl={current.image}
-            imgTemp={temp.currentImg}
-            tempKey='current'
+          <SectionCurrentUser
+            current={current}
+            temp={temp}
             onChange={onChange}
             onChangeImage={onChangeImage}
           />
-          <SettingButton content={Language.take('config.current.message')} full />
-
-
-
-
-
-
-
-          <h3 className='widget-right__config-title border-top'>{Language.take('config.companion.title')}</h3>
-          <TextInput
-            label={Language.take('config.companion.fullName')}
-            value={companion.name}
-            onChange={e => onChange(e.target.value, 'companion', 'name')}
-            required
-            table
-          />
-          <UserImageSelect
-            label={Language.take('config.companion.avatar')}
-            imgUrl={companion.image}
-            imgTemp={temp.companionImg}
-            tempKey='companion'
+          <SectionInterlocutor
+            companion={companion}
+            temp={temp}
             onChange={onChange}
             onChangeImage={onChangeImage}
           />
-          <SettingButton content={Language.take('config.companion.message')} full />
-
-
-
-
-
-        <div ref={this.section} style={{'height': '112px'}}>
-          <ReactCardFlip
-            isFlipped={this.state.isFlipped}
-          >
-            <div key="front" ref={this.front}>
-              <h3 className='widget-right__config-title border-top'>{Language.take('config.content.title')}</h3>
-              <TextInput
-                label={Language.take('config.content.height')}
-                value={content.height}
-                onChange={e => onChange(e.target.value, 'content', 'height')}
-                type='number'
-                required
-                table
-              />
-              <SettingButton content={Language.take('config.content.separator')} full handleClick={this.showBack} />
-            </div>
-            <div key="back" ref={this.back}>
-              <h3 className='widget-right__config-title border-top'>{Language.take('config.sections.title')}</h3>
-              <TextInput
-                label={Language.take('config.content.height')}
-                value={content.height}
-                onChange={e => onChange(e.target.value, 'content', 'height')}
-                type='number'
-                required
-                table
-              />
-              <SettingButton content={'asdasd'} full handleClick={this.showFront} />
-            </div>
-          </ReactCardFlip>
-        </div>
-
-
-
-
-
-
-
-          <h3 className='widget-right__config-title border-top'>{Language.take('config.sections.title')}</h3>
-          <CheckBox
-            label={Language.take('config.sections.top')}
-            checked={components.header}
-            onChange={e => onChange(e.target.checked, 'components', 'header')}
-            table
+          <SectionContent
+            content={content}
+            onChange={onChange}
           />
-          <CheckBox
-            label={Language.take('config.sections.bottom')}
-            checked={components.footer}
-            onChange={e => onChange(e.target.checked, 'components', 'footer')}
-            table
+          <SectionSections
+            components={components}
+            onChange={onChange}
           />
         </div>
       </div>

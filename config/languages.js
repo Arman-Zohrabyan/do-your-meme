@@ -23,13 +23,17 @@ export default {
     'config.content.title': 'Контент',
     'config.content.height': 'Высота контента',
     'config.content.separator': 'Добавить разделитель',
+    'config.content.separator.label': 'Текст разделителя',
+    'config.content.separator.placeholder': 'пример: 6 ноября',
     'config.sections.title': 'Разделы',
     'config.sections.top': 'Показать верхнюю часть',
     'config.sections.bottom': 'Показать нижнюю часть',
     'config.imageSelect.link': 'Ссылка на аватар',
     'config.imageSelect.button': 'Добавить',
     'config.imageSelect.upload': 'Загрузить аватар',
-    'download': 'скачать'
+    'download': 'скачать',
+    'cancel': 'Отменить',
+    'add': 'Добавить'
   },
   'en': {
     'store.vk.online': 'was online 19 minutes ago',
@@ -55,12 +59,16 @@ export default {
     'config.content.title': 'Content',
     'config.content.height': 'Content height',
     'config.content.separator': 'Add separator',
+    'config.content.separator.label': 'Separator text',
+    'config.content.separator.placeholder': 'example: november 6',
     'config.sections.title': 'Sections',
     'config.sections.top': 'Show top side',
     'config.sections.bottom': 'Show bottom side',
     'config.imageSelect.link': 'Avatar link',
     'config.imageSelect.button': 'Add',
     'config.imageSelect.upload': 'Upload image',
-    'download': 'download'
+    'download': 'download',
+    'cancel': 'Cancel',
+    'add': 'Add'
   }
 };

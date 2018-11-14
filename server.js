@@ -187,11 +187,11 @@ var _VkContainer = __webpack_require__(19);
 
 var _VkContainer2 = _interopRequireDefault(_VkContainer);
 
-var _Home = __webpack_require__(31);
+var _Home = __webpack_require__(32);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Fb = __webpack_require__(32);
+var _Fb = __webpack_require__(33);
 
 var _Fb2 = _interopRequireDefault(_Fb);
 
@@ -305,13 +305,17 @@ exports.default = {
     'config.content.title': 'Контент',
     'config.content.height': 'Высота контента',
     'config.content.separator': 'Добавить разделитель',
+    'config.content.separator.label': 'Текст разделителя',
+    'config.content.separator.placeholder': 'пример: 6 ноября',
     'config.sections.title': 'Разделы',
     'config.sections.top': 'Показать верхнюю часть',
     'config.sections.bottom': 'Показать нижнюю часть',
     'config.imageSelect.link': 'Ссылка на аватар',
     'config.imageSelect.button': 'Добавить',
     'config.imageSelect.upload': 'Загрузить аватар',
-    'download': 'скачать'
+    'download': 'скачать',
+    'cancel': 'Отменить',
+    'add': 'Добавить'
   },
   'en': {
     'store.vk.online': 'was online 19 minutes ago',
@@ -337,13 +341,17 @@ exports.default = {
     'config.content.title': 'Content',
     'config.content.height': 'Content height',
     'config.content.separator': 'Add separator',
+    'config.content.separator.label': 'Separator text',
+    'config.content.separator.placeholder': 'example: november 6',
     'config.sections.title': 'Sections',
     'config.sections.top': 'Show top side',
     'config.sections.bottom': 'Show bottom side',
     'config.imageSelect.link': 'Avatar link',
     'config.imageSelect.button': 'Add',
     'config.imageSelect.upload': 'Upload image',
-    'download': 'download'
+    'download': 'download',
+    'cancel': 'Cancel',
+    'add': 'Add'
   }
 };
 
@@ -365,21 +373,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(34);
+var _server = __webpack_require__(35);
 
 var _reactRouterDom = __webpack_require__(2);
 
 var _reactRedux = __webpack_require__(8);
 
-var _serializeJavascript = __webpack_require__(35);
+var _serializeJavascript = __webpack_require__(36);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _Store = __webpack_require__(36);
+var _Store = __webpack_require__(37);
 
 var _Store2 = _interopRequireDefault(_Store);
 
-var _App = __webpack_require__(42);
+var _App = __webpack_require__(43);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -490,9 +498,9 @@ var _customMiddlewares = __webpack_require__(15);
 
 var _customMiddlewares2 = _interopRequireDefault(_customMiddlewares);
 
-var _routerSocialPages = __webpack_require__(33);
+var _routerSocialPages = __webpack_require__(34);
 
-var _routerHome = __webpack_require__(47);
+var _routerHome = __webpack_require__(48);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -666,13 +674,13 @@ var _VkSettings = __webpack_require__(27);
 
 var _VkSettings2 = _interopRequireDefault(_VkSettings);
 
-var _actions = __webpack_require__(29);
+var _actions = __webpack_require__(30);
 
 var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
 
-var _html2canvas = __webpack_require__(30);
+var _html2canvas = __webpack_require__(31);
 
 var _html2canvas2 = _interopRequireDefault(_html2canvas);
 
@@ -1221,7 +1229,9 @@ function TextInput(_ref) {
       _ref$type = _ref.type,
       type = _ref$type === undefined ? 'text' : _ref$type,
       _ref$required = _ref.required,
-      required = _ref$required === undefined ? 'false' : _ref$required;
+      required = _ref$required === undefined ? 'false' : _ref$required,
+      _ref$placeholder = _ref.placeholder,
+      placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 
   var wrapper = (0, _classnames2.default)({
     'vk_form': true,
@@ -1245,7 +1255,8 @@ function TextInput(_ref) {
         type: type,
         className: 'vk_form__input',
         value: value,
-        onChange: onChange
+        onChange: onChange,
+        placeholder: placeholder
       })
     )
   );
@@ -1344,11 +1355,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function SettingButton(_ref) {
   var content = _ref.content,
       full = _ref.full,
-      handleClick = _ref.handleClick;
+      handleClick = _ref.handleClick,
+      distance = _ref.distance,
+      ligth = _ref.ligth;
 
   var wrapper = (0, _classnames2.default)({
     'vk_form__setting-button': true,
-    'vk_form__setting-button-full': !!full
+    'vk_form__setting-button-full': full,
+    'vk_form__setting-button-distance': distance,
+    'vk_form__setting-button-ligth': ligth
   });
 
   return _react2.default.createElement(
@@ -1471,19 +1486,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(48);
+var _reactDom = __webpack_require__(28);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _mini = __webpack_require__(6);
 
+var _SettingSections = __webpack_require__(50);
+
 var _Language = __webpack_require__(1);
 
 var _Language2 = _interopRequireDefault(_Language);
-
-var _reactCardFlip = __webpack_require__(28);
-
-var _reactCardFlip2 = _interopRequireDefault(_reactCardFlip);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1496,44 +1509,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var VkSettings = function (_Component) {
   _inherits(VkSettings, _Component);
 
-  function VkSettings(props) {
+  function VkSettings() {
     _classCallCheck(this, VkSettings);
 
-    var _this = _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).call(this, props));
-
-    _this.showBack = function () {
-      _this.setState({
-        isFlipped: true
-      });
-    };
-
-    _this.showFront = function () {
-      _this.setState({
-        isFlipped: false
-      });
-    };
-
-    _this.state = {
-      isFlipped: false
-    };
-
-    _this.front = _react2.default.createRef();
-    _this.back = _react2.default.createRef();
-    _this.section = _react2.default.createRef();
-    return _this;
+    return _possibleConstructorReturn(this, (VkSettings.__proto__ || Object.getPrototypeOf(VkSettings)).apply(this, arguments));
   }
 
   _createClass(VkSettings, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var frontHeight = _reactDom2.default.findDOMNode(this.front.current).offsetHeight;
-      var backHeight = _reactDom2.default.findDOMNode(this.back.current).offsetHeight;
-      var section = _reactDom2.default.findDOMNode(this.section.current);
-
-      var height = frontHeight > backHeight ? frontHeight : backHeight;
-      section.style.height = height + 5 + 'px';
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -1543,7 +1525,7 @@ var VkSettings = function (_Component) {
           current = _props.current,
           content = _props.content,
           temp = _props.temp,
-          _onChange = _props.onChange,
+          onChange = _props.onChange,
           onChangeImage = _props.onChangeImage;
 
 
@@ -1553,144 +1535,29 @@ var VkSettings = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'widget-right__config' },
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title' },
-            _Language2.default.take('config.top.title')
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: _Language2.default.take('config.top.online'),
-            value: header.time,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'header', 'time');
-            },
-            required: true,
-            table: true
+          _react2.default.createElement(_SettingSections.SectionTopPart, {
+            header: header,
+            onChange: onChange
           }),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: _Language2.default.take('config.top.mobile'),
-            checked: header.mobile,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'header', 'mobile');
-            },
-            table: true
-          }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            _Language2.default.take('config.current.title')
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: _Language2.default.take('config.current.fullName'),
-            value: current.name,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'current', 'name');
-            },
-            required: true,
-            table: true
-          }),
-          _react2.default.createElement(_mini.UserImageSelect, {
-            label: _Language2.default.take('config.current.avatar'),
-            imgUrl: current.image,
-            imgTemp: temp.currentImg,
-            tempKey: 'current',
-            onChange: _onChange,
+          _react2.default.createElement(_SettingSections.SectionCurrentUser, {
+            current: current,
+            temp: temp,
+            onChange: onChange,
             onChangeImage: onChangeImage
           }),
-          _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.current.message'), full: true }),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            _Language2.default.take('config.companion.title')
-          ),
-          _react2.default.createElement(_mini.TextInput, {
-            label: _Language2.default.take('config.companion.fullName'),
-            value: companion.name,
-            onChange: function onChange(e) {
-              return _onChange(e.target.value, 'companion', 'name');
-            },
-            required: true,
-            table: true
-          }),
-          _react2.default.createElement(_mini.UserImageSelect, {
-            label: _Language2.default.take('config.companion.avatar'),
-            imgUrl: companion.image,
-            imgTemp: temp.companionImg,
-            tempKey: 'companion',
-            onChange: _onChange,
+          _react2.default.createElement(_SettingSections.SectionInterlocutor, {
+            companion: companion,
+            temp: temp,
+            onChange: onChange,
             onChangeImage: onChangeImage
           }),
-          _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.companion.message'), full: true }),
-          _react2.default.createElement(
-            'div',
-            { ref: this.section, style: { 'height': '112px' } },
-            _react2.default.createElement(
-              _reactCardFlip2.default,
-              {
-                isFlipped: this.state.isFlipped
-              },
-              _react2.default.createElement(
-                'div',
-                { key: 'front', ref: this.front },
-                _react2.default.createElement(
-                  'h3',
-                  { className: 'widget-right__config-title border-top' },
-                  _Language2.default.take('config.content.title')
-                ),
-                _react2.default.createElement(_mini.TextInput, {
-                  label: _Language2.default.take('config.content.height'),
-                  value: content.height,
-                  onChange: function onChange(e) {
-                    return _onChange(e.target.value, 'content', 'height');
-                  },
-                  type: 'number',
-                  required: true,
-                  table: true
-                }),
-                _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.content.separator'), full: true, handleClick: this.showBack })
-              ),
-              _react2.default.createElement(
-                'div',
-                { key: 'back', ref: this.back },
-                _react2.default.createElement(
-                  'h3',
-                  { className: 'widget-right__config-title border-top' },
-                  _Language2.default.take('config.sections.title')
-                ),
-                _react2.default.createElement(_mini.TextInput, {
-                  label: _Language2.default.take('config.content.height'),
-                  value: content.height,
-                  onChange: function onChange(e) {
-                    return _onChange(e.target.value, 'content', 'height');
-                  },
-                  type: 'number',
-                  required: true,
-                  table: true
-                }),
-                _react2.default.createElement(_mini.SettingButton, { content: 'asdasd', full: true, handleClick: this.showFront })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'h3',
-            { className: 'widget-right__config-title border-top' },
-            _Language2.default.take('config.sections.title')
-          ),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: _Language2.default.take('config.sections.top'),
-            checked: components.header,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'components', 'header');
-            },
-            table: true
+          _react2.default.createElement(_SettingSections.SectionContent, {
+            content: content,
+            onChange: onChange
           }),
-          _react2.default.createElement(_mini.CheckBox, {
-            label: _Language2.default.take('config.sections.bottom'),
-            checked: components.footer,
-            onChange: function onChange(e) {
-              return _onChange(e.target.checked, 'components', 'footer');
-            },
-            table: true
+          _react2.default.createElement(_SettingSections.SectionSections, {
+            components: components,
+            onChange: onChange
           })
         )
       );
@@ -1706,10 +1573,16 @@ exports.default = VkSettings;
 /* 28 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-card-flip");
+module.exports = require("react-dom");
 
 /***/ }),
 /* 29 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-card-flip");
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1753,13 +1626,13 @@ var changeImage = exports.changeImage = function changeImage(type, key, img) {
 };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("html2canvas");
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1785,7 +1658,7 @@ function Home() {
 }
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1811,7 +1684,7 @@ function Fb() {
 }
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1861,19 +1734,19 @@ function facebook(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1885,17 +1758,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _redux = __webpack_require__(37);
+var _redux = __webpack_require__(38);
 
-var _reduxThunk = __webpack_require__(38);
+var _reduxThunk = __webpack_require__(39);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducer = __webpack_require__(39);
+var _reducer = __webpack_require__(40);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
-var _reducer3 = __webpack_require__(41);
+var _reducer3 = __webpack_require__(42);
 
 var _reducer4 = _interopRequireDefault(_reducer3);
 
@@ -1946,19 +1819,19 @@ var Store = function () {
 exports.default = Store;
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1970,7 +1843,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _constants = __webpack_require__(40);
+var _constants = __webpack_require__(41);
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -1986,7 +1859,8 @@ var initialState = {
     mobile: false
   },
   content: {
-    height: 200
+    height: 200,
+    separatorText: ''
   },
   companion: {
     name: 'Собеседник Беседник',
@@ -2038,7 +1912,7 @@ var vk = function vk() {
 exports.default = vk;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2052,7 +1926,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2082,7 +1956,7 @@ var app = function app() {
 exports.default = app;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2108,11 +1982,11 @@ var _routes = __webpack_require__(7);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _Menu = __webpack_require__(43);
+var _Menu = __webpack_require__(44);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _NoMatch = __webpack_require__(46);
+var _NoMatch = __webpack_require__(47);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
@@ -2188,7 +2062,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2206,11 +2080,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _reactRouter = __webpack_require__(44);
+var _reactRouter = __webpack_require__(45);
 
 var _reactstrap = __webpack_require__(5);
 
-var _StringHelper = __webpack_require__(45);
+var _StringHelper = __webpack_require__(46);
 
 var _StringHelper2 = _interopRequireDefault(_StringHelper);
 
@@ -2345,13 +2219,13 @@ var Menu = function (_Component) {
 exports.default = (0, _reactRouter.withRouter)(Menu);
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router");
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2384,7 +2258,7 @@ var StringHelper = function () {
 exports.default = StringHelper;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2410,7 +2284,7 @@ function NoMatch() {
 }
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2450,10 +2324,717 @@ function home(req, res) {
 exports.router = router;
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports) {
+/* 49 */,
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-dom");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SectionSections = exports.SectionTopPart = exports.SectionCurrentUser = exports.SectionInterlocutor = exports.SectionContent = undefined;
+
+var _SectionTopPart = __webpack_require__(58);
+
+var _SectionTopPart2 = _interopRequireDefault(_SectionTopPart);
+
+var _SectionContent = __webpack_require__(55);
+
+var _SectionContent2 = _interopRequireDefault(_SectionContent);
+
+var _SectionInterlocutor = __webpack_require__(56);
+
+var _SectionInterlocutor2 = _interopRequireDefault(_SectionInterlocutor);
+
+var _SectionSections = __webpack_require__(57);
+
+var _SectionSections2 = _interopRequireDefault(_SectionSections);
+
+var _SectionCurrentUser = __webpack_require__(59);
+
+var _SectionCurrentUser2 = _interopRequireDefault(_SectionCurrentUser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.SectionContent = _SectionContent2.default;
+exports.SectionInterlocutor = _SectionInterlocutor2.default;
+exports.SectionCurrentUser = _SectionCurrentUser2.default;
+exports.SectionTopPart = _SectionTopPart2.default;
+exports.SectionSections = _SectionSections2.default;
+
+/***/ }),
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+var _reactCardFlip = __webpack_require__(29);
+
+var _reactCardFlip2 = _interopRequireDefault(_reactCardFlip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionContent = function (_Component) {
+  _inherits(SectionContent, _Component);
+
+  function SectionContent(props) {
+    _classCallCheck(this, SectionContent);
+
+    var _this = _possibleConstructorReturn(this, (SectionContent.__proto__ || Object.getPrototypeOf(SectionContent)).call(this, props));
+
+    _this.showBack = function () {
+      _this.setState({
+        isFlipped: true
+      });
+    };
+
+    _this.showFront = function () {
+      _this.setState({
+        isFlipped: false
+      });
+    };
+
+    _this.state = {
+      isFlipped: false
+    };
+
+    _this.front = _react2.default.createRef();
+    _this.back = _react2.default.createRef();
+    _this.section = _react2.default.createRef();
+    return _this;
+  }
+
+  _createClass(SectionContent, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var frontHeight = _reactDom2.default.findDOMNode(this.front.current).offsetHeight;
+      var backHeight = _reactDom2.default.findDOMNode(this.back.current).offsetHeight;
+      var section = _reactDom2.default.findDOMNode(this.section.current);
+
+      var height = frontHeight > backHeight ? frontHeight : backHeight;
+      section.style.height = height + 5 + 'px';
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          content = _props.content,
+          _onChange = _props.onChange;
+
+
+      return _react2.default.createElement(
+        'div',
+        { ref: this.section, style: { 'height': '112px' } },
+        _react2.default.createElement(
+          _reactCardFlip2.default,
+          {
+            isFlipped: this.state.isFlipped
+          },
+          _react2.default.createElement(
+            'div',
+            { key: 'front', ref: this.front },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.content.title')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.content.height'),
+              value: content.height,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'content', 'height');
+              },
+              type: 'number',
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.content.separator'), full: true, handleClick: this.showBack })
+          ),
+          _react2.default.createElement(
+            'div',
+            { key: 'back', ref: this.back },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.content.separator')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.content.separator.label'),
+              placeholder: _Language2.default.take('config.content.separator.placeholder'),
+              value: content.separatorText,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'content', 'separatorText');
+              },
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('cancel'),
+              handleClick: this.showFront,
+              distance: true,
+              ligth: true
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('add'),
+              handleClick: this.showFront,
+              distance: true
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return SectionContent;
+}(_react.Component);
+
+exports.default = SectionContent;
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+var _reactCardFlip = __webpack_require__(29);
+
+var _reactCardFlip2 = _interopRequireDefault(_reactCardFlip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionInterlocutor = function (_Component) {
+  _inherits(SectionInterlocutor, _Component);
+
+  function SectionInterlocutor(props) {
+    _classCallCheck(this, SectionInterlocutor);
+
+    var _this = _possibleConstructorReturn(this, (SectionInterlocutor.__proto__ || Object.getPrototypeOf(SectionInterlocutor)).call(this, props));
+
+    _this.showBack = function () {
+      _this.setState({
+        isFlipped: true
+      });
+    };
+
+    _this.showFront = function () {
+      _this.setState({
+        isFlipped: false
+      });
+    };
+
+    _this.state = {
+      isFlipped: false
+    };
+
+    _this.front = _react2.default.createRef();
+    _this.back = _react2.default.createRef();
+    _this.section = _react2.default.createRef();
+    return _this;
+  }
+
+  _createClass(SectionInterlocutor, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var frontHeight = _reactDom2.default.findDOMNode(this.front.current).offsetHeight;
+      var backHeight = _reactDom2.default.findDOMNode(this.back.current).offsetHeight;
+      var section = _reactDom2.default.findDOMNode(this.section.current);
+
+      var height = frontHeight > backHeight ? frontHeight : backHeight;
+      section.style.height = height + 5 + 'px';
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          companion = _props.companion,
+          temp = _props.temp,
+          _onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
+
+
+      return _react2.default.createElement(
+        'div',
+        { ref: this.section, style: { 'height': '186px' } },
+        _react2.default.createElement(
+          _reactCardFlip2.default,
+          {
+            isFlipped: this.state.isFlipped
+          },
+          _react2.default.createElement(
+            'div',
+            { key: 'front', ref: this.front },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.companion.title')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.companion.fullName'),
+              value: companion.name,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'companion', 'name');
+              },
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.UserImageSelect, {
+              label: _Language2.default.take('config.companion.avatar'),
+              imgUrl: companion.image,
+              imgTemp: temp.companionImg,
+              tempKey: 'companion',
+              onChange: _onChange,
+              onChangeImage: onChangeImage
+            }),
+            _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.companion.message'), full: true, handleClick: this.showBack })
+          ),
+          _react2.default.createElement(
+            'div',
+            { key: 'back', ref: this.back },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.companion.title')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.companion.fullName'),
+              value: companion.name,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'companion', 'name');
+              },
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.UserImageSelect, {
+              label: _Language2.default.take('config.companion.avatar'),
+              imgUrl: companion.image,
+              imgTemp: temp.companionImg,
+              tempKey: 'companion',
+              onChange: _onChange,
+              onChangeImage: onChangeImage
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('cancel'),
+              handleClick: this.showFront,
+              distance: true,
+              ligth: true
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('add'),
+              handleClick: this.showFront,
+              distance: true
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return SectionInterlocutor;
+}(_react.Component);
+
+exports.default = SectionInterlocutor;
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionSections = function (_Component) {
+  _inherits(SectionSections, _Component);
+
+  function SectionSections() {
+    _classCallCheck(this, SectionSections);
+
+    return _possibleConstructorReturn(this, (SectionSections.__proto__ || Object.getPrototypeOf(SectionSections)).apply(this, arguments));
+  }
+
+  _createClass(SectionSections, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          components = _props.components,
+          _onChange = _props.onChange;
+
+
+      return _react2.default.createElement(
+        _react.Fragment,
+        null,
+        _react2.default.createElement(
+          'h3',
+          { className: 'widget-right__config-title border-top' },
+          _Language2.default.take('config.sections.title')
+        ),
+        _react2.default.createElement(_mini.CheckBox, {
+          label: _Language2.default.take('config.sections.top'),
+          checked: components.header,
+          onChange: function onChange(e) {
+            return _onChange(e.target.checked, 'components', 'header');
+          },
+          table: true
+        }),
+        _react2.default.createElement(_mini.CheckBox, {
+          label: _Language2.default.take('config.sections.bottom'),
+          checked: components.footer,
+          onChange: function onChange(e) {
+            return _onChange(e.target.checked, 'components', 'footer');
+          },
+          table: true
+        })
+      );
+    }
+  }]);
+
+  return SectionSections;
+}(_react.Component);
+
+exports.default = SectionSections;
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionTopPart = function (_Component) {
+  _inherits(SectionTopPart, _Component);
+
+  function SectionTopPart() {
+    _classCallCheck(this, SectionTopPart);
+
+    return _possibleConstructorReturn(this, (SectionTopPart.__proto__ || Object.getPrototypeOf(SectionTopPart)).apply(this, arguments));
+  }
+
+  _createClass(SectionTopPart, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          header = _props.header,
+          _onChange = _props.onChange;
+
+
+      return _react2.default.createElement(
+        _react.Fragment,
+        null,
+        _react2.default.createElement(
+          'h3',
+          { className: 'widget-right__config-title' },
+          _Language2.default.take('config.top.title')
+        ),
+        _react2.default.createElement(_mini.TextInput, {
+          label: _Language2.default.take('config.top.online'),
+          value: header.time,
+          onChange: function onChange(e) {
+            return _onChange(e.target.value, 'header', 'time');
+          },
+          required: true,
+          table: true
+        }),
+        _react2.default.createElement(_mini.CheckBox, {
+          label: _Language2.default.take('config.top.mobile'),
+          checked: header.mobile,
+          onChange: function onChange(e) {
+            return _onChange(e.target.checked, 'header', 'mobile');
+          },
+          table: true
+        })
+      );
+    }
+  }]);
+
+  return SectionTopPart;
+}(_react.Component);
+
+exports.default = SectionTopPart;
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mini = __webpack_require__(6);
+
+var _Language = __webpack_require__(1);
+
+var _Language2 = _interopRequireDefault(_Language);
+
+var _reactCardFlip = __webpack_require__(29);
+
+var _reactCardFlip2 = _interopRequireDefault(_reactCardFlip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionCurrentUser = function (_Component) {
+  _inherits(SectionCurrentUser, _Component);
+
+  function SectionCurrentUser(props) {
+    _classCallCheck(this, SectionCurrentUser);
+
+    var _this = _possibleConstructorReturn(this, (SectionCurrentUser.__proto__ || Object.getPrototypeOf(SectionCurrentUser)).call(this, props));
+
+    _this.showBack = function () {
+      _this.setState({
+        isFlipped: true
+      });
+    };
+
+    _this.showFront = function () {
+      _this.setState({
+        isFlipped: false
+      });
+    };
+
+    _this.state = {
+      isFlipped: false
+    };
+
+    _this.front = _react2.default.createRef();
+    _this.back = _react2.default.createRef();
+    _this.section = _react2.default.createRef();
+    return _this;
+  }
+
+  _createClass(SectionCurrentUser, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var frontHeight = _reactDom2.default.findDOMNode(this.front.current).offsetHeight;
+      var backHeight = _reactDom2.default.findDOMNode(this.back.current).offsetHeight;
+      var section = _reactDom2.default.findDOMNode(this.section.current);
+
+      var height = frontHeight > backHeight ? frontHeight : backHeight;
+      section.style.height = height + 5 + 'px';
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          current = _props.current,
+          temp = _props.temp,
+          _onChange = _props.onChange,
+          onChangeImage = _props.onChangeImage;
+
+
+      return _react2.default.createElement(
+        'div',
+        { ref: this.section, style: { 'height': '186px' } },
+        _react2.default.createElement(
+          _reactCardFlip2.default,
+          {
+            isFlipped: this.state.isFlipped
+          },
+          _react2.default.createElement(
+            'div',
+            { key: 'front', ref: this.front },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.current.title')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.current.fullName'),
+              value: current.name,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'current', 'name');
+              },
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.UserImageSelect, {
+              label: _Language2.default.take('config.current.avatar'),
+              imgUrl: current.image,
+              imgTemp: temp.currentImg,
+              tempKey: 'current',
+              onChange: _onChange,
+              onChangeImage: onChangeImage
+            }),
+            _react2.default.createElement(_mini.SettingButton, { content: _Language2.default.take('config.current.message'), full: true, handleClick: this.showBack })
+          ),
+          _react2.default.createElement(
+            'div',
+            { key: 'back', ref: this.back },
+            _react2.default.createElement(
+              'h3',
+              { className: 'widget-right__config-title border-top' },
+              _Language2.default.take('config.current.title')
+            ),
+            _react2.default.createElement(_mini.TextInput, {
+              label: _Language2.default.take('config.current.fullName'),
+              value: current.name,
+              onChange: function onChange(e) {
+                return _onChange(e.target.value, 'current', 'name');
+              },
+              required: true,
+              table: true
+            }),
+            _react2.default.createElement(_mini.UserImageSelect, {
+              label: _Language2.default.take('config.current.avatar'),
+              imgUrl: current.image,
+              imgTemp: temp.currentImg,
+              tempKey: 'current',
+              onChange: _onChange,
+              onChangeImage: onChangeImage
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('cancel'),
+              handleClick: this.showFront,
+              distance: true,
+              ligth: true
+            }),
+            _react2.default.createElement(_mini.SettingButton, {
+              content: _Language2.default.take('add'),
+              handleClick: this.showFront,
+              distance: true
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return SectionCurrentUser;
+}(_react.Component);
+
+exports.default = SectionCurrentUser;
 
 /***/ })
 /******/ ]);

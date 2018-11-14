@@ -136,6 +136,21 @@ label {
     padding-bottom: 4px; }
   .vk_form__setting-button-full {
     width: 100%; }
+  .vk_form__setting-button-distance {
+    margin: 5px 20px; }
+  .vk_form__setting-button-ligth {
+    background-color: #e5ebf1;
+    color: #55677d;
+    border-color: #d8d8d8 #d1d1d1 #bababa; }
+    .vk_form__setting-button-ligth:focus {
+      outline: none; }
+    .vk_form__setting-button-ligth:hover {
+      background-color: #e5ebf1;
+      text-decoration: none; }
+    .vk_form__setting-button-ligth:active {
+      background-color: #e5ebf1;
+      padding-top: 5px;
+      padding-bottom: 4px; }
 
 .vk_form__img-select-button {
   margin-top: 1px;
@@ -359,7 +374,6 @@ label {
       padding: 3px 15px;
       top: 7px;
       margin: 10px 0;
-      border: 1px solid transparent;
       transition: box-shadow 0.2s ease-out, border-color 0.2s ease-out; }
   .vk-widget_content__user-name {
     max-width: 240px;
