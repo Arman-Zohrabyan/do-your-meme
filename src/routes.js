@@ -1,7 +1,19 @@
+import React from 'react';
+import path from 'path';
+// import Loadable from 'react-loadable';
+
 import VkContainer from './containers/Vk/VkContainer';
 import Home from './components/Home';
 import Fb from './components/Fb';
 // import Language from './classes/Language';
+
+
+// const LoadableVkContainer = Loadable({
+//   loader: () => import('./containers/Vk/VkContainer'),
+//   loading: <div>Загрузка</div>,
+//   serverSideRequirePath: path.join(__dirname, './containers/Vk/VkContainer')
+// });
+
 
 const routes = [
   {
