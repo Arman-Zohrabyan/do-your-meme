@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import Loadable from 'react-loadable';
 import customMiddlewares from './customMiddlewares';
 import { router as routerSocialPages } from './routes/routerSocialPages';
 import { router as routerHome } from './routes/routerHome';
@@ -24,6 +25,8 @@ app.get('/*', routerSocialPages);
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log('Server is listening on port: 3000');
+Loadable.preloadAll().then(() => {
+  app.listen(PORT, () => {
+    console.log('Server is listening on port: 3000');
+  });
 });

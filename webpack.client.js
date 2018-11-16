@@ -2,13 +2,14 @@ const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 
 
 const browserConfig = {
   entry: './browser/index.js',
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: 'bundle.[chunkhash].js',
     publicPath: '/'
   },
   module: {
@@ -47,6 +48,14 @@ const browserConfig = {
     ]
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      filename: '[name].js',
+      minChunks: Infinity
+    }),
+    new ReactLoadablePlugin({
+      filename: './public/react-loadable.json',
+    }),
     new webpack.DefinePlugin({
       __isBrowser__: 'true'
     }),
