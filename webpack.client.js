@@ -9,7 +9,7 @@ const browserConfig = {
   entry: './browser/index.js',
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.[chunkhash].js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
   module: {

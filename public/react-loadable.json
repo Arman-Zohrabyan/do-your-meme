@@ -3,638 +3,638 @@
     {
       "id": 45,
       "name": "./src/containers/Vk/VkContainer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./mini": [
     {
       "id": 122,
       "name": "./src/components/Vk/mini/index.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Color": [
     {
       "id": 123,
       "name": "./node_modules/html2canvas/dist/npm/Color.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Length": [
     {
       "id": 124,
       "name": "./node_modules/html2canvas/dist/npm/Length.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Bounds": [
     {
       "id": 125,
       "name": "./node_modules/html2canvas/dist/npm/Bounds.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./NodeContainer": [
     {
       "id": 126,
       "name": "./node_modules/html2canvas/dist/npm/NodeContainer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Util": [
     {
       "id": 127,
       "name": "./node_modules/html2canvas/dist/npm/Util.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     },
     {
       "id": 137,
       "name": "./node_modules/css-line-break/dist/Util.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/background": [
     {
       "id": 128,
       "name": "./node_modules/html2canvas/dist/npm/parsing/background.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../drawing/Path": [
     {
       "id": 129,
       "name": "./node_modules/html2canvas/dist/npm/drawing/Path.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./drawing/Vector": [
     {
       "id": 130,
       "name": "./node_modules/html2canvas/dist/npm/drawing/Vector.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/listStyle": [
     {
       "id": 131,
       "name": "./node_modules/html2canvas/dist/npm/parsing/listStyle.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./TextContainer": [
     {
       "id": 132,
       "name": "./node_modules/html2canvas/dist/npm/TextContainer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Feature": [
     {
       "id": 133,
       "name": "./node_modules/html2canvas/dist/npm/Feature.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "react-card-flip": [
     {
       "id": 134,
       "name": "./node_modules/react-card-flip/lib/react-card-flip.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../parsing/textDecoration": [
     {
       "id": 135,
       "name": "./node_modules/html2canvas/dist/npm/parsing/textDecoration.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/border": [
     {
       "id": 136,
       "name": "./node_modules/html2canvas/dist/npm/parsing/border.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./ListItem": [
     {
       "id": 138,
       "name": "./node_modules/html2canvas/dist/npm/ListItem.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./UserImage": [
     {
       "id": 139,
       "name": "./src/components/Vk/mini/UserImage.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./renderer/CanvasRenderer": [
     {
       "id": 140,
       "name": "./node_modules/html2canvas/dist/npm/renderer/CanvasRenderer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Logger": [
     {
       "id": 141,
       "name": "./node_modules/html2canvas/dist/npm/Logger.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/padding": [
     {
       "id": 142,
       "name": "./node_modules/html2canvas/dist/npm/parsing/padding.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/overflowWrap": [
     {
       "id": 143,
       "name": "./node_modules/html2canvas/dist/npm/parsing/overflowWrap.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/position": [
     {
       "id": 144,
       "name": "./node_modules/html2canvas/dist/npm/parsing/position.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/textTransform": [
     {
       "id": 145,
       "name": "./node_modules/html2canvas/dist/npm/parsing/textTransform.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Input": [
     {
       "id": 146,
       "name": "./node_modules/html2canvas/dist/npm/Input.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./TextBounds": [
     {
       "id": 147,
       "name": "./node_modules/html2canvas/dist/npm/TextBounds.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./renderer/ForeignObjectRenderer": [
     {
       "id": 148,
       "name": "./node_modules/html2canvas/dist/npm/renderer/ForeignObjectRenderer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Unicode": [
     {
       "id": 149,
       "name": "./node_modules/html2canvas/dist/npm/Unicode.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Font": [
     {
       "id": 150,
       "name": "./node_modules/html2canvas/dist/npm/Font.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Proxy": [
     {
       "id": 151,
       "name": "./node_modules/html2canvas/dist/npm/Proxy.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../../components/Vk/VkWidget": [
     {
       "id": 152,
       "name": "./src/components/Vk/VkWidget.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./VkHeader": [
     {
       "id": 153,
       "name": "./src/components/Vk/VkHeader.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./UserImageSelect": [
     {
       "id": 154,
       "name": "./src/components/Vk/mini/UserImageSelect.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./TextInput": [
     {
       "id": 155,
       "name": "./src/components/Vk/mini/TextInput.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./CheckBox": [
     {
       "id": 156,
       "name": "./src/components/Vk/mini/CheckBox.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./MessageBox": [
     {
       "id": 157,
       "name": "./src/components/Vk/mini/MessageBox.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SettingButton": [
     {
       "id": 158,
       "name": "./src/components/Vk/mini/SettingButton.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./VkFooter": [
     {
       "id": 159,
       "name": "./src/components/Vk/VkFooter.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../../components/Vk/VkSettings": [
     {
       "id": 160,
       "name": "./src/components/Vk/VkSettings.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SettingSections": [
     {
       "id": 161,
       "name": "./src/components/Vk/SettingSections/index.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SectionTopPart": [
     {
       "id": 162,
       "name": "./src/components/Vk/SettingSections/SectionTopPart.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SectionContent": [
     {
       "id": 163,
       "name": "./src/components/Vk/SettingSections/SectionContent.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SectionInterlocutor": [
     {
       "id": 164,
       "name": "./src/components/Vk/SettingSections/SectionInterlocutor.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SectionSections": [
     {
       "id": 165,
       "name": "./src/components/Vk/SettingSections/SectionSections.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./SectionCurrentUser": [
     {
       "id": 166,
       "name": "./src/components/Vk/SettingSections/SectionCurrentUser.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../../store/vk/actions": [
     {
       "id": 167,
       "name": "./src/store/vk/actions.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "html2canvas": [
     {
       "id": 168,
       "name": "./node_modules/html2canvas/dist/npm/index.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Window": [
     {
       "id": 169,
       "name": "./node_modules/html2canvas/dist/npm/Window.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./NodeParser": [
     {
       "id": 170,
       "name": "./node_modules/html2canvas/dist/npm/NodeParser.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./StackingContext": [
     {
       "id": 171,
       "name": "./node_modules/html2canvas/dist/npm/StackingContext.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "../drawing/Size": [
     {
       "id": 172,
       "name": "./node_modules/html2canvas/dist/npm/drawing/Size.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./drawing/BezierCurve": [
     {
       "id": 173,
       "name": "./node_modules/html2canvas/dist/npm/drawing/BezierCurve.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/borderRadius": [
     {
       "id": 174,
       "name": "./node_modules/html2canvas/dist/npm/parsing/borderRadius.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/display": [
     {
       "id": 175,
       "name": "./node_modules/html2canvas/dist/npm/parsing/display.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/float": [
     {
       "id": 176,
       "name": "./node_modules/html2canvas/dist/npm/parsing/float.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/font": [
     {
       "id": 177,
       "name": "./node_modules/html2canvas/dist/npm/parsing/font.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/letterSpacing": [
     {
       "id": 178,
       "name": "./node_modules/html2canvas/dist/npm/parsing/letterSpacing.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/lineBreak": [
     {
       "id": 179,
       "name": "./node_modules/html2canvas/dist/npm/parsing/lineBreak.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/margin": [
     {
       "id": 180,
       "name": "./node_modules/html2canvas/dist/npm/parsing/margin.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/overflow": [
     {
       "id": 181,
       "name": "./node_modules/html2canvas/dist/npm/parsing/overflow.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/textShadow": [
     {
       "id": 182,
       "name": "./node_modules/html2canvas/dist/npm/parsing/textShadow.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/transform": [
     {
       "id": 183,
       "name": "./node_modules/html2canvas/dist/npm/parsing/transform.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/visibility": [
     {
       "id": 184,
       "name": "./node_modules/html2canvas/dist/npm/parsing/visibility.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/word-break": [
     {
       "id": 185,
       "name": "./node_modules/html2canvas/dist/npm/parsing/word-break.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./parsing/zIndex": [
     {
       "id": 186,
       "name": "./node_modules/html2canvas/dist/npm/parsing/zIndex.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "css-line-break": [
     {
       "id": 187,
       "name": "./node_modules/css-line-break/dist/index.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./LineBreak": [
     {
       "id": 188,
       "name": "./node_modules/css-line-break/dist/LineBreak.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Trie": [
     {
       "id": 189,
       "name": "./node_modules/css-line-break/dist/Trie.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./linebreak-trie": [
     {
       "id": 190,
       "name": "./node_modules/css-line-break/dist/linebreak-trie.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./drawing/Circle": [
     {
       "id": 191,
       "name": "./node_modules/html2canvas/dist/npm/drawing/Circle.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Renderer": [
     {
       "id": 192,
       "name": "./node_modules/html2canvas/dist/npm/Renderer.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Gradient": [
     {
       "id": 193,
       "name": "./node_modules/html2canvas/dist/npm/Gradient.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Angle": [
     {
       "id": 194,
       "name": "./node_modules/html2canvas/dist/npm/Angle.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./Clone": [
     {
       "id": 195,
       "name": "./node_modules/html2canvas/dist/npm/Clone.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./ResourceLoader": [
     {
       "id": 196,
       "name": "./node_modules/html2canvas/dist/npm/ResourceLoader.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./PseudoNodeContent": [
     {
       "id": 197,
       "name": "./node_modules/html2canvas/dist/npm/PseudoNodeContent.js",
-      "file": "0.bundle.7f3e066f8cb779a493bd.js",
-      "publicPath": "/0.bundle.7f3e066f8cb779a493bd.js"
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
     }
   ],
   "./components/Home": [
     {
       "id": 46,
       "name": "./src/components/Home.js",
-      "file": "1.bundle.d2dec0e54d7c177e2728.js",
-      "publicPath": "/1.bundle.d2dec0e54d7c177e2728.js"
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
     }
   ],
   "./components/Fb": [
     {
       "id": 47,
       "name": "./src/components/Fb.js",
-      "file": "2.bundle.c23e24aada7777c5cc7a.js",
-      "publicPath": "/2.bundle.c23e24aada7777c5cc7a.js"
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
     }
   ],
   "./createTransitionManager": [
     {
       "id": 16,
       "name": "./node_modules/history/es/createTransitionManager.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 16,
@@ -647,8 +647,8 @@
     {
       "id": 48,
       "name": "./browser/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 48,
@@ -661,8 +661,8 @@
     {
       "id": 22,
       "name": "./node_modules/react-dom/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 22,
@@ -675,8 +675,8 @@
     {
       "id": 15,
       "name": "./node_modules/react-router-dom/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 15,
@@ -689,8 +689,8 @@
     {
       "id": 44,
       "name": "./node_modules/react-redux/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 44,
@@ -703,8 +703,8 @@
     {
       "id": 42,
       "name": "./node_modules/react-loadable/lib/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 42,
@@ -717,8 +717,8 @@
     {
       "id": 98,
       "name": "./src/components/App.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 98,
@@ -731,8 +731,8 @@
     {
       "id": 116,
       "name": "./src/store/Store.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 116,
@@ -745,8 +745,8 @@
     {
       "id": 121,
       "name": "./src/styles/style.scss",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 121,
@@ -759,8 +759,8 @@
     {
       "id": 38,
       "name": "./node_modules/redux/es/redux.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 38,
@@ -773,8 +773,8 @@
     {
       "id": 117,
       "name": "./node_modules/redux-thunk/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 117,
@@ -787,8 +787,8 @@
     {
       "id": 118,
       "name": "./src/store/vk/reducer.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 118,
@@ -801,8 +801,8 @@
     {
       "id": 120,
       "name": "./src/store/app/reducer.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 120,
@@ -815,8 +815,8 @@
     {
       "id": 119,
       "name": "./config/constants.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 119,
@@ -829,8 +829,8 @@
     {
       "id": 1,
       "name": "./node_modules/process/browser.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 1,
@@ -843,8 +843,8 @@
     {
       "id": 82,
       "name": "./node_modules/symbol-observable/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 82,
@@ -857,8 +857,8 @@
     {
       "id": 12,
       "name": "./node_modules/webpack/buildin/global.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 12,
@@ -871,8 +871,8 @@
     {
       "id": 83,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 83,
@@ -885,8 +885,8 @@
     {
       "id": 84,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 84,
@@ -899,8 +899,8 @@
     {
       "id": 23,
       "name": "./node_modules/reactstrap/dist/reactstrap.es.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 23,
@@ -913,8 +913,8 @@
     {
       "id": 109,
       "name": "./src/routes.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 109,
@@ -927,8 +927,8 @@
     {
       "id": 112,
       "name": "./src/components/Menu.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 112,
@@ -941,8 +941,8 @@
     {
       "id": 115,
       "name": "./src/components/NoMatch.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 115,
@@ -955,8 +955,8 @@
     {
       "id": 21,
       "name": "./src/classes/Language.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 21,
@@ -969,8 +969,8 @@
     {
       "id": 111,
       "name": "./config/languages.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 111,
@@ -983,8 +983,8 @@
     {
       "id": 113,
       "name": "./node_modules/react-router/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 113,
@@ -997,8 +997,8 @@
     {
       "id": 114,
       "name": "./src/helpers/StringHelper.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 114,
@@ -1011,8 +1011,8 @@
     {
       "id": 27,
       "name": "./node_modules/react-router/es/MemoryRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 27,
@@ -1025,8 +1025,8 @@
     {
       "id": 30,
       "name": "./node_modules/react-router/es/Prompt.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 30,
@@ -1039,8 +1039,8 @@
     {
       "id": 31,
       "name": "./node_modules/react-router/es/Redirect.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 31,
@@ -1053,8 +1053,8 @@
     {
       "id": 18,
       "name": "./node_modules/react-router/es/Route.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 18,
@@ -1067,8 +1067,8 @@
     {
       "id": 10,
       "name": "./node_modules/react-router/es/Router.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 10,
@@ -1081,8 +1081,8 @@
     {
       "id": 32,
       "name": "./node_modules/react-router/es/StaticRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 32,
@@ -1095,8 +1095,8 @@
     {
       "id": 33,
       "name": "./node_modules/react-router/es/Switch.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 33,
@@ -1109,8 +1109,8 @@
     {
       "id": 19,
       "name": "./node_modules/react-router/es/generatePath.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 19,
@@ -1123,8 +1123,8 @@
     {
       "id": 11,
       "name": "./node_modules/react-router/es/matchPath.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 11,
@@ -1137,8 +1137,8 @@
     {
       "id": 34,
       "name": "./node_modules/react-router/es/withRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 34,
@@ -1151,8 +1151,8 @@
     {
       "id": 2,
       "name": "./node_modules/prop-types/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 2,
@@ -1165,8 +1165,8 @@
     {
       "id": 35,
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 35,
@@ -1179,8 +1179,8 @@
     {
       "id": 59,
       "name": "./node_modules/prop-types/factoryWithTypeCheckers.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 59,
@@ -1193,8 +1193,8 @@
     {
       "id": 60,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 60,
@@ -1207,8 +1207,8 @@
     {
       "id": 14,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 14,
@@ -1221,8 +1221,8 @@
     {
       "id": 6,
       "name": "./node_modules/object-assign/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 6,
@@ -1235,8 +1235,8 @@
     {
       "id": 13,
       "name": "./node_modules/prop-types/checkPropTypes.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 13,
@@ -1249,8 +1249,8 @@
     {
       "id": 29,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 29,
@@ -1263,8 +1263,8 @@
     {
       "id": 69,
       "name": "./node_modules/isarray/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 69,
@@ -1277,14 +1277,14 @@
     {
       "id": 4,
       "name": "./node_modules/warning/warning.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 8,
       "name": "./node_modules/history/node_modules/warning/browser.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 4,
@@ -1303,8 +1303,8 @@
     {
       "id": 3,
       "name": "./node_modules/invariant/browser.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 3,
@@ -1317,8 +1317,8 @@
     {
       "id": 5,
       "name": "./node_modules/history/es/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 5,
@@ -1331,8 +1331,8 @@
     {
       "id": 61,
       "name": "./node_modules/history/es/createBrowserHistory.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 61,
@@ -1345,8 +1345,8 @@
     {
       "id": 64,
       "name": "./node_modules/history/es/createHashHistory.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 64,
@@ -1359,8 +1359,8 @@
     {
       "id": 65,
       "name": "./node_modules/history/es/createMemoryHistory.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 65,
@@ -1373,8 +1373,8 @@
     {
       "id": 9,
       "name": "./node_modules/history/es/LocationUtils.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 9,
@@ -1387,8 +1387,8 @@
     {
       "id": 7,
       "name": "./node_modules/history/es/PathUtils.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 7,
@@ -1401,8 +1401,8 @@
     {
       "id": 62,
       "name": "./node_modules/resolve-pathname/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 62,
@@ -1415,8 +1415,8 @@
     {
       "id": 63,
       "name": "./node_modules/value-equal/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 63,
@@ -1429,8 +1429,8 @@
     {
       "id": 0,
       "name": "./node_modules/react/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 0,
@@ -1443,8 +1443,8 @@
     {
       "id": 25,
       "name": "./node_modules/history/es/DOMUtils.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 25,
@@ -1457,8 +1457,8 @@
     {
       "id": 110,
       "name": "./node_modules/path-browserify/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 110,
@@ -1471,8 +1471,8 @@
     {
       "id": 43,
       "name": "./node_modules/classnames/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 43,
@@ -1485,8 +1485,8 @@
     {
       "id": 99,
       "name": "./node_modules/lodash.isfunction/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 99,
@@ -1499,8 +1499,8 @@
     {
       "id": 100,
       "name": "./node_modules/lodash.isobject/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 100,
@@ -1513,8 +1513,8 @@
     {
       "id": 101,
       "name": "./node_modules/react-popper/lib/react-popper.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 101,
@@ -1527,8 +1527,8 @@
     {
       "id": 107,
       "name": "./node_modules/lodash.tonumber/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 107,
@@ -1541,8 +1541,8 @@
     {
       "id": 108,
       "name": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 108,
@@ -1555,8 +1555,8 @@
     {
       "id": 102,
       "name": "./node_modules/react-popper/lib/Manager.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 102,
@@ -1569,8 +1569,8 @@
     {
       "id": 103,
       "name": "./node_modules/react-popper/lib/Target.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 103,
@@ -1583,8 +1583,8 @@
     {
       "id": 104,
       "name": "./node_modules/react-popper/lib/Popper.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 104,
@@ -1597,8 +1597,8 @@
     {
       "id": 106,
       "name": "./node_modules/react-popper/lib/Arrow.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 106,
@@ -1611,8 +1611,8 @@
     {
       "id": 105,
       "name": "./node_modules/popper.js/dist/esm/popper.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 105,
@@ -1625,8 +1625,8 @@
     {
       "id": 77,
       "name": "./node_modules/react-redux/es/components/Provider.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 77,
@@ -1639,8 +1639,8 @@
     {
       "id": 37,
       "name": "./node_modules/react-redux/es/components/connectAdvanced.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 37,
@@ -1653,8 +1653,8 @@
     {
       "id": 79,
       "name": "./node_modules/react-redux/es/connect/connect.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 79,
@@ -1667,8 +1667,8 @@
     {
       "id": 80,
       "name": "./node_modules/react-redux/es/utils/shallowEqual.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 80,
@@ -1681,8 +1681,8 @@
     {
       "id": 81,
       "name": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 81,
@@ -1695,8 +1695,8 @@
     {
       "id": 94,
       "name": "./node_modules/react-redux/es/connect/mapStateToProps.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 94,
@@ -1709,8 +1709,8 @@
     {
       "id": 95,
       "name": "./node_modules/react-redux/es/connect/mergeProps.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 95,
@@ -1723,8 +1723,8 @@
     {
       "id": 96,
       "name": "./node_modules/react-redux/es/connect/selectorFactory.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 96,
@@ -1737,8 +1737,8 @@
     {
       "id": 97,
       "name": "./node_modules/react-redux/es/connect/verifySubselectors.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 97,
@@ -1751,8 +1751,8 @@
     {
       "id": 20,
       "name": "./node_modules/react-redux/es/utils/warning.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 20,
@@ -1765,8 +1765,8 @@
     {
       "id": 40,
       "name": "./node_modules/react-redux/es/utils/verifyPlainObject.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 40,
@@ -1779,8 +1779,8 @@
     {
       "id": 85,
       "name": "./node_modules/lodash-es/isPlainObject.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 85,
@@ -1793,8 +1793,8 @@
     {
       "id": 86,
       "name": "./node_modules/lodash-es/_baseGetTag.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 86,
@@ -1807,8 +1807,8 @@
     {
       "id": 91,
       "name": "./node_modules/lodash-es/_getPrototype.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 91,
@@ -1821,8 +1821,8 @@
     {
       "id": 93,
       "name": "./node_modules/lodash-es/isObjectLike.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 93,
@@ -1835,8 +1835,8 @@
     {
       "id": 92,
       "name": "./node_modules/lodash-es/_overArg.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 92,
@@ -1849,8 +1849,8 @@
     {
       "id": 41,
       "name": "./node_modules/lodash-es/_Symbol.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 41,
@@ -1863,8 +1863,8 @@
     {
       "id": 89,
       "name": "./node_modules/lodash-es/_getRawTag.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 89,
@@ -1877,8 +1877,8 @@
     {
       "id": 90,
       "name": "./node_modules/lodash-es/_objectToString.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 90,
@@ -1891,8 +1891,8 @@
     {
       "id": 87,
       "name": "./node_modules/lodash-es/_root.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 87,
@@ -1905,8 +1905,8 @@
     {
       "id": 88,
       "name": "./node_modules/lodash-es/_freeGlobal.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 88,
@@ -1919,8 +1919,8 @@
     {
       "id": 39,
       "name": "./node_modules/react-redux/es/connect/wrapMapToProps.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 39,
@@ -1933,8 +1933,8 @@
     {
       "id": 78,
       "name": "./node_modules/react-redux/es/utils/Subscription.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 78,
@@ -1947,8 +1947,8 @@
     {
       "id": 36,
       "name": "./node_modules/react-redux/es/utils/PropTypes.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 36,
@@ -1961,8 +1961,8 @@
     {
       "id": 58,
       "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 58,
@@ -1975,8 +1975,8 @@
     {
       "id": 66,
       "name": "./node_modules/react-router-dom/es/HashRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 66,
@@ -1989,8 +1989,8 @@
     {
       "id": 26,
       "name": "./node_modules/react-router-dom/es/Link.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 26,
@@ -2003,8 +2003,8 @@
     {
       "id": 67,
       "name": "./node_modules/react-router-dom/es/MemoryRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 67,
@@ -2017,8 +2017,8 @@
     {
       "id": 68,
       "name": "./node_modules/react-router-dom/es/NavLink.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 68,
@@ -2031,8 +2031,8 @@
     {
       "id": 70,
       "name": "./node_modules/react-router-dom/es/Prompt.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 70,
@@ -2045,8 +2045,8 @@
     {
       "id": 71,
       "name": "./node_modules/react-router-dom/es/Redirect.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 71,
@@ -2059,8 +2059,8 @@
     {
       "id": 28,
       "name": "./node_modules/react-router-dom/es/Route.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 28,
@@ -2073,8 +2073,8 @@
     {
       "id": 17,
       "name": "./node_modules/react-router-dom/es/Router.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 17,
@@ -2087,8 +2087,8 @@
     {
       "id": 72,
       "name": "./node_modules/react-router-dom/es/StaticRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 72,
@@ -2101,8 +2101,8 @@
     {
       "id": 73,
       "name": "./node_modules/react-router-dom/es/Switch.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 73,
@@ -2115,8 +2115,8 @@
     {
       "id": 74,
       "name": "./node_modules/react-router-dom/es/generatePath.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 74,
@@ -2129,8 +2129,8 @@
     {
       "id": 75,
       "name": "./node_modules/react-router-dom/es/matchPath.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 75,
@@ -2143,8 +2143,8 @@
     {
       "id": 76,
       "name": "./node_modules/react-router-dom/es/withRouter.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 76,
@@ -2157,8 +2157,8 @@
     {
       "id": 51,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 51,
@@ -2171,8 +2171,8 @@
     {
       "id": 54,
       "name": "./node_modules/react-dom/cjs/react-dom.development.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 54,
@@ -2185,8 +2185,8 @@
     {
       "id": 24,
       "name": "./node_modules/react-dom/node_modules/schedule/index.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 24,
@@ -2199,8 +2199,8 @@
     {
       "id": 55,
       "name": "./node_modules/react-dom/node_modules/schedule/tracing.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 55,
@@ -2213,8 +2213,8 @@
     {
       "id": 56,
       "name": "./node_modules/react-dom/node_modules/schedule/cjs/schedule-tracing.production.min.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 56,
@@ -2227,8 +2227,8 @@
     {
       "id": 57,
       "name": "./node_modules/react-dom/node_modules/schedule/cjs/schedule-tracing.development.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 57,
@@ -2241,8 +2241,8 @@
     {
       "id": 52,
       "name": "./node_modules/react-dom/node_modules/schedule/cjs/schedule.production.min.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 52,
@@ -2255,8 +2255,8 @@
     {
       "id": 53,
       "name": "./node_modules/react-dom/node_modules/schedule/cjs/schedule.development.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 53,
@@ -2269,8 +2269,8 @@
     {
       "id": 49,
       "name": "./node_modules/react/cjs/react.production.min.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 49,
@@ -2283,8 +2283,8 @@
     {
       "id": 50,
       "name": "./node_modules/react/cjs/react.development.js",
-      "file": "bundle.511fe4e648cf73781a2e.js",
-      "publicPath": "/bundle.511fe4e648cf73781a2e.js"
+      "file": "bundle.js",
+      "publicPath": "/bundle.js"
     },
     {
       "id": 50,

@@ -32,12 +32,12 @@ class PageGenerator {
       `<script>window.__INITIAL_STATE__ = ${serialize(state)}</script>`,
       '</head>',
 
-      `<body>`,
+      '<body>',
       `<div id="app">${body}</div>`,
       '<script src="/manifest.js"></script>',
       '<link href="/bundle.css" rel="stylesheet">',
       ...bundles.map(bundle => `<script src="${bundle.publicPath}"></script>`),
-      '<script src="/bundle.<?= hash ?>.js"></script>',
+      '<script src="/bundle.js"></script>',
       '</body>',
       '</html>',
     ].join('\n');
