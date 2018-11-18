@@ -31,6 +31,17 @@ class MiddlewaresHandler {
     res.cookie('language', language, { expire: new Date()+30*24*60*60 });
     return language;
   }
+
+  static getMailContent = (req) => {
+    const userIp = requestIp.getClientIp(req);
+    const geo = geoip.lookup(userIp) || {};
+
+    return `
+      <p>ip: _________ ${userIp}</p>
+      <p>city: _______ ${geo.city}</p>
+      <p>user agent: _ ${req.headers['user-agent']}</p>
+    `;
+  }
 }
 
 export default MiddlewaresHandler;
