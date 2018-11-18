@@ -1,11 +1,8 @@
 import constants from '../../../config/constants';
 
 
-const initialState = {
+export const initialState = {
   widgetContent: [
-    {
-      separator: '6 ноября'
-    },
     {
       current: [{
         msgTime: '14:00',
@@ -55,7 +52,7 @@ const initialState = {
   }
 };
 
-const vk = (state = initialState, action) => {
+const vk = (state = { ...initialState }, action) => {
   let _state;
 
   switch (action.type) {
@@ -69,6 +66,18 @@ const vk = (state = initialState, action) => {
       const { src, key } = action;
       _state = { ...state };
       _state[key].image = src;
+      return _state;
+    }
+    case 'VK_CHANGE_WIDGET_CONTENT': {
+      const { widgetContent } = action;
+      _state = { ...state };
+      _state.widgetContent = widgetContent;
+      return _state;
+    }
+    case 'VK_CLEAR_INPUT': {
+      const { section, name } = action;
+      _state = { ...state };
+      _state[section][name] = '';
       return _state;
     }
     default: {

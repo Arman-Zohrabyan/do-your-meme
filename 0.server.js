@@ -127,16 +127,7 @@ function (_Component) {
         lg: "4",
         xl: "5",
         className: "widget-right"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Vk_VkSettings__["a" /* default */], {
-        components: vk.components,
-        header: vk.header,
-        content: vk.content,
-        current: vk.current,
-        companion: vk.companion,
-        temp: vk.temp,
-        onChange: onChange,
-        onChangeImage: onChangeImage
-      })));
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Vk_VkSettings__["a" /* default */], null)));
     }
   }]);
 
@@ -152,10 +143,10 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onChange: function onChange(value, section, key) {
-      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["a" /* change */])(value, section, key));
+      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["b" /* change */])(value, section, key));
     },
     onChangeImage: function onChangeImage(type, key, img) {
-      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["b" /* changeImage */])(type, key, img));
+      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["c" /* changeImage */])(type, key, img));
     }
   };
 };
@@ -829,9 +820,12 @@ function WidgetMessage(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mini__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SettingSections__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__classes_Language__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mini__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SettingSections__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store_vk_actions__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__classes_Language__ = __webpack_require__(2);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -856,6 +850,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var VkSettings =
 /*#__PURE__*/
 function (_Component) {
@@ -871,35 +867,40 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          header = _this$props.header,
-          components = _this$props.components,
-          companion = _this$props.companion,
-          current = _this$props.current,
-          content = _this$props.content,
-          temp = _this$props.temp,
+          vk = _this$props.vk,
           onChange = _this$props.onChange,
-          onChangeImage = _this$props.onChangeImage;
+          onChangeImage = _this$props.onChangeImage,
+          onAddContent = _this$props.onAddContent;
+      var header = vk.header,
+          components = vk.components,
+          companion = vk.companion,
+          current = vk.current,
+          content = vk.content,
+          temp = vk.temp;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "widget-right__wrapper"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "widget-right__config"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SettingSections__["e" /* SectionTopPart */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SettingSections__["e" /* SectionTopPart */], {
         header: header,
         onChange: onChange
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SettingSections__["b" /* SectionCurrentUser */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SettingSections__["b" /* SectionCurrentUser */], {
         current: current,
         temp: temp,
         onChange: onChange,
-        onChangeImage: onChangeImage
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SettingSections__["c" /* SectionInterlocutor */], {
+        onChangeImage: onChangeImage,
+        addwidgetContent: onAddContent
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SettingSections__["c" /* SectionInterlocutor */], {
         companion: companion,
         temp: temp,
         onChange: onChange,
-        onChangeImage: onChangeImage
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SettingSections__["a" /* SectionContent */], {
+        onChangeImage: onChangeImage,
+        addwidgetContent: onAddContent
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SettingSections__["a" /* SectionContent */], {
         content: content,
-        onChange: onChange
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SettingSections__["d" /* SectionSections */], {
+        onChange: onChange,
+        addwidgetContent: onAddContent
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SettingSections__["d" /* SectionSections */], {
         components: components,
         onChange: onChange
       })));
@@ -909,7 +910,27 @@ function (_Component) {
   return VkSettings;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (VkSettings);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    vk: state.vk
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    onChange: function onChange(value, section, key) {
+      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["b" /* change */])(value, section, key));
+    },
+    onChangeImage: function onChangeImage(type, key, img) {
+      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["c" /* changeImage */])(type, key, img));
+    },
+    onAddContent: function onAddContent(groupName) {
+      dispatch(Object(__WEBPACK_IMPORTED_MODULE_5__store_vk_actions__["a" /* addContent */])(groupName));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(VkSettings));
 
 /***/ }),
 /* 55 */
@@ -1063,6 +1084,14 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SectionContent).call(this, props));
 
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleAddSection", function () {
+      var addwidgetContent = _this.props.addwidgetContent;
+
+      _this.showFront();
+
+      addwidgetContent('separator');
+    });
+
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "showBack", function () {
       _this.setState({
         isFlipped: true
@@ -1146,7 +1175,7 @@ function (_Component) {
         ligth: true
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__mini__["c" /* SettingButton */], {
         content: __WEBPACK_IMPORTED_MODULE_3__classes_Language__["a" /* default */].take('add'),
-        handleClick: this.showFront,
+        handleClick: this.handleAddSection,
         distance: true
       }))));
     }
@@ -1207,6 +1236,14 @@ function (_Component) {
     _classCallCheck(this, SectionInterlocutor);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SectionInterlocutor).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleAddSection", function () {
+      var addwidgetContent = _this.props.addwidgetContent;
+
+      _this.showFront();
+
+      addwidgetContent('companion');
+    });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "showBack", function () {
       _this.setState({
@@ -1307,7 +1344,7 @@ function (_Component) {
         ligth: true
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__mini__["c" /* SettingButton */], {
         content: __WEBPACK_IMPORTED_MODULE_3__classes_Language__["a" /* default */].take('add'),
-        handleClick: this.showFront,
+        handleClick: this.handleAddSection,
         distance: true
       }))));
     }
@@ -1447,6 +1484,14 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SectionCurrentUser).call(this, props));
 
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleAddSection", function () {
+      var addwidgetContent = _this.props.addwidgetContent;
+
+      _this.showFront();
+
+      addwidgetContent('current');
+    });
+
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "showBack", function () {
       _this.setState({
         isFlipped: true
@@ -1546,7 +1591,7 @@ function (_Component) {
         ligth: true
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__mini__["c" /* SettingButton */], {
         content: __WEBPACK_IMPORTED_MODULE_3__classes_Language__["a" /* default */].take('add'),
-        handleClick: this.showFront,
+        handleClick: this.handleAddSection,
         distance: true
       }))));
     }
@@ -1562,8 +1607,11 @@ function (_Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return change; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return changeImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return change; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return changeImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return addContent; });
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var change = function change(value, section, key) {
   return {
     type: 'VK_CHANGE_DATA',
@@ -1596,6 +1644,54 @@ var changeImage = function changeImage(type, key, img) {
         console.log('Error: ', error);
       };
     }
+  };
+};
+var addContent = function addContent(groupName) {
+  return function (dispatch, getState) {
+    var _getState = getState(),
+        vk = _getState.vk;
+
+    var widgetContent = vk.widgetContent;
+    var section, name1, name2;
+
+    if (groupName === 'separator') {
+      section = 'content';
+      name1 = 'separatorText';
+
+      var group = _defineProperty({}, groupName, vk[section][name1]);
+
+      widgetContent.push(group);
+      dispatch(_setContent(widgetContent));
+      dispatch(_clearInputValue(section, name1));
+    } else {
+      var _ref;
+
+      section = groupName;
+      name1 = 'msgTime';
+      name2 = 'message';
+
+      var _group2 = _defineProperty({}, groupName, [(_ref = {}, _defineProperty(_ref, name1, vk[section][name1]), _defineProperty(_ref, name2, vk[section][name2]), _ref)]);
+
+      widgetContent.push(_group2);
+      dispatch(_setContent(widgetContent));
+      dispatch(_clearInputValue(section, name1));
+      dispatch(_clearInputValue(section, name2));
+    }
+  };
+};
+
+var _clearInputValue = function _clearInputValue(section, name) {
+  return {
+    type: 'VK_CLEAR_INPUT',
+    section: section,
+    name: name
+  };
+};
+
+var _setContent = function _setContent(widgetContent) {
+  return {
+    type: 'VK_CHANGE_WIDGET_CONTENT',
+    widgetContent: widgetContent
   };
 };
 

@@ -39063,6 +39063,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export initialState */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config_constants__ = __webpack_require__(119);
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
@@ -39071,8 +39072,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   widgetContent: [{
-    separator: '6 ноября'
-  }, {
     current: [{
       msgTime: '14:00',
       message: 'Привет.'
@@ -39119,7 +39118,7 @@ var initialState = {
 };
 
 var vk = function vk() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _objectSpread({}, initialState);
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   var _state;
@@ -39141,6 +39140,23 @@ var vk = function vk() {
             _key = action.key;
         _state = _objectSpread({}, state);
         _state[_key].image = src;
+        return _state;
+      }
+
+    case 'VK_CHANGE_WIDGET_CONTENT':
+      {
+        var widgetContent = action.widgetContent;
+        _state = _objectSpread({}, state);
+        _state.widgetContent = widgetContent;
+        return _state;
+      }
+
+    case 'VK_CLEAR_INPUT':
+      {
+        var _section = action.section,
+            name = action.name;
+        _state = _objectSpread({}, state);
+        _state[_section][name] = '';
         return _state;
       }
 

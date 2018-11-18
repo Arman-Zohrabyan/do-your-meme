@@ -645,16 +645,16 @@
       "publicPath": "/2.bundle.js"
     }
   ],
-  "./createTransitionManager": [
+  "path": [
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1441,16 +1441,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "react": [
+  "./createTransitionManager": [
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1469,16 +1469,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "path": [
+  "react": [
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }

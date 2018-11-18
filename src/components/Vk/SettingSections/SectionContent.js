@@ -17,6 +17,12 @@ class SectionContent extends Component {
     this.section = React.createRef();
   }
 
+  handleAddSection = () => {
+    const { addwidgetContent } = this.props;
+    this.showFront();
+    addwidgetContent('separator');
+  }
+
   showBack = () => {
     this.setState({
       isFlipped: true
@@ -79,7 +85,7 @@ class SectionContent extends Component {
             />
             <SettingButton
               content={Language.take('add')}
-              handleClick={this.showFront}
+              handleClick={this.handleAddSection}
               distance
             />
           </div>

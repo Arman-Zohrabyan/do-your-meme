@@ -51,16 +51,7 @@ class VkContainer extends Component {
           </div>
         </Col>
         <Col md='12' lg='4' xl='5' className='widget-right'>
-          <VkSettings
-            components={vk.components}
-            header={vk.header}
-            content={vk.content}
-            current={vk.current}
-            companion={vk.companion}
-            temp={vk.temp}
-            onChange={onChange}
-            onChangeImage={onChangeImage}
-          />
+          <VkSettings />
         </Col>
       </Row>
     );
