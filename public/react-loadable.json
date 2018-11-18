@@ -149,9 +149,17 @@
       "publicPath": "/0.bundle.js"
     }
   ],
-  "./renderer/CanvasRenderer": [
+  "../../store/vk/actions": [
     {
       "id": 140,
+      "name": "./src/store/vk/actions.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./renderer/CanvasRenderer": [
+    {
+      "id": 141,
       "name": "./node_modules/html2canvas/dist/npm/renderer/CanvasRenderer.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -159,7 +167,7 @@
   ],
   "./Logger": [
     {
-      "id": 141,
+      "id": 142,
       "name": "./node_modules/html2canvas/dist/npm/Logger.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -167,7 +175,7 @@
   ],
   "./parsing/padding": [
     {
-      "id": 142,
+      "id": 143,
       "name": "./node_modules/html2canvas/dist/npm/parsing/padding.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -175,7 +183,7 @@
   ],
   "./parsing/overflowWrap": [
     {
-      "id": 143,
+      "id": 144,
       "name": "./node_modules/html2canvas/dist/npm/parsing/overflowWrap.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -183,7 +191,7 @@
   ],
   "./parsing/position": [
     {
-      "id": 144,
+      "id": 145,
       "name": "./node_modules/html2canvas/dist/npm/parsing/position.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -191,7 +199,7 @@
   ],
   "./parsing/textTransform": [
     {
-      "id": 145,
+      "id": 146,
       "name": "./node_modules/html2canvas/dist/npm/parsing/textTransform.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -199,7 +207,7 @@
   ],
   "./Input": [
     {
-      "id": 146,
+      "id": 147,
       "name": "./node_modules/html2canvas/dist/npm/Input.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -207,7 +215,7 @@
   ],
   "./TextBounds": [
     {
-      "id": 147,
+      "id": 148,
       "name": "./node_modules/html2canvas/dist/npm/TextBounds.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -215,7 +223,7 @@
   ],
   "./renderer/ForeignObjectRenderer": [
     {
-      "id": 148,
+      "id": 149,
       "name": "./node_modules/html2canvas/dist/npm/renderer/ForeignObjectRenderer.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -223,7 +231,7 @@
   ],
   "./Unicode": [
     {
-      "id": 149,
+      "id": 150,
       "name": "./node_modules/html2canvas/dist/npm/Unicode.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -231,7 +239,7 @@
   ],
   "./Font": [
     {
-      "id": 150,
+      "id": 151,
       "name": "./node_modules/html2canvas/dist/npm/Font.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -239,7 +247,7 @@
   ],
   "./Proxy": [
     {
-      "id": 151,
+      "id": 152,
       "name": "./node_modules/html2canvas/dist/npm/Proxy.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -247,7 +255,7 @@
   ],
   "../../components/Vk/VkWidget": [
     {
-      "id": 152,
+      "id": 153,
       "name": "./src/components/Vk/VkWidget.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -255,7 +263,7 @@
   ],
   "./VkHeader": [
     {
-      "id": 153,
+      "id": 154,
       "name": "./src/components/Vk/VkHeader.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -263,7 +271,7 @@
   ],
   "./UserImageSelect": [
     {
-      "id": 154,
+      "id": 155,
       "name": "./src/components/Vk/mini/UserImageSelect.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -271,7 +279,7 @@
   ],
   "./TextInput": [
     {
-      "id": 155,
+      "id": 156,
       "name": "./src/components/Vk/mini/TextInput.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -279,7 +287,7 @@
   ],
   "./CheckBox": [
     {
-      "id": 156,
+      "id": 157,
       "name": "./src/components/Vk/mini/CheckBox.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -287,7 +295,7 @@
   ],
   "./MessageBox": [
     {
-      "id": 157,
+      "id": 158,
       "name": "./src/components/Vk/mini/MessageBox.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -295,7 +303,7 @@
   ],
   "./SettingButton": [
     {
-      "id": 158,
+      "id": 159,
       "name": "./src/components/Vk/mini/SettingButton.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -303,7 +311,7 @@
   ],
   "./VkFooter": [
     {
-      "id": 159,
+      "id": 160,
       "name": "./src/components/Vk/VkFooter.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -311,7 +319,7 @@
   ],
   "./widget/WidgetSeparator": [
     {
-      "id": 160,
+      "id": 161,
       "name": "./src/components/Vk/widget/WidgetSeparator.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -319,7 +327,7 @@
   ],
   "./widget/WidgetMessage": [
     {
-      "id": 161,
+      "id": 162,
       "name": "./src/components/Vk/widget/WidgetMessage.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -327,7 +335,7 @@
   ],
   "../../components/Vk/VkSettings": [
     {
-      "id": 162,
+      "id": 163,
       "name": "./src/components/Vk/VkSettings.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -335,7 +343,7 @@
   ],
   "./SettingSections": [
     {
-      "id": 163,
+      "id": 164,
       "name": "./src/components/Vk/SettingSections/index.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -343,7 +351,7 @@
   ],
   "./SectionTopPart": [
     {
-      "id": 164,
+      "id": 165,
       "name": "./src/components/Vk/SettingSections/SectionTopPart.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -351,7 +359,7 @@
   ],
   "./SectionContent": [
     {
-      "id": 165,
+      "id": 166,
       "name": "./src/components/Vk/SettingSections/SectionContent.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -359,7 +367,7 @@
   ],
   "./SectionInterlocutor": [
     {
-      "id": 166,
+      "id": 167,
       "name": "./src/components/Vk/SettingSections/SectionInterlocutor.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -367,7 +375,7 @@
   ],
   "./SectionSections": [
     {
-      "id": 167,
+      "id": 168,
       "name": "./src/components/Vk/SettingSections/SectionSections.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -375,16 +383,8 @@
   ],
   "./SectionCurrentUser": [
     {
-      "id": 168,
-      "name": "./src/components/Vk/SettingSections/SectionCurrentUser.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "../../store/vk/actions": [
-    {
       "id": 169,
-      "name": "./src/store/vk/actions.js",
+      "name": "./src/components/Vk/SettingSections/SectionCurrentUser.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
     }
@@ -645,16 +645,16 @@
       "publicPath": "/2.bundle.js"
     }
   ],
-  "path": [
+  "./createTransitionManager": [
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1441,16 +1441,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "./createTransitionManager": [
+  "react": [
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1469,16 +1469,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "react": [
+  "path": [
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
