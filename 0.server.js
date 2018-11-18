@@ -780,13 +780,24 @@ function WidgetSeparator(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mini__ = __webpack_require__(42);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 
 
 
 function WidgetMessage(_ref) {
   var user = _ref.user,
       messageData = _ref.messageData;
-  messageData = messageData[0];
+
+  var datas = _toConsumableArray(messageData);
+
+  var firstData = datas.shift();
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "vk-widget_content__message-section"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -804,9 +815,14 @@ function WidgetMessage(_ref) {
     className: "vk-widget_content__user-name"
   }, user.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
     className: "vk-widget_content__message-time"
-  }, messageData.msgTime)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, firstData.msgTime)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "vk-widget_content__message"
-  }, messageData.message))));
+  }, firstData.message), datas.map(function (data, key) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      className: "vk-widget_content__message second-message",
+      key: key
+    }, data.message);
+  }))));
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (WidgetMessage);
@@ -1652,27 +1668,42 @@ var addContent = function addContent(groupName) {
         vk = _getState.vk;
 
     var widgetContent = vk.widgetContent;
+
+    var lastFroup = _getLastGroup(widgetContent);
+
     var section, name1, name2;
 
     if (groupName === 'separator') {
       section = 'content';
       name1 = 'separatorText';
 
-      var group = _defineProperty({}, groupName, vk[section][name1]);
+      if (lastFroup.name === groupName) {
+        widgetContent[lastFroup.key][lastFroup.name] = vk[section][name1];
+      } else {
+        var group = _defineProperty({}, groupName, vk[section][name1]);
 
-      widgetContent.push(group);
+        widgetContent.push(group);
+      }
+
       dispatch(_setContent(widgetContent));
       dispatch(_clearInputValue(section, name1));
     } else {
-      var _ref;
-
       section = groupName;
       name1 = 'msgTime';
       name2 = 'message';
 
-      var _group2 = _defineProperty({}, groupName, [(_ref = {}, _defineProperty(_ref, name1, vk[section][name1]), _defineProperty(_ref, name2, vk[section][name2]), _ref)]);
+      if (lastFroup.name === groupName) {
+        var _widgetContent$lastFr;
 
-      widgetContent.push(_group2);
+        widgetContent[lastFroup.key][lastFroup.name].push((_widgetContent$lastFr = {}, _defineProperty(_widgetContent$lastFr, name1, vk[section][name1]), _defineProperty(_widgetContent$lastFr, name2, vk[section][name2]), _widgetContent$lastFr));
+      } else {
+        var _ref;
+
+        var _group2 = _defineProperty({}, groupName, [(_ref = {}, _defineProperty(_ref, name1, vk[section][name1]), _defineProperty(_ref, name2, vk[section][name2]), _ref)]);
+
+        widgetContent.push(_group2);
+      }
+
       dispatch(_setContent(widgetContent));
       dispatch(_clearInputValue(section, name1));
       dispatch(_clearInputValue(section, name2));
@@ -1692,6 +1723,21 @@ var _setContent = function _setContent(widgetContent) {
   return {
     type: 'VK_CHANGE_WIDGET_CONTENT',
     widgetContent: widgetContent
+  };
+};
+
+var _getLastGroup = function _getLastGroup(widgetContent) {
+  var key = widgetContent.length;
+  var name = null;
+
+  if (key !== 0) {
+    key = key - 1;
+    name = Object.keys(widgetContent[key])[0];
+  }
+
+  return {
+    key: key,
+    name: name
   };
 };
 

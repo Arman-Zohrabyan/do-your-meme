@@ -31,14 +31,19 @@ export const changeImage = (type, key, img) => dispatch => {
 export const addContent = groupName => (dispatch, getState) => {
   const { vk } = getState();
   const { widgetContent } = vk;
+  const lastFroup = _getLastGroup(widgetContent);
   let section, name1, name2;
 
   if (groupName === 'separator') {
     section = 'content';
     name1 = 'separatorText';
 
-    const group = { [groupName]: vk[section][name1] };
-    widgetContent.push(group);
+    if (lastFroup.name === groupName) {
+      widgetContent[lastFroup.key][lastFroup.name] = vk[section][name1];
+    } else {
+      const group = { [groupName]: vk[section][name1] };
+      widgetContent.push(group);
+    }
 
     dispatch(_setContent(widgetContent));
     dispatch(_clearInputValue(section, name1));
@@ -47,15 +52,24 @@ export const addContent = groupName => (dispatch, getState) => {
     name1 = 'msgTime';
     name2 = 'message';
 
-    const group = {
-      [groupName]: [
+    if (lastFroup.name === groupName) {
+      widgetContent[lastFroup.key][lastFroup.name].push(
         {
           [name1]: vk[section][name1],
           [name2]: vk[section][name2]
         }
-      ]
-    };
-    widgetContent.push(group);
+      );
+    } else {
+      const group = {
+        [groupName]: [
+          {
+            [name1]: vk[section][name1],
+            [name2]: vk[section][name2]
+          }
+        ]
+      };
+      widgetContent.push(group);
+    }
 
     dispatch(_setContent(widgetContent));
     dispatch(_clearInputValue(section, name1));
@@ -74,3 +88,13 @@ const _setContent = widgetContent => ({
   type: 'VK_CHANGE_WIDGET_CONTENT',
   widgetContent
 });
+
+const _getLastGroup = widgetContent => {
+  let key = widgetContent.length;
+  let name = null;
+  if (key !== 0) {
+    key = key - 1;
+    name = Object.keys(widgetContent[key])[0];
+  }
+  return { key, name };
+};

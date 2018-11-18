@@ -194,6 +194,12 @@
       }
     }
     &__message {
+      color: black;
+      line-height: 18px;
+
+      &.second-message {
+        padding-top: 13px;
+      }
       &-data {
         line-height: 16px;
         padding-top: 2px;

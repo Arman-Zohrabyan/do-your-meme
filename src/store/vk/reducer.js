@@ -2,26 +2,7 @@ import constants from '../../../config/constants';
 
 
 export const initialState = {
-  widgetContent: [
-    {
-      current: [{
-        msgTime: '14:00',
-        message: 'Привет.'
-      }]
-    },
-    {
-      companion: [{
-        msgTime: '14:20',
-        message: 'Здравствуй.'
-      }]
-    },
-    {
-      current: [{
-        msgTime: '14:21',
-        message: 'Как дела?'
-      }]
-    }
-  ],
+  widgetContent: [],
   components: {
     header: true,
     footer: true

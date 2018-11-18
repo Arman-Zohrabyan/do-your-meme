@@ -2,7 +2,9 @@ import React from 'react';
 import { UserImage } from '../mini';
 
 function WidgetMessage({ user, messageData }) {
-	messageData = messageData[0];
+  const datas = [...messageData];
+	const firstData = datas.shift();
+
   return (
     <div className='vk-widget_content__message-section'>
       <div className='vk-widget_content__messages-wrapper'>
@@ -18,12 +20,19 @@ function WidgetMessage({ user, messageData }) {
               {user.name}
             </span>
             <span className='vk-widget_content__message-time'>
-              {messageData.msgTime}
+              {firstData.msgTime}
             </span>
           </div>
           <div className='vk-widget_content__message'>
-            {messageData.message}
+            {firstData.message}
           </div>
+          {
+            datas.map((data, key) =>
+              <div className='vk-widget_content__message second-message' key={key}>
+                {data.message}
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

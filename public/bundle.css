@@ -395,23 +395,28 @@ label {
     display: inline-block;
     vertical-align: top;
     line-height: 15px; }
-  .vk-widget_content__message-data {
-    line-height: 16px;
-    padding-top: 2px; }
-  .vk-widget_content__message-time {
-    color: rgba(120, 127, 140, 0.6);
-    font-size: 12px;
-    display: inline-block;
-    margin-left: 7px;
-    line-height: 15px;
-    vertical-align: top; }
-  .vk-widget_content__messages-wrapper {
-    display: flex; }
-  .vk-widget_content__message-section {
-    font-size: 13px;
-    padding: 11px 0; }
-  .vk-widget_content__message-left {
-    margin-left: 36px;
-    margin-right: 10px; }
-  .vk-widget_content__message-right {
-    width: 387px; }
+  .vk-widget_content__message {
+    color: black;
+    line-height: 18px; }
+    .vk-widget_content__message.second-message {
+      padding-top: 13px; }
+    .vk-widget_content__message-data {
+      line-height: 16px;
+      padding-top: 2px; }
+    .vk-widget_content__message-time {
+      color: rgba(120, 127, 140, 0.6);
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 7px;
+      line-height: 15px;
+      vertical-align: top; }
+    .vk-widget_content__messages-wrapper {
+      display: flex; }
+    .vk-widget_content__message-section {
+      font-size: 13px;
+      padding: 11px 0; }
+    .vk-widget_content__message-left {
+      margin-left: 36px;
+      margin-right: 10px; }
+    .vk-widget_content__message-right {
+      width: 387px; }
