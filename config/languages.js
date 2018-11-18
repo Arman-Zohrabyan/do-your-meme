@@ -1,5 +1,6 @@
 export default {
   'ru': {
+    'underDevelopment': 'в стадии разработки...',
     'store.vk.online': 'был в сети 19 минут назад',
     'titles.home': 'Развлекательный сайт',
     'titles.vk': 'Создать переписку Вконтакте',
@@ -41,6 +42,7 @@ export default {
     'add': 'Добавить'
   },
   'en': {
+    'underDevelopment': 'under development...',
     'store.vk.online': 'was online 19 minutes ago',
     'titles.home': 'Entertaining web site',
     'titles.vk': 'Create a correspondence VKontakte',

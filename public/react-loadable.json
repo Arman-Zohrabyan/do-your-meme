@@ -309,313 +309,9 @@
       "publicPath": "/0.bundle.js"
     }
   ],
-  "../../components/Vk/VkSettings": [
-    {
-      "id": 160,
-      "name": "./src/components/Vk/VkSettings.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SettingSections": [
-    {
-      "id": 161,
-      "name": "./src/components/Vk/SettingSections/index.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SectionTopPart": [
-    {
-      "id": 162,
-      "name": "./src/components/Vk/SettingSections/SectionTopPart.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SectionContent": [
-    {
-      "id": 163,
-      "name": "./src/components/Vk/SettingSections/SectionContent.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SectionInterlocutor": [
-    {
-      "id": 164,
-      "name": "./src/components/Vk/SettingSections/SectionInterlocutor.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SectionSections": [
-    {
-      "id": 165,
-      "name": "./src/components/Vk/SettingSections/SectionSections.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./SectionCurrentUser": [
-    {
-      "id": 166,
-      "name": "./src/components/Vk/SettingSections/SectionCurrentUser.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "../../store/vk/actions": [
-    {
-      "id": 167,
-      "name": "./src/store/vk/actions.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "html2canvas": [
-    {
-      "id": 168,
-      "name": "./node_modules/html2canvas/dist/npm/index.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Window": [
-    {
-      "id": 169,
-      "name": "./node_modules/html2canvas/dist/npm/Window.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./NodeParser": [
-    {
-      "id": 170,
-      "name": "./node_modules/html2canvas/dist/npm/NodeParser.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./StackingContext": [
-    {
-      "id": 171,
-      "name": "./node_modules/html2canvas/dist/npm/StackingContext.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "../drawing/Size": [
-    {
-      "id": 172,
-      "name": "./node_modules/html2canvas/dist/npm/drawing/Size.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./drawing/BezierCurve": [
-    {
-      "id": 173,
-      "name": "./node_modules/html2canvas/dist/npm/drawing/BezierCurve.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/borderRadius": [
-    {
-      "id": 174,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/borderRadius.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/display": [
-    {
-      "id": 175,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/display.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/float": [
-    {
-      "id": 176,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/float.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/font": [
-    {
-      "id": 177,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/font.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/letterSpacing": [
-    {
-      "id": 178,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/letterSpacing.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/lineBreak": [
-    {
-      "id": 179,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/lineBreak.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/margin": [
-    {
-      "id": 180,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/margin.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/overflow": [
-    {
-      "id": 181,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/overflow.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/textShadow": [
-    {
-      "id": 182,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/textShadow.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/transform": [
-    {
-      "id": 183,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/transform.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/visibility": [
-    {
-      "id": 184,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/visibility.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/word-break": [
-    {
-      "id": 185,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/word-break.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./parsing/zIndex": [
-    {
-      "id": 186,
-      "name": "./node_modules/html2canvas/dist/npm/parsing/zIndex.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "css-line-break": [
-    {
-      "id": 187,
-      "name": "./node_modules/css-line-break/dist/index.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./LineBreak": [
-    {
-      "id": 188,
-      "name": "./node_modules/css-line-break/dist/LineBreak.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Trie": [
-    {
-      "id": 189,
-      "name": "./node_modules/css-line-break/dist/Trie.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./linebreak-trie": [
-    {
-      "id": 190,
-      "name": "./node_modules/css-line-break/dist/linebreak-trie.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./drawing/Circle": [
-    {
-      "id": 191,
-      "name": "./node_modules/html2canvas/dist/npm/drawing/Circle.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Renderer": [
-    {
-      "id": 192,
-      "name": "./node_modules/html2canvas/dist/npm/Renderer.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Gradient": [
-    {
-      "id": 193,
-      "name": "./node_modules/html2canvas/dist/npm/Gradient.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Angle": [
-    {
-      "id": 194,
-      "name": "./node_modules/html2canvas/dist/npm/Angle.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./Clone": [
-    {
-      "id": 195,
-      "name": "./node_modules/html2canvas/dist/npm/Clone.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./ResourceLoader": [
-    {
-      "id": 196,
-      "name": "./node_modules/html2canvas/dist/npm/ResourceLoader.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./PseudoNodeContent": [
-    {
-      "id": 197,
-      "name": "./node_modules/html2canvas/dist/npm/PseudoNodeContent.js",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
   "./widget/WidgetSeparator": [
     {
-      "id": 202,
+      "id": 160,
       "name": "./src/components/Vk/widget/WidgetSeparator.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
@@ -623,8 +319,312 @@
   ],
   "./widget/WidgetMessage": [
     {
-      "id": 203,
+      "id": 161,
       "name": "./src/components/Vk/widget/WidgetMessage.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "../../components/Vk/VkSettings": [
+    {
+      "id": 162,
+      "name": "./src/components/Vk/VkSettings.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SettingSections": [
+    {
+      "id": 163,
+      "name": "./src/components/Vk/SettingSections/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SectionTopPart": [
+    {
+      "id": 164,
+      "name": "./src/components/Vk/SettingSections/SectionTopPart.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SectionContent": [
+    {
+      "id": 165,
+      "name": "./src/components/Vk/SettingSections/SectionContent.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SectionInterlocutor": [
+    {
+      "id": 166,
+      "name": "./src/components/Vk/SettingSections/SectionInterlocutor.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SectionSections": [
+    {
+      "id": 167,
+      "name": "./src/components/Vk/SettingSections/SectionSections.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./SectionCurrentUser": [
+    {
+      "id": 168,
+      "name": "./src/components/Vk/SettingSections/SectionCurrentUser.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "../../store/vk/actions": [
+    {
+      "id": 169,
+      "name": "./src/store/vk/actions.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "html2canvas": [
+    {
+      "id": 170,
+      "name": "./node_modules/html2canvas/dist/npm/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Window": [
+    {
+      "id": 171,
+      "name": "./node_modules/html2canvas/dist/npm/Window.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./NodeParser": [
+    {
+      "id": 172,
+      "name": "./node_modules/html2canvas/dist/npm/NodeParser.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./StackingContext": [
+    {
+      "id": 173,
+      "name": "./node_modules/html2canvas/dist/npm/StackingContext.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "../drawing/Size": [
+    {
+      "id": 174,
+      "name": "./node_modules/html2canvas/dist/npm/drawing/Size.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./drawing/BezierCurve": [
+    {
+      "id": 175,
+      "name": "./node_modules/html2canvas/dist/npm/drawing/BezierCurve.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/borderRadius": [
+    {
+      "id": 176,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/borderRadius.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/display": [
+    {
+      "id": 177,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/display.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/float": [
+    {
+      "id": 178,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/float.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/font": [
+    {
+      "id": 179,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/font.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/letterSpacing": [
+    {
+      "id": 180,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/letterSpacing.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/lineBreak": [
+    {
+      "id": 181,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/lineBreak.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/margin": [
+    {
+      "id": 182,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/margin.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/overflow": [
+    {
+      "id": 183,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/overflow.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/textShadow": [
+    {
+      "id": 184,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/textShadow.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/transform": [
+    {
+      "id": 185,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/transform.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/visibility": [
+    {
+      "id": 186,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/visibility.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/word-break": [
+    {
+      "id": 187,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/word-break.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./parsing/zIndex": [
+    {
+      "id": 188,
+      "name": "./node_modules/html2canvas/dist/npm/parsing/zIndex.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "css-line-break": [
+    {
+      "id": 189,
+      "name": "./node_modules/css-line-break/dist/index.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./LineBreak": [
+    {
+      "id": 190,
+      "name": "./node_modules/css-line-break/dist/LineBreak.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Trie": [
+    {
+      "id": 191,
+      "name": "./node_modules/css-line-break/dist/Trie.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./linebreak-trie": [
+    {
+      "id": 192,
+      "name": "./node_modules/css-line-break/dist/linebreak-trie.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./drawing/Circle": [
+    {
+      "id": 193,
+      "name": "./node_modules/html2canvas/dist/npm/drawing/Circle.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Renderer": [
+    {
+      "id": 194,
+      "name": "./node_modules/html2canvas/dist/npm/Renderer.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Gradient": [
+    {
+      "id": 195,
+      "name": "./node_modules/html2canvas/dist/npm/Gradient.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Angle": [
+    {
+      "id": 196,
+      "name": "./node_modules/html2canvas/dist/npm/Angle.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./Clone": [
+    {
+      "id": 197,
+      "name": "./node_modules/html2canvas/dist/npm/Clone.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./ResourceLoader": [
+    {
+      "id": 198,
+      "name": "./node_modules/html2canvas/dist/npm/ResourceLoader.js",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./PseudoNodeContent": [
+    {
+      "id": 199,
+      "name": "./node_modules/html2canvas/dist/npm/PseudoNodeContent.js",
       "file": "0.bundle.js",
       "publicPath": "/0.bundle.js"
     }
@@ -645,16 +645,16 @@
       "publicPath": "/2.bundle.js"
     }
   ],
-  "path": [
+  "./createTransitionManager": [
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 110,
-      "name": "./node_modules/path-browserify/index.js",
+      "id": 16,
+      "name": "./node_modules/history/es/createTransitionManager.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1441,16 +1441,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "./createTransitionManager": [
+  "react": [
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 16,
-      "name": "./node_modules/history/es/createTransitionManager.js",
+      "id": 0,
+      "name": "./node_modules/react/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }
@@ -1469,16 +1469,16 @@
       "publicPath": "/bundle.css"
     }
   ],
-  "react": [
+  "path": [
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.js",
       "publicPath": "/bundle.js"
     },
     {
-      "id": 0,
-      "name": "./node_modules/react/index.js",
+      "id": 110,
+      "name": "./node_modules/path-browserify/index.js",
       "file": "bundle.css",
       "publicPath": "/bundle.css"
     }

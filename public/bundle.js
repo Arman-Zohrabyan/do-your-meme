@@ -38670,6 +38670,7 @@ var substr = 'ab'.substr(-1) === 'b'
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
   'ru': {
+    'underDevelopment': 'в стадии разработки...',
     'store.vk.online': 'был в сети 19 минут назад',
     'titles.home': 'Развлекательный сайт',
     'titles.vk': 'Создать переписку Вконтакте',
@@ -38711,6 +38712,7 @@ var substr = 'ab'.substr(-1) === 'b'
     'add': 'Добавить'
   },
   'en': {
+    'underDevelopment': 'under development...',
     'store.vk.online': 'was online 19 minutes ago',
     'titles.home': 'Entertaining web site',
     'titles.vk': 'Create a correspondence VKontakte',

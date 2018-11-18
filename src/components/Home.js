@@ -1,9 +1,10 @@
 import React from 'react';
+import Language from '../classes/Language';
 
 export default function Home () {
   return (
     <div>
-      Выберите социальную сеть
+      {Language.take('underDevelopment')}
     </div>
   );
 }
