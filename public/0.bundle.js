@@ -100,7 +100,11 @@ function (_Component) {
         components: vk.components,
         header: vk.header,
         content: vk.content,
-        companion: vk.companion
+        users: {
+          companion: vk.companion,
+          current: vk.current
+        },
+        widgetContent: vk.widgetContent
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "text-center"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
@@ -6645,7 +6649,8 @@ var Proxy = exports.Proxy = function Proxy(src, options) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__VkHeader__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__VkFooter__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mini__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__widget_WidgetSeparator__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__widget_WidgetMessage__ = __webpack_require__(203);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -6665,6 +6670,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -6693,17 +6699,17 @@ function (_Component) {
       var _this$props = _this.props,
           header = _this$props.header,
           components = _this$props.components,
-          companion = _this$props.companion;
+          users = _this$props.users;
 
       if (!components.header) {
         return null;
       }
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__VkHeader__["a" /* default */], {
-        companion: companion.name,
+        companion: users.companion.name,
         time: header.time,
         isMobile: header.mobile,
-        img: companion.image
+        img: users.companion.image
       });
     });
 
@@ -6723,7 +6729,10 @@ function (_Component) {
   _createClass(VkWidget, [{
     key: "render",
     value: function render() {
-      var content = this.props.content;
+      var _this$props2 = this.props,
+          content = _this$props2.content,
+          widgetContent = _this$props2.widgetContent,
+          users = _this$props2.users;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "vk-widget",
         id: "vk-chat-widget"
@@ -6734,49 +6743,22 @@ function (_Component) {
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "vk-widget_body__content vk-widget_content"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h5", {
-        className: "vk-widget_content__separator"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-        className: "vk-widget_content__separator-content"
-      }, "6 \u043D\u043E\u044F\u0431\u0440\u044F")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-section"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__messages-wrapper"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-left"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__mini__["e" /* UserImage */], {
-        src: "./assets/images/user.png",
-        size: "medium"
-      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-right"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message vk-widget_content__message-data"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-        className: "vk-widget_content__user-name"
-      }, "valodik"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-        className: "vk-widget_content__message-time"
-      }, "14:00")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message"
-      }, "\u041B\u0430\u0434\u043D\u043E \u0431\u0440\u0430\u0442\u0435\u0446. ^^) \u0412\u0435\u0440\u043D\u0443\u0441\u044C \u0434\u043E\u043C\u043E\u0439, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u044E.")))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-section"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__messages-wrapper"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-left"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__mini__["e" /* UserImage */], {
-        src: "./assets/images/user.png",
-        size: "medium"
-      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message-right"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message vk-widget_content__message-data"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-        className: "vk-widget_content__user-name"
-      }, "valodik"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-        className: "vk-widget_content__message-time"
-      }, "14:00")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "vk-widget_content__message"
-      }, "\u041B\u0430\u0434\u043D\u043E \u0431\u0440\u0430\u0442\u0435\u0446. ^^) \u0412\u0435\u0440\u043D\u0443\u0441\u044C \u0434\u043E\u043C\u043E\u0439, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u044E.")))))), this.renderFooter());
+      }, widgetContent.map(function (elemet, key) {
+        return Object.keys(elemet).map(function (groupName) {
+          if (groupName === 'separator') {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__widget_WidgetSeparator__["a" /* default */], {
+              key: key,
+              text: elemet[groupName]
+            });
+          }
+
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__widget_WidgetMessage__["a" /* default */], {
+            key: key,
+            user: users[groupName],
+            messageData: elemet[groupName]
+          });
+        });
+      }))), this.renderFooter());
     }
   }]);
 
@@ -11897,6 +11879,69 @@ var formatCounterValue = function formatCounterValue(counter, glue, format) {
 
     return result;
 };
+
+/***/ }),
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+function WidgetSeparator(_ref) {
+  var text = _ref.text;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h5", {
+    className: "vk-widget_content__separator"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+    className: "vk-widget_content__separator-content"
+  }, text));
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (WidgetSeparator);
+
+/***/ }),
+/* 203 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mini__ = __webpack_require__(122);
+
+
+
+function WidgetMessage(_ref) {
+  var user = _ref.user,
+      messageData = _ref.messageData;
+  messageData = messageData[0];
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__message-section"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__messages-wrapper"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__message-left"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__mini__["e" /* UserImage */], {
+    src: user.image,
+    size: "medium"
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__message-right"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__message vk-widget_content__message-data"
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+    className: "vk-widget_content__user-name"
+  }, user.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+    className: "vk-widget_content__message-time"
+  }, messageData.msgTime)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "vk-widget_content__message"
+  }, messageData.message))));
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (WidgetMessage);
 
 /***/ })
 ]));

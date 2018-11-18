@@ -33,7 +33,11 @@ class VkContainer extends Component {
                 components={vk.components}
                 header={vk.header}
                 content={vk.content}
-                companion={vk.companion}
+                users={{
+                  companion: vk.companion,
+                  current: vk.current
+                }}
+                widgetContent={vk.widgetContent}
               />
             </div>
             <div className='text-center'>

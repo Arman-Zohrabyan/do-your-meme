@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import VkHeader from './VkHeader';
 import VkFooter from './VkFooter';
-import { UserImage } from './mini';
+import WidgetSeparator from './widget/WidgetSeparator';
+import WidgetMessage from './widget/WidgetMessage';
 
 class VkWidget extends Component {
   renderHeader = () => {
     const {
       header,
       components,
-      companion
+      users
     } = this.props;
     if (!components.header) {
       return null;
     }
     return (
       <VkHeader
-        companion={companion.name}
+        companion={users.companion.name}
         time={header.time}
         isMobile={header.mobile}
-        img={companion.image}
+        img={users.companion.image}
       />
     );
   }
@@ -32,7 +33,7 @@ class VkWidget extends Component {
   }
 
   render() {
-    const { content } = this.props;
+    const { content, widgetContent, users } = this.props;
 
     return (
       <div className='vk-widget' id='vk-chat-widget'>
@@ -40,58 +41,16 @@ class VkWidget extends Component {
 
         <div className='vk-widget_body' style={{height: `${content.height}px`}}>
           <div className='vk-widget_body__content vk-widget_content'>
-            <h5 className='vk-widget_content__separator'>
-              <span className='vk-widget_content__separator-content'>6 ноября</span>
-            </h5>
-
-            <div className='vk-widget_content__message-section'>
-              <div className='vk-widget_content__messages-wrapper'>
-                <div className='vk-widget_content__message-left'>
-                  <UserImage
-                    src='./assets/images/user.png'
-                    size='medium'
-                  />
-                </div>
-                <div className='vk-widget_content__message-right'>
-                  <div className='vk-widget_content__message vk-widget_content__message-data'>
-                    <span className='vk-widget_content__user-name'>
-                      valodik
-                    </span>
-                    <span className='vk-widget_content__message-time'>
-                      14:00
-                    </span>
-                  </div>
-                  <div className='vk-widget_content__message'>
-                    Ладно братец. ^^) Вернусь домой, попробую.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='vk-widget_content__message-section'>
-              <div className='vk-widget_content__messages-wrapper'>
-                <div className='vk-widget_content__message-left'>
-                  <UserImage
-                    src='./assets/images/user.png'
-                    size='medium'
-                  />
-                </div>
-                <div className='vk-widget_content__message-right'>
-                  <div className='vk-widget_content__message vk-widget_content__message-data'>
-                    <span className='vk-widget_content__user-name'>
-                      valodik
-                    </span>
-                    <span className='vk-widget_content__message-time'>
-                      14:00
-                    </span>
-                  </div>
-                  <div className='vk-widget_content__message'>
-                    Ладно братец. ^^) Вернусь домой, попробую.
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            {
+              widgetContent.map((elemet, key) =>
+                Object.keys(elemet).map(groupName => {
+                  if (groupName === 'separator') {
+                    return <WidgetSeparator key={key} text={elemet[groupName]} />;
+                  }
+                  return <WidgetMessage key={key} user={users[groupName]} messageData={elemet[groupName]} />;
+                })
+              )
+            }
           </div>
         </div>
 

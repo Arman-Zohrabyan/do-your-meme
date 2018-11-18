@@ -2,6 +2,29 @@ import constants from '../../../config/constants';
 
 
 const initialState = {
+  widgetContent: [
+    {
+      separator: '6 ноября'
+    },
+    {
+      current: [{
+        msgTime: '14:00',
+        message: 'Привет.'
+      }]
+    },
+    {
+      companion: [{
+        msgTime: '14:20',
+        message: 'Здравствуй.'
+      }]
+    },
+    {
+      current: [{
+        msgTime: '14:21',
+        message: 'Как дела?'
+      }]
+    }
+  ],
   components: {
     header: true,
     footer: true
@@ -11,7 +34,7 @@ const initialState = {
     mobile: false
   },
   content: {
-    height: 200,
+    height: 250,
     separatorText: ''
   },
   companion: {
