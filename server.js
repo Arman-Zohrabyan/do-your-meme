@@ -159,7 +159,7 @@ module.exports = require("reactstrap");
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_path__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_path__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_path___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_path__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_loadable__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_loadable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_loadable__);
@@ -527,39 +527,36 @@ module.exports = require("cookie-parser");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nodemailer__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nodemailer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nodemailer__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MiddlewaresHandler__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_data_json__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__config_data_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MiddlewaresHandler__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_data_json__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__config_data_json__);
+// import nodemailer from 'nodemailer';
 
-
-
-var transporter = __WEBPACK_IMPORTED_MODULE_0_nodemailer___default.a.createTransport({
-  host: 'smtp.mail.ru',
-  port: 465,
-  auth: {
-    user: __WEBPACK_IMPORTED_MODULE_2__config_data_json___default.a.login,
-    pass: __WEBPACK_IMPORTED_MODULE_2__config_data_json___default.a.password
-  }
-});
+ // const transporter = nodemailer.createTransport({
+//   host: 'smtp.mail.ru',
+//   port: 465,
+//   auth: {
+//     user: config.login,
+//     pass: config.password
+//   }
+// });
 
 var customMiddlewares = function customMiddlewares(req, res, next) {
-  res.locals.language = __WEBPACK_IMPORTED_MODULE_1__MiddlewaresHandler__["a" /* default */].getLanguage(req, res);
-  res.locals.activeRoute = __WEBPACK_IMPORTED_MODULE_1__MiddlewaresHandler__["a" /* default */].getActiveRoute(req);
-  var mailOptions = {
-    from: __WEBPACK_IMPORTED_MODULE_2__config_data_json___default.a.login,
-    to: __WEBPACK_IMPORTED_MODULE_2__config_data_json___default.a.login,
-    subject: 'New user',
-    html: __WEBPACK_IMPORTED_MODULE_1__MiddlewaresHandler__["a" /* default */].getMailContent(req)
-  };
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  res.locals.language = __WEBPACK_IMPORTED_MODULE_0__MiddlewaresHandler__["a" /* default */].getLanguage(req, res);
+  res.locals.activeRoute = __WEBPACK_IMPORTED_MODULE_0__MiddlewaresHandler__["a" /* default */].getActiveRoute(req); // const mailOptions = {
+  //   from: config.login,
+  //   to: config.login,
+  //   subject: 'New user',
+  //   html: MiddlewaresHandler.getMailContent(req)
+  // };
+  // transporter.sendMail(mailOptions, function(error, info){
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log('Email sent: ' + info.response);
+  //   }
+  // });
+
   next();
 };
 
@@ -567,20 +564,14 @@ var customMiddlewares = function customMiddlewares(req, res, next) {
 
 /***/ }),
 /* 17 */
-/***/ (function(module, exports) {
-
-module.exports = require("nodemailer");
-
-/***/ }),
-/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_dom__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_router_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_geoip_lite__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_geoip_lite__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_geoip_lite___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_geoip_lite__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_request_ip__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_request_ip__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_request_ip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_request_ip__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_routes__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_languages__ = __webpack_require__(7);
@@ -635,31 +626,31 @@ _defineProperty(MiddlewaresHandler, "getLanguage", function (req, res) {
   return language;
 });
 
-_defineProperty(MiddlewaresHandler, "getMailContent", function (req) {
-  var userIp = __WEBPACK_IMPORTED_MODULE_2_request_ip___default.a.getClientIp(req);
-  var geo = __WEBPACK_IMPORTED_MODULE_1_geoip_lite___default.a.lookup(userIp) || {};
-  return "\n      <p>ip: _________ ".concat(userIp, "</p>\n      <p>city: _______ ").concat(geo.city, "</p>\n      <p>user agent: _ ").concat(req.headers['user-agent'], "</p>\n    ");
-});
-
 /* harmony default export */ __webpack_exports__["a"] = (MiddlewaresHandler);
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("geoip-lite");
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("request-ip");
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("path");
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = {"login":"info_meme@mail.ru","password":"so-your-meme"}
 
 /***/ }),
 /* 22 */
@@ -1260,32 +1251,6 @@ module.exports = require("react-card-flip");
 /***/ (function(module, exports) {
 
 module.exports = require("html2canvas");
-
-/***/ }),
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */
-/***/ (function(module, exports) {
-
-module.exports = {"login":"info_meme@mail.ru","password":"so-your-meme"}
 
 /***/ })
 /******/ ]);

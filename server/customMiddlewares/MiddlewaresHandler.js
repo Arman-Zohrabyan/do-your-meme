@@ -32,16 +32,16 @@ class MiddlewaresHandler {
     return language;
   }
 
-  static getMailContent = (req) => {
-    const userIp = requestIp.getClientIp(req);
-    const geo = geoip.lookup(userIp) || {};
+  // static getMailContent = (req) => {
+  //   const userIp = requestIp.getClientIp(req);
+  //   const geo = geoip.lookup(userIp) || {};
 
-    return `
-      <p>ip: _________ ${userIp}</p>
-      <p>city: _______ ${geo.city}</p>
-      <p>user agent: _ ${req.headers['user-agent']}</p>
-    `;
-  }
+  //   return `
+  //     <p>ip: _________ ${userIp}</p>
+  //     <p>city: _______ ${geo.city}</p>
+  //     <p>user agent: _ ${req.headers['user-agent']}</p>
+  //   `;
+  // }
 }
 
 export default MiddlewaresHandler;
