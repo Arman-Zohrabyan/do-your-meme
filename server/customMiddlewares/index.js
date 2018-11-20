@@ -1,13 +1,13 @@
 // import nodemailer from 'nodemailer';
 import MiddlewaresHandler from './MiddlewaresHandler';
-import config from '../../config/data.json';
+// import mailerData from '../../config/mailerData.json';
 
 // const transporter = nodemailer.createTransport({
 //   host: 'smtp.mail.ru',
 //   port: 465,
 //   auth: {
-//     user: config.login,
-//     pass: config.password
+//     user: mailerData.login,
+//     pass: mailerData.password
 //   }
 // });
 
@@ -16,8 +16,8 @@ const customMiddlewares = (req, res, next) => {
   res.locals.activeRoute = MiddlewaresHandler.getActiveRoute(req);
 
   // const mailOptions = {
-  //   from: config.login,
-  //   to: config.login,
+  //   from: mailerData.login,
+  //   to: mailerData.login,
   //   subject: 'New user',
   //   html: MiddlewaresHandler.getMailContent(req)
   // };
